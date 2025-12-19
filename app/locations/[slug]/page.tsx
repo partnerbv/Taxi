@@ -5,9 +5,9 @@ import Link from 'next/link'
 import { locations, getLocationBySlug, getAllLocationSlugs } from '@/data/locations'
 
 interface LocationPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 // Airport pricing data
@@ -90,7 +90,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: LocationPageProps): Promise<Metadata> {
-  const location = getLocationBySlug(params.slug)
+  const { slug } = await params
+  const location = getLocationBySlug(slug)
 
   if (!location) {
     return { title: 'Locatie niet gevonden' }
@@ -155,8 +156,9 @@ function getLocationFaqs(locationName: string, nearbyAirport: string, schipholPr
   ]
 }
 
-export default function LocationPage({ params }: LocationPageProps) {
-  const location = getLocationBySlug(params.slug)
+export default async function LocationPage({ params }: LocationPageProps) {
+  const { slug } = await params
+  const location = getLocationBySlug(slug)
 
   if (!location) {
     notFound()

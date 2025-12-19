@@ -1,6 +1,6 @@
 'use client'
 
-import { useFormState, useFormStatus } from 'react-dom'
+import { useActionState } from 'react'
 import { submitContactForm, type ContactFormState } from '@/app/actions/contact'
 
 const initialState: ContactFormState = {
@@ -9,48 +9,8 @@ const initialState: ContactFormState = {
   errors: {},
 }
 
-function SubmitButton() {
-  const { pending } = useFormStatus()
-
-  return (
-    <button
-      type="submit"
-      disabled={pending}
-      className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
-    >
-      {pending ? (
-        <span className="flex items-center justify-center">
-          <svg
-            className="animate-spin -ml-1 mr-3 h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <circle
-              className="opacity-25"
-              cx="12"
-              cy="12"
-              r="10"
-              stroke="currentColor"
-              strokeWidth="4"
-            />
-            <path
-              className="opacity-75"
-              fill="currentColor"
-              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-            />
-          </svg>
-          Verzenden...
-        </span>
-      ) : (
-        'Verstuur Aanvraag'
-      )}
-    </button>
-  )
-}
-
 export default function ContactForm() {
-  const [state, formAction] = useFormState(submitContactForm, initialState)
+  const [state, formAction, isPending] = useActionState(submitContactForm, initialState)
 
   return (
     <form action={formAction} className="space-y-6">
@@ -214,7 +174,39 @@ export default function ContactForm() {
       </div>
 
       {/* Submit Button */}
-      <SubmitButton />
+      <button
+        type="submit"
+        disabled={isPending}
+        className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        {isPending ? (
+          <span className="flex items-center justify-center">
+            <svg
+              className="animate-spin -ml-1 mr-3 h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <circle
+                className="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                strokeWidth="4"
+              />
+              <path
+                className="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+              />
+            </svg>
+            Verzenden...
+          </span>
+        ) : (
+          'Verstuur Aanvraag'
+        )}
+      </button>
 
       <p className="text-sm text-secondary-500 text-center">
         Door dit formulier te versturen gaat u akkoord met onze{' '}
