@@ -331,7 +331,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/Taxi.jpg"
+                  src="/Taxi-Den-Haag.webp"
                   alt="Taxi Den Haag"
                   width={600}
                   height={450}
