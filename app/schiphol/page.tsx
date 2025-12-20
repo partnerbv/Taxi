@@ -342,20 +342,50 @@ export default function SchipholPage() {
       {/* Features */}
       <section className="py-20 bg-secondary-50">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-4">
-              Waarom Enjoy Taxi
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
-              Onze Schiphol Service
-            </h2>
-            <p className="text-secondary-600 max-w-2xl mx-auto">
-              Alles voor een zorgeloze reis naar de luchthaven
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            {/* Image */}
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/Taxi.jpg"
+                  alt="Premium Taxi Service - Chauffeur met klant"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-4 -left-4 w-full h-full rounded-2xl bg-primary-200/50 -z-10" />
+            </div>
+
+            {/* Content */}
+            <div>
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-4">
+                Waarom Enjoy Taxi
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
+                Onze Schiphol Service
+              </h2>
+              <p className="text-secondary-600 mb-8">
+                Alles voor een zorgeloze reis naar de luchthaven. Professionele chauffeurs, luxe Tesla voertuigen en persoonlijke service.
+              </p>
+              <div className="space-y-4">
+                {features.slice(0, 4).map((feature, index) => (
+                  <div key={index} className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-lg bg-primary-100 text-primary-600 flex items-center justify-center flex-shrink-0">
+                      {feature.icon}
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-secondary-900">{feature.title}</h3>
+                      <p className="text-secondary-600 text-sm">{feature.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {features.slice(4).map((feature, index) => (
               <div
                 key={index}
                 className="bg-white rounded-xl p-6 border border-secondary-200 hover:shadow-lg hover:border-primary-200 transition-all"

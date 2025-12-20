@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { locations } from '@/data/locations'
 
 export const metadata: Metadata = {
@@ -76,7 +77,8 @@ export default function LocatiesPage() {
         </div>
 
         <div className="container-custom relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
               <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -91,7 +93,7 @@ export default function LocatiesPage() {
               Premium Tesla taxi service in Den Haag, Leiden, Delft en omgeving.
               24/7 beschikbaar met vaste prijzen.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4">
               <a
                 href="tel:+31612345678"
                 className="inline-flex items-center px-8 py-4 bg-white text-primary-900 font-semibold rounded-xl hover:bg-primary-50 transition-all shadow-lg"
@@ -110,6 +112,23 @@ export default function LocatiesPage() {
                 </svg>
                 Schiphol Transfers
               </Link>
+            </div>
+            </div>
+
+            {/* Hero Image */}
+            <div className="relative hidden lg:block">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/Taxi Den haag.jpg"
+                  alt="Taxi Den Haag - Premium Taxi Service"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/50 to-transparent" />
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-full h-full rounded-2xl bg-primary-500/20 -z-10" />
             </div>
           </div>
         </div>
