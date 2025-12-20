@@ -73,14 +73,14 @@ const benefits = [
 const testimonials = [
   {
     name: 'Mark de Vries',
-    role: 'Zakelijke reiziger',
+    role: 'Zakelijke klant',
     text: 'Fantastische service! Altijd op tijd, professionele chauffeurs en de Tesla is heerlijk comfortabel.',
     rating: 5,
   },
   {
     name: 'Sophie Jansen',
-    role: 'Frequent flyer',
-    text: 'Gebruik Enjoy Taxi al maanden voor mijn Schiphol transfers. Betrouwbaar en goede prijs-kwaliteit.',
+    role: 'Vaste klant',
+    text: 'Gebruik Enjoy Taxi al maanden voor al mijn ritten. Betrouwbaar, goede prijs en altijd vriendelijke chauffeurs.',
     rating: 5,
   },
 ]
@@ -100,12 +100,16 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
   const keywords = [
     `taxi ${location.name.toLowerCase()}`,
     `taxi ${location.name.toLowerCase()} bestellen`,
-    `taxi ${location.name.toLowerCase()} schiphol`,
-    `${location.name.toLowerCase()} taxi service`,
-    `taxi ${location.name.toLowerCase()} prijs`,
-    `goedkope taxi ${location.name.toLowerCase()}`,
-    `taxi naar schiphol ${location.name.toLowerCase()}`,
-    'premium taxi', '24/7 taxi', 'vaste prijs taxi',
+    `${location.name.toLowerCase()} taxi`,
+    `taxi service ${location.name.toLowerCase()}`,
+    `taxi ${location.name.toLowerCase()} den haag`,
+    `taxi ${location.name.toLowerCase()} leiden`,
+    `${location.name.toLowerCase()} taxicentrale`,
+    `taxi ${location.name.toLowerCase()} 24 uur`,
+    `taxi reserveren ${location.name.toLowerCase()}`,
+    `taxi bellen ${location.name.toLowerCase()}`,
+    'premium taxi', 'tesla taxi', '24/7 taxi', 'vaste prijs taxi',
+    'zakelijk vervoer', 'luchthaven taxi', 'taxi zuid-holland',
   ]
 
   return {
@@ -127,27 +131,27 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
 }
 
 // Dynamic FAQs based on location
-function getLocationFaqs(locationName: string, nearbyAirport: string, schipholPrice: number) {
+function getLocationFaqs(locationName: string) {
   return [
     {
       question: `Hoe bestel ik een taxi in ${locationName}?`,
       answer: `U kunt een taxi in ${locationName} bestellen door te bellen naar 06 2017 2767 of via WhatsApp. Wij reageren binnen 5 minuten met een vaste prijs.`,
     },
     {
-      question: `Wat kost een taxi van ${locationName} naar Schiphol?`,
-      answer: `Een taxi van ${locationName} naar Schiphol kost vanaf €${schipholPrice}. Vaste prijs, inclusief bagage en 30 minuten gratis wachttijd.`,
-    },
-    {
       question: `Hoe snel kan er een taxi in ${locationName} zijn?`,
-      answer: `In ${locationName} kunnen wij meestal binnen 15-20 minuten een Tesla taxi bij u hebben. Voor vroege vluchten raden wij reserveren aan.`,
+      answer: `In ${locationName} kunnen wij meestal binnen 15-20 minuten een Tesla taxi bij u hebben. Voor geplande ritten raden wij reserveren aan.`,
     },
     {
-      question: `Rijden jullie ook naar ${nearbyAirport}?`,
-      answer: `Ja, wij rijden dagelijks naar ${nearbyAirport}. Neem contact op voor de exacte prijs voor uw rit.`,
+      question: `Wat zijn de tarieven voor een taxi in ${locationName}?`,
+      answer: `Wij werken met vaste prijzen die u vooraf ontvangt. Geen verrassingen, ook niet bij files. Bel of WhatsApp ons voor een directe prijsopgave voor uw rit.`,
     },
     {
       question: `Kan ik in ${locationName} ook zakelijk boeken?`,
       answer: `Ja, wij bieden zakelijke accounts met maandelijkse facturatie, BTW-specificatie en korting bij regelmatig gebruik.`,
+    },
+    {
+      question: `Rijden jullie vanaf ${locationName} naar de luchthaven?`,
+      answer: `Ja, wij verzorgen dagelijks luchthaven transfers naar Schiphol, Rotterdam Airport en Eindhoven Airport. Inclusief flight tracking en gratis wachttijd.`,
     },
     {
       question: 'Welke betaalmethoden accepteren jullie?',
@@ -169,9 +173,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
     (l) => l.region === location.region && l.slug !== location.slug
   ).slice(0, 4)
 
-  // Fixed airport prices
-  const schipholPrice = 79
-  const locationFaqs = getLocationFaqs(location.name, location.nearbyAirport || 'Schiphol', schipholPrice)
+  const locationFaqs = getLocationFaqs(location.name)
 
   return (
     <>
@@ -292,7 +294,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
               </div>
             </div>
 
-            {/* Right - Price Card */}
+            {/* Right - Service Card */}
             <div className="hidden lg:block">
               <div className="relative">
                 {/* Glow effect */}
@@ -301,15 +303,17 @@ export default async function LocationPage({ params }: LocationPageProps) {
                 {/* Card */}
                 <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 p-8 shadow-2xl">
                   <div className="text-center mb-6">
-                    <span className="text-white/60 text-sm">Naar Schiphol vanaf</span>
-                    <div className="text-6xl font-bold text-white mt-1">
-                      €{schipholPrice}<span className="text-2xl">,-</span>
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
+                      <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
                     </div>
-                    <span className="text-primary-300 text-sm">Vaste prijs, all-inclusive</span>
+                    <h3 className="text-xl font-bold text-white">Uw Taxi in {location.name}</h3>
+                    <span className="text-primary-300 text-sm">Premium Tesla Service</span>
                   </div>
 
                   <div className="space-y-3 mb-6">
-                    {['Geen toeslag bij files', 'Bagage inbegrepen', '30 min gratis wachttijd', 'Flight tracking'].map((item, i) => (
+                    {['Vaste prijs, geen verrassingen', 'Binnen 15 min ophalen mogelijk', '100% elektrische Tesla vloot', 'Professionele chauffeurs'].map((item, i) => (
                       <div key={i} className="flex items-center gap-3 text-white/80">
                         <svg className="w-5 h-5 text-green-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -323,7 +327,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                     href="tel:+31620172767"
                     className="block w-full py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-bold rounded-xl text-center transition-all duration-300 hover:from-primary-600 hover:to-primary-700 hover:shadow-lg hover:shadow-primary-500/30"
                   >
-                    Boek Nu - Bel Direct
+                    Bel Nu - 06 2017 2767
                   </a>
                 </div>
               </div>
@@ -409,30 +413,29 @@ export default async function LocationPage({ params }: LocationPageProps) {
                 </div>
               </div>
 
-              {/* Schiphol Info Box */}
-              {location.schipholDistance !== '0 km' && (
-                <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-600 to-primary-700 p-8 text-white">
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-                  <div className="relative">
-                    <h3 className="text-xl font-bold mb-6">
-                      Taxi {location.name} → Schiphol
-                    </h3>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                      {[
-                        { label: 'Afstand', value: location.schipholDistance },
-                        { label: 'Reistijd', value: location.schipholTime },
-                        { label: 'Prijs vanaf', value: `€${schipholPrice},-` },
-                        { label: 'Beschikbaar', value: '24/7' },
-                      ].map((item, i) => (
-                        <div key={i}>
-                          <div className="text-white/70 text-sm mb-1">{item.label}</div>
-                          <div className="text-2xl font-bold">{item.value}</div>
-                        </div>
-                      ))}
-                    </div>
+              {/* Diensten overzicht */}
+              <div className="relative overflow-hidden rounded-2xl">
+                <Image
+                  src="/Taxi-Den-Haag.webp"
+                  alt={`Taxi service ${location.name}`}
+                  width={600}
+                  height={400}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary-900/90 via-secondary-900/50 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="text-xl font-bold text-white mb-3">
+                    Onze Diensten in {location.name}
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {['Zakelijk Vervoer', 'Luchthaven Transfers', 'Privé Ritten', 'Evenementen'].map((dienst, i) => (
+                      <span key={i} className="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-sm rounded-full">
+                        {dienst}
+                      </span>
+                    ))}
                   </div>
                 </div>
-              )}
+              </div>
             </div>
 
             {/* Sidebar - 2 columns */}
