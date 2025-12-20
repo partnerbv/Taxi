@@ -21,14 +21,14 @@ describe('Hero Component', () => {
     render(<Hero />)
 
     const phoneLink = screen.getByRole('link', { name: /bel direct/i })
-    expect(phoneLink).toHaveAttribute('href', 'tel:+31612345678')
+    expect(phoneLink).toHaveAttribute('href', 'tel:+31620172767')
   })
 
   it('has correct WhatsApp link', () => {
     render(<Hero />)
 
     const whatsappLink = screen.getByRole('link', { name: /whatsapp/i })
-    expect(whatsappLink).toHaveAttribute('href', 'https://wa.me/31612345678')
+    expect(whatsappLink).toHaveAttribute('href', 'https://wa.me/31620172767')
     expect(whatsappLink).toHaveAttribute('target', '_blank')
     expect(whatsappLink).toHaveAttribute('rel', 'noopener noreferrer')
   })

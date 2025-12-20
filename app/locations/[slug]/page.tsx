@@ -131,7 +131,7 @@ function getLocationFaqs(locationName: string, nearbyAirport: string, schipholPr
   return [
     {
       question: `Hoe bestel ik een taxi in ${locationName}?`,
-      answer: `U kunt een taxi in ${locationName} bestellen door te bellen naar +31 6 1234 5678 of via WhatsApp. Wij reageren binnen 5 minuten met een vaste prijs.`,
+      answer: `U kunt een taxi in ${locationName} bestellen door te bellen naar 06 2017 2767 of via WhatsApp. Wij reageren binnen 5 minuten met een vaste prijs.`,
     },
     {
       question: `Wat kost een taxi van ${locationName} naar Schiphol?`,
@@ -185,7 +185,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
             name: `Enjoy Taxi ${location.name}`,
             description: location.description,
             url: `https://enjoytaxi.nl/locations/${location.slug}`,
-            telephone: '+31612345678',
+            telephone: '+31620172767',
             priceRange: '€€',
             aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', reviewCount: '150' },
           }),
@@ -235,10 +235,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
 
               {/* Main Title */}
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
-                Taxi
-                <span className="block bg-gradient-to-r from-primary-300 via-primary-400 to-blue-400 bg-clip-text text-transparent">
-                  {location.name}
-                </span>
+                Taxi <span className="bg-gradient-to-r from-primary-300 via-primary-400 to-blue-400 bg-clip-text text-transparent">{location.name}</span>
               </h1>
 
               <p className="text-xl md:text-2xl text-white/80 mb-8 leading-relaxed max-w-xl">
@@ -248,7 +245,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
                 <a
-                  href="tel:+31612345678"
+                  href="tel:+31620172767"
                   className="group inline-flex items-center justify-center px-8 py-4 bg-white text-secondary-900 font-bold rounded-2xl transition-all duration-300 hover:bg-primary-50 hover:scale-105 shadow-2xl shadow-white/20"
                 >
                   <svg className="w-5 h-5 mr-3 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -260,7 +257,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                   </svg>
                 </a>
                 <a
-                  href="https://wa.me/31612345678"
+                  href="https://wa.me/31620172767"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-md text-white font-bold rounded-2xl border-2 border-white/30 transition-all duration-300 hover:bg-white/20 hover:border-white/50"
@@ -272,25 +269,25 @@ export default async function LocationPage({ params }: LocationPageProps) {
                 </a>
               </div>
 
-              {/* Trust Badges */}
-              <div className="flex flex-wrap items-center gap-6">
-                <div className="flex items-center gap-2 text-white/80">
-                  <div className="flex -space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <span className="font-semibold">5.0</span>
-                  <span className="text-white/60">Google Reviews</span>
+              {/* USP Pills */}
+              <div className="flex flex-wrap gap-3">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+                  <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                  <span className="text-sm font-medium text-white">100% Tesla</span>
                 </div>
-                <div className="h-6 w-px bg-white/20" />
-                <div className="flex items-center gap-2 text-white/80">
-                  <svg className="w-5 h-5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+                  <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span className="text-sm font-medium text-white">24/7 Service</span>
+                </div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+                  <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <span>1000+ tevreden klanten</span>
+                  <span className="text-sm font-medium text-white">Vaste Tarieven</span>
                 </div>
               </div>
             </div>
@@ -323,7 +320,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                   </div>
 
                   <a
-                    href="tel:+31612345678"
+                    href="tel:+31620172767"
                     className="block w-full py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-bold rounded-xl text-center transition-all duration-300 hover:from-primary-600 hover:to-primary-700 hover:shadow-lg hover:shadow-primary-500/30"
                   >
                     Boek Nu - Bel Direct
@@ -461,14 +458,14 @@ export default async function LocationPage({ params }: LocationPageProps) {
                   </div>
 
                   <div className="space-y-3">
-                    <a href="tel:+31612345678" className="flex items-center justify-center gap-3 w-full py-4 bg-white text-secondary-900 font-bold rounded-xl transition-all hover:bg-primary-50 hover:scale-[1.02]">
+                    <a href="tel:+31620172767" className="flex items-center justify-center gap-3 w-full py-4 bg-white text-secondary-900 font-bold rounded-xl transition-all hover:bg-primary-50 hover:scale-[1.02]">
                       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
-                      +31 6 1234 5678
+                      06 2017 2767
                     </a>
                     <a
-                      href="https://wa.me/31612345678"
+                      href="https://wa.me/31620172767"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-3 w-full py-4 bg-green-500 text-white font-bold rounded-xl transition-all hover:bg-green-600 hover:scale-[1.02]"
@@ -524,21 +521,22 @@ export default async function LocationPage({ params }: LocationPageProps) {
                   className="w-full h-auto object-cover"
                   quality={90}
                 />
-                {/* Floating badge */}
-                <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-6 border border-secondary-100">
-                  <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center text-white text-2xl">
-                      ✈️
-                    </div>
-                    <div>
-                      <div className="text-sm text-secondary-500">Luchthaven Service</div>
-                      <div className="text-xl font-bold text-secondary-900">Flight Tracking</div>
+                {/* Glossy badge */}
+                <div className="absolute bottom-4 left-4">
+                  <div className="bg-gradient-to-r from-white/90 to-white/80 backdrop-blur-md rounded-full px-4 py-2 shadow-xl border border-white/50">
+                    <div className="flex items-center gap-2">
+                      <div className="w-6 h-6 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center shadow-sm">
+                        <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-xs font-semibold text-secondary-800">Flight Tracking</span>
                     </div>
                   </div>
                 </div>
               </div>
               {/* Decorative element */}
-              <div className="absolute -z-10 -bottom-8 -left-8 w-full h-full rounded-3xl bg-gradient-to-br from-primary-200 to-primary-100" />
+              <div className="absolute -z-10 -bottom-4 -left-4 w-full h-full rounded-3xl bg-gradient-to-br from-primary-200 to-primary-100" />
             </div>
 
             {/* Content */}
@@ -600,7 +598,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
               </div>
 
               <a
-                href="tel:+31612345678"
+                href="tel:+31620172767"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-500 text-white font-bold rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-primary-500/30 hover:scale-105"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -840,7 +838,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
             <div className="inline-flex items-center gap-4 px-6 py-4 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
               <span className="text-white/70">Uw locatie niet gevonden?</span>
               <a
-                href="tel:+31612345678"
+                href="tel:+31620172767"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-secondary-900 font-semibold rounded-xl hover:bg-primary-50 transition-colors"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -857,7 +855,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
       {/* FLOATING CTA - Mobile */}
       <div className="fixed bottom-6 left-4 right-4 z-50 lg:hidden">
         <a
-          href="tel:+31612345678"
+          href="tel:+31620172767"
           className="flex items-center justify-center gap-3 w-full py-4 bg-gradient-to-r from-primary-600 to-primary-500 text-white font-bold rounded-2xl shadow-2xl shadow-primary-600/40"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -6,17 +6,17 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: 'Googlebot',
         allow: '/',
-        disallow: ['/api/', '/_next/static/', '/admin/'],
+        disallow: ['/_next/static/'],
       },
       {
         userAgent: 'Bingbot',
         allow: '/',
-        disallow: ['/api/', '/_next/static/', '/admin/'],
+        disallow: ['/_next/static/'],
       },
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/_next/', '/admin/', '/private/'],
+        disallow: ['/_next/'],
       },
     ],
     sitemap: 'https://enjoytaxi.nl/sitemap.xml',

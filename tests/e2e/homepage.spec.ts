@@ -32,12 +32,12 @@ test.describe('Homepage', () => {
 
   test('should have working phone CTA link', async ({ page }) => {
     const phoneLink = page.getByRole('link', { name: /bel direct/i }).first()
-    await expect(phoneLink).toHaveAttribute('href', 'tel:+31612345678')
+    await expect(phoneLink).toHaveAttribute('href', 'tel:+31620172767')
   })
 
   test('should have working WhatsApp CTA link', async ({ page }) => {
     const whatsappLink = page.getByRole('link', { name: /whatsapp/i }).first()
-    await expect(whatsappLink).toHaveAttribute('href', 'https://wa.me/31612345678')
+    await expect(whatsappLink).toHaveAttribute('href', 'https://wa.me/31620172767')
   })
 
   test('should display services section', async ({ page }) => {

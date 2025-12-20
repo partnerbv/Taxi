@@ -84,7 +84,7 @@ export default function Header() {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="tel:+31612345678"
+              href="tel:+31620172767"
               className={`flex items-center space-x-2 transition-colors ${
                 isScrolled
                   ? 'text-primary-600 hover:text-primary-700'
@@ -179,7 +179,7 @@ export default function Header() {
             ))}
             <div className="flex flex-col space-y-3 pt-4">
               <a
-                href="tel:+31612345678"
+                href="tel:+31620172767"
                 className="flex items-center justify-center space-x-2 text-primary-600 py-3 border-2 border-primary-500 rounded-full"
               >
                 <svg

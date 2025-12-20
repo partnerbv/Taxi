@@ -22,7 +22,7 @@ export const locations: Location[] = [
   // Den Haag en omgeving
   {
     slug: 'den-haag',
-    name: 'Den Haag',
+    name: 'Den Haag en Omgeving',
     region: 'Den Haag e.o.',
     description:
       'Taxi Den Haag nodig? Enjoy Taxi biedt premium vervoer met Tesla in Den Haag en omgeving. Taxi naar Schiphol vanaf €79, zakelijk vervoer bij het Binnenhof, of taxi naar Scheveningen - wij rijden 24/7 met vaste prijzen.',
@@ -38,7 +38,7 @@ export const locations: Location[] = [
       { destination: 'Leiden', priceFrom: 35 },
       { destination: 'Delft', priceFrom: 25 },
     ],
-    metaTitle: 'Taxi Den Haag | 24/7 Beschikbaar | Vaste Prijzen | Enjoy Taxi',
+    metaTitle: 'Taxi Den Haag en Omgeving | 24/7 Beschikbaar | Vaste Prijzen | Enjoy Taxi',
     metaDescription:
       'Taxi Den Haag bestellen? ✓ 24/7 beschikbaar ✓ Vaste prijzen ✓ Schiphol vanaf €79 ✓ Tesla comfort ✓ Geen wachttijd. Bel nu!',
   },

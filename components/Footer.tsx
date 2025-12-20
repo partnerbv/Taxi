@@ -61,7 +61,7 @@ export default function Footer() {
             {/* Contact Info */}
             <div className="space-y-3">
               <a
-                href="tel:+31612345678"
+                href="tel:+31620172767"
                 className="flex items-center space-x-3 text-secondary-300 hover:text-primary-400 transition-colors"
               >
                 <svg
@@ -78,7 +78,7 @@ export default function Footer() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span>+31 6 1234 5678</span>
+                <span>06 2017 2767</span>
               </a>
               <a
                 href="mailto:info@enjoytaxi.nl"
@@ -100,6 +100,13 @@ export default function Footer() {
                 </svg>
                 <span>info@enjoytaxi.nl</span>
               </a>
+            </div>
+            {/* Business Info */}
+            <div className="mt-6 pt-6 border-t border-secondary-700">
+              <div className="text-sm text-secondary-400 space-y-1">
+                <p>KVK: 27293969</p>
+                <p>BTW: NL002455187B87</p>
+              </div>
             </div>
           </div>
 

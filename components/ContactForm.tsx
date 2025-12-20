@@ -97,7 +97,7 @@ export default function ContactForm() {
           name="phone"
           required
           className={`input-field ${state.errors?.phone ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : ''}`}
-          placeholder="+31 6 1234 5678"
+          placeholder="06 1234 5678"
           aria-describedby={state.errors?.phone ? 'phone-error' : undefined}
         />
         {state.errors?.phone && (

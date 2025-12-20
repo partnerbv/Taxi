@@ -53,7 +53,7 @@ export const metadata: Metadata = {
       'Premium taxi service in Den Haag en Leiden. Tesla vloot, vaste prijzen, 24/7 beschikbaar. Schiphol transfers vanaf €35.',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: '/Taxi Den haag.jpg',
         width: 1200,
         height: 630,
         alt: 'Enjoy Taxi - Premium Taxi Den Haag en Leiden',
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     title: 'Taxi Den Haag & Leiden | Enjoy Taxi',
     description:
       'Premium taxi service met Tesla vloot. 24/7 beschikbaar, vaste prijzen, Schiphol transfers.',
-    images: ['/images/og-image.jpg'],
+    images: ['/Taxi Den haag.jpg'],
   },
   robots: {
     index: true,
