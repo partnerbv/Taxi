@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Hero from '@/components/Hero'
 import ReviewList from '@/components/ReviewList'
+import FloatingCTA from '@/components/FloatingCTA'
 import { locations } from '@/data/locations'
 
 const services = [
@@ -920,6 +921,9 @@ export default function HomePage() {
           }}
         />
       </section>
+
+      {/* Floating Mobile CTA - Hidden on hero and footer */}
+      <FloatingCTA />
     </>
   )
 }

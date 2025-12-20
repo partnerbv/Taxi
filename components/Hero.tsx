@@ -169,14 +169,14 @@ export default function Hero() {
       </div>
 
       {/* Modern Wave Divider with 3D Driving Car */}
-      <div className="absolute bottom-0 left-0 right-0 z-20 overflow-hidden">
-        <div className="relative">
+      <div className="absolute bottom-0 left-0 right-0 z-20 overflow-visible">
+        <div className="relative h-[80px] md:h-[120px]">
           {/* Road Surface */}
           <svg
             viewBox="0 0 1440 150"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="w-full h-auto"
+            className="absolute bottom-0 w-full h-[80px] md:h-[120px]"
             preserveAspectRatio="none"
           >
             {/* Main wave - white background */}
@@ -212,11 +212,11 @@ export default function Hero() {
           </svg>
 
           {/* 3D Animated Tesla Car */}
-          <div className="absolute bottom-[40px] md:bottom-[72px] animate-drive" style={{ perspective: '500px' }}>
+          <div className="absolute bottom-[35px] md:bottom-[55px] animate-drive" style={{ perspective: '500px' }}>
             <div className="relative" style={{ transformStyle: 'preserve-3d' }}>
               {/* Car shadow on road */}
               <div
-                className="absolute -bottom-2 left-1/2 w-16 md:w-20 h-3 md:h-4 bg-black/30 rounded-full blur-sm animate-car-shadow"
+                className="absolute -bottom-2 left-1/2 w-12 md:w-20 h-2 md:h-4 bg-black/30 rounded-full blur-sm animate-car-shadow"
               />
 
               {/* 3D Tesla Model */}
@@ -226,7 +226,7 @@ export default function Hero() {
                 viewBox="0 0 80 40"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="drop-shadow-2xl w-20 h-10 md:w-[80px] md:h-[40px]"
+                className="drop-shadow-2xl w-14 h-7 md:w-20 md:h-10"
                 style={{ transform: 'rotateX(10deg)' }}
               >
                 {/* Car body - main shape with 3D gradient */}

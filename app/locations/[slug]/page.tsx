@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import { locations, getLocationBySlug, getAllLocationSlugs } from '@/data/locations'
+import FloatingCTA from '@/components/FloatingCTA'
 
 interface LocationPageProps {
   params: Promise<{
@@ -852,6 +853,9 @@ export default async function LocationPage({ params }: LocationPageProps) {
           </div>
         </div>
       </section>
+
+      {/* Floating Mobile CTA - Hidden on hero and footer */}
+      <FloatingCTA />
     </>
   )
 }
