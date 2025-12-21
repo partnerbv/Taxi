@@ -5,28 +5,25 @@ import ReviewList from '@/components/ReviewList'
 import FloatingCTA from '@/components/FloatingCTA'
 
 export const metadata: Metadata = {
-  title: 'Taxi naar Schiphol | Vaste Prijs vanaf €79 | 24/7 Service | Enjoy Taxi',
-  description: 'Taxi naar Schiphol vanaf €79 vaste prijs. ✓ Flight tracking ✓ 30 min gratis wachttijd ✓ Bagage inbegrepen ✓ 24/7 beschikbaar vanuit Den Haag en Leiden. Boek nu!',
+  title: 'Taxi naar Schiphol | Vaste Prijzen vanaf €35 | Enjoy Taxi',
+  description:
+    'Taxi naar Schiphol vanaf Den Haag €55, Leiden €35. ✓ Vaste prijzen ✓ Flight tracking ✓ 24/7 beschikbaar ✓ Tesla comfort. Boek nu uw Schiphol taxi!',
   keywords: [
-    'taxi naar schiphol',
     'taxi schiphol',
     'schiphol taxi',
-    'schiphol transfer',
+    'taxi naar schiphol',
+    'schiphol airport taxi',
+    'taxi den haag schiphol',
+    'taxi leiden schiphol',
     'luchthaven taxi',
-    'taxi schiphol den haag',
-    'taxi schiphol leiden',
-    'schiphol taxi vaste prijs',
-    'taxi amsterdam airport',
-    'schiphol taxi service',
-    'goedkope taxi schiphol',
-    'taxi schiphol boeken',
+    'airport transfer schiphol',
+    'schiphol vervoer',
+    'taxi schiphol vaste prijs',
   ],
-  alternates: {
-    canonical: 'https://enjoytaxi.nl/schiphol',
-  },
   openGraph: {
-    title: 'Taxi naar Schiphol | Vaste Prijs vanaf €79 | Enjoy Taxi',
-    description: 'Taxi naar Schiphol vanaf €79. Flight tracking, gratis wachttijd, 24/7 beschikbaar.',
+    title: 'Taxi naar Schiphol | Vaste Prijzen vanaf €35 | Enjoy Taxi',
+    description:
+      'Premium taxi naar Schiphol Airport. Vaste prijzen, flight tracking, 24/7 beschikbaar. Tesla comfort voor uw luchthaven transfer.',
     url: 'https://enjoytaxi.nl/schiphol',
     images: [
       {
@@ -37,138 +34,159 @@ export const metadata: Metadata = {
       },
     ],
   },
+  alternates: {
+    canonical: 'https://enjoytaxi.nl/schiphol',
+  },
 }
 
-const pricing = [
-  { location: 'Den Haag Centrum', price: 79, duration: '45 min' },
-  { location: 'Scheveningen', price: 85, duration: '50 min' },
-  { location: 'Leiden Centrum', price: 79, duration: '35 min' },
-  { location: 'Delft', price: 69, duration: '40 min' },
-  { location: 'Zoetermeer', price: 75, duration: '35 min' },
-  { location: 'Wassenaar', price: 75, duration: '40 min' },
-  { location: 'Voorburg', price: 75, duration: '40 min' },
-  { location: 'Rijswijk', price: 75, duration: '40 min' },
+const services = [
+  {
+    title: 'Schiphol Transfer',
+    description: 'Comfortabel van en naar Schiphol Airport met vaste prijzen.',
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+      </svg>
+    ),
+    href: '#prijzen',
+  },
+  {
+    title: 'Flight Tracking',
+    description: 'Wij volgen uw vlucht. Bij vertraging passen wij de ophaaltijd aan.',
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+      </svg>
+    ),
+    href: '#hoe-werkt-het',
+  },
+  {
+    title: 'Zakelijk Vervoer',
+    description: 'Professionele luchthaven transfers voor zakelijke reizigers.',
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    ),
+    href: '/services#zakelijk',
+  },
+  {
+    title: 'Groepsvervoer',
+    description: 'Meerdere passagiers? Wij regelen vervoer voor uw hele groep.',
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    ),
+    href: '/contact',
+  },
 ]
 
 const features = [
   {
+    title: 'Vaste Schiphol Prijzen',
+    description: 'Geen verrassingen. Ook niet bij files of vertragingen.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    title: '30 Min Gratis Wachttijd',
-    description: 'Bij vertraging van uw vlucht wachten wij gratis tot 30 minuten.',
   },
   {
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-    title: 'Vaste Prijs Garantie',
-    description: 'De prijs die u ziet is de prijs die u betaalt. Geen toeslagen bij files.',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-      </svg>
-    ),
     title: 'Flight Tracking',
     description: 'Wij volgen uw vlucht en passen de ophaaltijd automatisch aan.',
-  },
-  {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
       </svg>
     ),
-    title: 'Bagage Inbegrepen',
-    description: 'Standaard bagage is altijd inbegrepen in de prijs.',
   },
   {
+    title: '30 Min Gratis Wachten',
+    description: 'Bij ophalen op Schiphol wachten wij 30 minuten gratis.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    title: '100% Tesla',
-    description: 'Reis comfortabel en duurzaam in onze Tesla Model S of X.',
   },
   {
+    title: 'Tesla Comfort',
+    description: 'Reis in stijl met onze luxe Tesla vloot naar Schiphol.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
-    title: '24/7 Beschikbaar',
-    description: 'Ook voor vroege ochtendvluchten of late aankomsten.',
+  },
+]
+
+const schipholPrices = [
+  {
+    location: 'Leiden',
+    price: 35,
+    duration: '25 min',
+    popular: false,
+  },
+  {
+    location: 'Den Haag',
+    price: 55,
+    duration: '35 min',
+    popular: true,
+  },
+  {
+    location: 'Delft',
+    price: 45,
+    duration: '30 min',
+    popular: false,
+  },
+  {
+    location: 'Zoetermeer',
+    price: 50,
+    duration: '30 min',
+    popular: false,
+  },
+  {
+    location: 'Wassenaar',
+    price: 50,
+    duration: '30 min',
+    popular: false,
+  },
+  {
+    location: 'Voorburg',
+    price: 50,
+    duration: '30 min',
+    popular: false,
   },
 ]
 
 const processSteps = [
   {
     step: '1',
-    title: 'Bel of WhatsApp',
-    description: 'Neem contact op via telefoon of WhatsApp met uw vluchtgegevens.',
+    title: 'Boek Uw Schiphol Taxi',
+    description: 'Bel, WhatsApp of vul het formulier in. Vermeld uw vluchtgegevens.',
   },
   {
     step: '2',
-    title: 'Ontvang Vaste Prijs',
-    description: 'U ontvangt direct een vaste prijs voor uw Schiphol transfer.',
+    title: 'Ontvang Bevestiging',
+    description: 'U ontvangt direct een bevestiging met vaste prijs en chauffeurgegevens.',
   },
   {
     step: '3',
-    title: 'Bevestig Uw Rit',
-    description: 'Bevestig de boeking. Wij sturen een bevestiging met chauffeurgegevens.',
+    title: 'Wij Volgen Uw Vlucht',
+    description: 'Flight tracking zorgt dat wij altijd op tijd staan, ook bij vertraging.',
   },
   {
     step: '4',
-    title: 'Ontspannen naar Schiphol',
-    description: 'Uw chauffeur staat op tijd klaar. Relax en geniet van de Tesla rit naar Schiphol.',
-  },
-]
-
-const faqs = [
-  {
-    question: 'Wat kost een taxi naar Schiphol?',
-    answer: 'Een taxi naar Schiphol kost vanaf €79 vanuit Den Haag of Leiden. Dit is een vaste prijs - geen toeslagen bij files of omleidingen. Bagage en 30 minuten wachttijd zijn inbegrepen.',
-  },
-  {
-    question: 'Hoe laat moet ik de taxi naar Schiphol bestellen?',
-    answer: 'Wij adviseren om de taxi naar Schiphol minimaal 3 uur voor uw vertrektijd te boeken. Voor internationale vluchten raden wij 3,5 uur aan. Wij houden rekening met mogelijke drukte op de weg.',
-  },
-  {
-    question: 'Wat als mijn vlucht vertraging heeft?',
-    answer: 'Geen probleem! Wij volgen uw vlucht via flight tracking. Bij vertraging passen wij de ophaaltijd voor uw taxi naar Schiphol automatisch aan. De eerste 30 minuten wachttijd zijn gratis.',
-  },
-  {
-    question: 'Kan ik een taxi naar Schiphol vooraf betalen?',
-    answer: 'Ja, wij accepteren contant, PIN, creditcard en voor zakelijke klanten facturatie. Vooraf betalen via iDEAL is ook mogelijk voor uw Schiphol transfer.',
-  },
-  {
-    question: 'Hoeveel bagage mag ik meenemen naar Schiphol?',
-    answer: 'Standaard bagage (1 koffer + 1 handbagage per persoon) is inbegrepen bij de taxi naar Schiphol. Voor extra bagage of bijzondere items zoals ski\'s, neem vooraf contact met ons op.',
-  },
-  {
-    question: 'Kan ik een kinderzitje aanvragen voor de Schiphol taxi?',
-    answer: 'Ja, kinderzitjes zijn beschikbaar op aanvraag. Geef dit aan bij uw boeking voor de taxi naar Schiphol zodat wij dit kunnen regelen.',
-  },
-  {
-    question: 'Waar wordt ik opgehaald op Schiphol?',
-    answer: 'Onze chauffeur staat klaar bij de afgesproken ontmoetingsplek, meestal bij de aankomsthal. U ontvangt vooraf een bericht met de exacte locatie en het telefoonnummer van de chauffeur.',
-  },
-  {
-    question: "Is de taxi naar Schiphol ook 's nachts beschikbaar?",
-    answer: 'Ja, onze Schiphol taxi service is 24/7 beschikbaar. Ook voor vroege ochtendvluchten of late nachtvluchten kunt u bij ons terecht.',
+    title: 'Comfortabel Reizen',
+    description: 'Uw chauffeur staat klaar. Geniet van de Tesla rit naar of van Schiphol.',
   },
 ]
 
 export default function SchipholPage() {
   return (
     <>
-      {/* Schema */}
+      {/* Schema.org structured data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -176,7 +194,7 @@ export default function SchipholPage() {
             '@context': 'https://schema.org',
             '@type': 'Service',
             name: 'Taxi naar Schiphol - Enjoy Taxi',
-            description: 'Premium taxi service naar Schiphol Airport vanuit Den Haag en Leiden. Vaste prijzen, flight tracking en 24/7 beschikbaar.',
+            description: 'Premium taxi service naar Schiphol Airport vanuit Den Haag, Leiden en omgeving. Vaste prijzen, flight tracking en 24/7 beschikbaar.',
             provider: {
               '@type': 'LocalBusiness',
               name: 'Enjoy Taxi',
@@ -193,110 +211,466 @@ export default function SchipholPage() {
               { '@type': 'City', name: 'Leiden' },
               { '@type': 'City', name: 'Delft' },
               { '@type': 'City', name: 'Zoetermeer' },
-              { '@type': 'City', name: 'Wassenaar' },
+              { '@type': 'Airport', name: 'Schiphol Airport', iataCode: 'AMS' },
             ],
             hasOfferCatalog: {
               '@type': 'OfferCatalog',
-              name: 'Taxi naar Schiphol Tarieven',
-              itemListElement: pricing.map((item) => ({
-                '@type': 'Offer',
-                name: `Taxi ${item.location} naar Schiphol`,
-                price: item.price,
-                priceCurrency: 'EUR',
-              })),
+              name: 'Schiphol Taxi Tarieven',
+              itemListElement: [
+                {
+                  '@type': 'Offer',
+                  itemOffered: { '@type': 'Service', name: 'Taxi Leiden - Schiphol' },
+                  price: '35',
+                  priceCurrency: 'EUR',
+                },
+                {
+                  '@type': 'Offer',
+                  itemOffered: { '@type': 'Service', name: 'Taxi Den Haag - Schiphol' },
+                  price: '55',
+                  priceCurrency: 'EUR',
+                },
+              ],
             },
           }),
         }}
       />
 
-      {/* FAQ Schema */}
+      {/* TaxiService Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: faq.answer,
-              },
-            })),
+            '@type': 'TaxiService',
+            name: 'Schiphol Taxi Service - Enjoy Taxi',
+            description: 'Betrouwbare taxi service naar Schiphol Airport met vaste prijzen en flight tracking.',
+            provider: {
+              '@type': 'Organization',
+              name: 'Enjoy Taxi',
+              url: 'https://enjoytaxi.nl',
+            },
+            serviceType: 'Airport Transfer',
+            areaServed: {
+              '@type': 'Airport',
+              name: 'Amsterdam Airport Schiphol',
+              iataCode: 'AMS',
+            },
           }),
         }}
       />
 
-      {/* Hero Section - Like Home Page */}
-      <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-primary-900 via-primary-800 to-secondary-900 overflow-hidden">
-        {/* Background Effects */}
+      {/* Hero Section - Same style as homepage */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Background Image */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary-500/10 rounded-full blur-[100px]" />
-          <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-accent-500/10 rounded-full blur-[100px]" />
-        </div>
-        <div className="absolute inset-0 opacity-5">
-          <div className="h-full w-full" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
-            backgroundSize: '40px 40px'
-          }} />
+          <Image
+            src="/Taxi naar Schiphol .webp"
+            alt="Taxi naar Schiphol - Premium Luchthaven Transfer"
+            fill
+            className="object-cover"
+            priority
+            quality={90}
+          />
+          {/* Overlay with color glow */}
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary-900/95 via-secondary-900/85 to-primary-900/70" />
+          {/* Color glow effects */}
+          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-500/20 rounded-full blur-[150px] -translate-x-1/2 translate-y-1/2" />
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-400/20 rounded-full blur-[120px] translate-x-1/3 -translate-y-1/3" />
         </div>
 
-        <div className="container-custom relative z-10 py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
+        {/* Content */}
+        <div className="container-custom relative z-10 py-20 lg:py-0">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Column - Content */}
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-                <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                </svg>
-                <span className="text-sm font-semibold text-white uppercase tracking-wider">Schiphol Transfer</span>
+              {/* Badge */}
+              <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
+                <span className="w-2 h-2 bg-primary-400 rounded-full animate-pulse" />
+                <span className="text-sm font-medium text-white/90">
+                  Vaste Prijzen naar Schiphol
+                </span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Taxi naar <span className="text-primary-300">Schiphol</span>
+              {/* Main Headline */}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
+                Taxi naar{' '}
+                <span className="text-primary-300">Schiphol</span>
+                <br />
+                Vanaf €35
               </h1>
 
-              <p className="text-xl text-white/80 mb-8 leading-relaxed">
-                Comfortabel en stressvrij naar Schiphol Airport met onze premium Tesla taxi service.
-                Vaste prijzen vanaf €79, flight tracking en 30 minuten gratis wachttijd bij vertraging.
+              {/* Subheadline */}
+              <p className="text-lg md:text-xl text-white/80 mb-8 max-w-lg leading-relaxed">
+                Stressvrij naar Schiphol Airport met onze premium Tesla taxi service.
+                Vaste prijzen, flight tracking en 30 minuten gratis wachttijd.
               </p>
 
-              {/* USPs */}
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-                {[
-                  { text: 'Vaste Prijs', icon: '✓' },
-                  { text: 'Flight Tracking', icon: '✓' },
-                  { text: '24/7 Service', icon: '✓' },
-                  { text: '100% Tesla', icon: '✓' },
-                  { text: 'Bagage Inbegrepen', icon: '✓' },
-                  { text: '30 Min Wachttijd', icon: '✓' },
-                ].map((usp, index) => (
-                  <div key={index} className="flex items-center gap-2 text-white/90">
-                    <span className="w-5 h-5 rounded-full bg-green-500 flex items-center justify-center text-xs text-white">
-                      {usp.icon}
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                <a
+                  href="tel:+31620172767"
+                  className="inline-flex items-center justify-center px-7 py-3.5 font-semibold text-primary-600 text-sm bg-white rounded-lg transition-all duration-200 hover:bg-primary-50 hover:shadow-lg"
+                >
+                  <svg
+                    className="w-5 h-5 mr-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
+                  </svg>
+                  Boek Nu
+                </a>
+                <a
+                  href="https://wa.me/31620172767?text=Hallo, ik wil graag een taxi naar Schiphol boeken."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-7 py-3.5 font-semibold text-white text-sm bg-transparent border border-white/30 rounded-lg transition-all duration-200 hover:bg-white/10"
+                >
+                  <svg
+                    className="w-5 h-5 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                  </svg>
+                  WhatsApp
+                </a>
+              </div>
+
+              {/* USP Pills */}
+              <div className="flex flex-wrap gap-3">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+                  <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span className="text-sm font-medium text-white">Vaste Prijzen</span>
+                </div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+                  <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                  </svg>
+                  <span className="text-sm font-medium text-white">Flight Tracking</span>
+                </div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+                  <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span className="text-sm font-medium text-white">24/7 Service</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Stats Card */}
+            <div className="hidden lg:block">
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+                {/* Plane Icon */}
+                <div className="flex justify-center mb-6">
+                  <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center">
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={1.5}
+                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-bold text-white text-center mb-6">Schiphol Taxi Voordelen</h3>
+
+                {/* Stats Grid */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="bg-white/10 rounded-xl p-4 text-center">
+                    <div className="text-2xl font-bold text-white mb-1">€35</div>
+                    <div className="text-xs text-white/70">Vanaf Leiden</div>
+                  </div>
+                  <div className="bg-white/10 rounded-xl p-4 text-center">
+                    <div className="text-2xl font-bold text-white mb-1">24/7</div>
+                    <div className="text-xs text-white/70">Beschikbaar</div>
+                  </div>
+                  <div className="bg-white/10 rounded-xl p-4 text-center">
+                    <div className="text-2xl font-bold text-primary-300 mb-1">30 min</div>
+                    <div className="text-xs text-white/70">Gratis Wachten</div>
+                  </div>
+                  <div className="bg-white/10 rounded-xl p-4 text-center">
+                    <div className="text-2xl font-bold text-white mb-1">100%</div>
+                    <div className="text-xs text-white/70">Tesla</div>
+                  </div>
+                </div>
+
+                {/* Quick Book CTA */}
+                <Link
+                  href="/contact"
+                  className="block w-full bg-white text-primary-600 font-semibold py-3.5 px-6 rounded-lg text-center hover:bg-primary-50 transition-colors text-sm"
+                >
+                  Boek Schiphol Taxi
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Wave Divider */}
+        <div className="absolute bottom-0 left-0 right-0 z-20">
+          <svg
+            viewBox="0 0 1440 120"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-[60px] md:h-[80px]"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0 120L0 60C240 80 480 40 720 40C960 40 1200 80 1440 60L1440 120H0Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+      </section>
+
+      {/* Schiphol Pricing Section */}
+      <section id="prijzen" className="py-24 bg-secondary-50">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+            {/* Content */}
+            <div>
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                </svg>
+                Schiphol Tarieven
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-6">
+                Vaste Prijzen naar Schiphol
+              </h2>
+              <p className="text-lg text-secondary-600 mb-8">
+                Geen verrassingen, ook niet bij files of vertragingen. Onze Schiphol taxi tarieven zijn all-inclusive: bagage, flight tracking en 30 minuten gratis wachttijd.
+              </p>
+
+              {/* Quick stats */}
+              <div className="grid grid-cols-3 gap-6">
+                <div className="text-center p-4 bg-white rounded-xl border border-secondary-200">
+                  <div className="text-2xl font-bold text-primary-600">€35</div>
+                  <div className="text-sm text-secondary-500">Vanaf</div>
+                </div>
+                <div className="text-center p-4 bg-white rounded-xl border border-secondary-200">
+                  <div className="text-2xl font-bold text-primary-600">24/7</div>
+                  <div className="text-sm text-secondary-500">Service</div>
+                </div>
+                <div className="text-center p-4 bg-white rounded-xl border border-secondary-200">
+                  <div className="text-2xl font-bold text-primary-600">30 min</div>
+                  <div className="text-sm text-secondary-500">Gratis Wachten</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Image */}
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/Taxi naar Schiphol .webp"
+                  alt="Taxi naar Schiphol"
+                  width={600}
+                  height={450}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -left-6 w-full h-full rounded-2xl bg-primary-200 -z-10" />
+            </div>
+          </div>
+
+          {/* Pricing Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {schipholPrices.map((item) => (
+              <div
+                key={item.location}
+                className={`group p-5 bg-white rounded-xl border transition-all text-center ${
+                  item.popular
+                    ? 'border-primary-500 shadow-lg shadow-primary-500/20'
+                    : 'border-secondary-200 hover:border-primary-300 hover:shadow-lg'
+                }`}
+              >
+                {item.popular && (
+                  <span className="inline-block px-2 py-1 bg-primary-100 text-primary-700 text-xs font-semibold rounded-full mb-2">
+                    Populair
+                  </span>
+                )}
+                <div className="w-10 h-10 rounded-lg bg-primary-100 text-primary-600 flex items-center justify-center mx-auto mb-3 group-hover:bg-primary-600 group-hover:text-white transition-colors">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 className="font-semibold text-secondary-900 group-hover:text-primary-600 transition-colors">
+                  {item.location}
+                </h3>
+                <div className="text-2xl font-bold text-primary-600 mt-2">€{item.price}</div>
+                <p className="text-xs text-secondary-500 mt-1">{item.duration}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center mt-10">
+            <a
+              href="tel:+31620172767"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-primary-600 text-white font-semibold rounded-xl hover:bg-primary-700 transition-colors shadow-lg"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Boek Nu - Bel Direct
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section - Same style as homepage */}
+      <section className="relative py-24 bg-gradient-to-b from-secondary-50 via-white to-secondary-50 overflow-hidden">
+        {/* Background decorations */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-primary-100/50 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent-100/50 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+
+        <div className="container-custom relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary-100 to-primary-50 border border-primary-200 mb-6">
+              <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse" />
+              <span className="text-sm font-semibold text-primary-700 uppercase tracking-wider">Schiphol Diensten</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6">
+              Taxi Service naar <span className="text-primary-600">Schiphol</span>
+            </h2>
+            <p className="text-xl text-secondary-600 max-w-2xl mx-auto">
+              Alles voor een zorgeloze reis naar Schiphol Airport. Van flight tracking tot groepsvervoer.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index) => {
+              const gradients = [
+                'from-blue-500 to-cyan-500',
+                'from-purple-500 to-pink-500',
+                'from-orange-500 to-amber-500',
+                'from-emerald-500 to-teal-500',
+              ]
+              return (
+                <Link
+                  key={service.title}
+                  href={service.href}
+                  className="group relative p-8 bg-white border border-secondary-200 rounded-2xl transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/10 hover:-translate-y-2 overflow-hidden"
+                >
+                  {/* Hover gradient overlay */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index]} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+
+                  <div className="relative z-10">
+                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${gradients[index]} text-white flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      {service.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-secondary-900 mb-3 group-hover:text-primary-600 transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-secondary-600 mb-6">{service.description}</p>
+                    <span className="inline-flex items-center text-sm font-semibold text-primary-600 group-hover:text-primary-700">
+                      Meer info
+                      <svg className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
                     </span>
-                    <span className="text-sm font-medium">{usp.text}</span>
+                  </div>
+                </Link>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section - Same style as homepage */}
+      <section id="hoe-werkt-het" className="py-24 bg-white">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Image */}
+            <div className="relative order-2 lg:order-1">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/Taxi.jpg"
+                  alt="Schiphol Taxi Service - Enjoy Taxi"
+                  width={600}
+                  height={450}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 w-full h-full rounded-2xl bg-primary-100 -z-10" />
+              {/* Floating badge */}
+              <div className="absolute -top-4 -left-4 bg-white rounded-xl shadow-lg p-4 border border-secondary-100">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+                    <svg className="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="font-bold text-secondary-900">Flight Tracking</div>
+                    <div className="text-sm text-secondary-500">Automatisch</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="order-1 lg:order-2">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
+                Hoe Werkt Het
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-6">
+                Schiphol Taxi Boeken in 4 Stappen
+              </h2>
+              <p className="text-lg text-secondary-600 mb-10">
+                Uw Schiphol taxi boeken is eenvoudig. Wij zorgen voor de rest.
+              </p>
+
+              <div className="space-y-6">
+                {processSteps.map((item, index) => (
+                  <div key={index} className="flex gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-600 text-white flex items-center justify-center font-bold text-lg">
+                      {item.step}
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-secondary-900 mb-1">{item.title}</h3>
+                      <p className="text-secondary-600 text-sm">{item.description}</p>
+                    </div>
                   </div>
                 ))}
               </div>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 mt-10">
                 <a
                   href="tel:+31620172767"
-                  className="inline-flex items-center px-8 py-4 bg-white text-primary-900 font-semibold rounded-xl hover:bg-primary-50 transition-all shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center px-6 py-3 bg-primary-600 text-white font-semibold rounded-xl hover:bg-primary-700 transition-colors"
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  Boek Nu: 06 2017 2767
+                  Bel Nu
                 </a>
                 <a
-                  href="https://wa.me/31620172767?text=Hallo,%20ik%20wil%20graag%20een%20taxi%20naar%20Schiphol%20boeken"
+                  href="https://wa.me/31620172767?text=Hallo, ik wil graag een taxi naar Schiphol boeken."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-8 py-4 bg-green-500 text-white font-semibold rounded-xl hover:bg-green-600 transition-all shadow-lg"
+                  className="inline-flex items-center px-6 py-3 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition-colors"
                 >
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
@@ -305,228 +679,74 @@ export default function SchipholPage() {
                 </a>
               </div>
             </div>
-
-            {/* Right - Price Card */}
-            <div className="relative">
-              <div className="bg-white rounded-3xl shadow-2xl p-8">
-                <div className="text-center mb-6">
-                  <span className="text-sm font-semibold text-primary-600 uppercase tracking-wider">Taxi naar Schiphol</span>
-                  <div className="flex items-baseline justify-center mt-2">
-                    <span className="text-lg text-secondary-500">vanaf</span>
-                    <span className="text-6xl font-bold text-secondary-900 mx-2">€79</span>
-                  </div>
-                  <p className="text-secondary-500 mt-2">vaste prijs, geen verrassingen</p>
-                </div>
-
-                <div className="space-y-3 mb-6">
-                  {[
-                    'Vaste prijs, ook bij files',
-                    '30 min gratis wachttijd',
-                    'Flight tracking inbegrepen',
-                    'Bagage inbegrepen',
-                    'Luxe Tesla voertuig',
-                    '24/7 beschikbaar',
-                  ].map((feature, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <svg className="w-5 h-5 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span className="text-secondary-700">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <a
-                  href="tel:+31620172767"
-                  className="block w-full py-4 bg-primary-600 text-white text-center font-semibold rounded-xl hover:bg-primary-700 transition-colors"
-                >
-                  Boek Uw Schiphol Taxi
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Pricing Table Section */}
-      <section className="py-24 bg-secondary-50">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-4">
-              Tarieven Taxi naar Schiphol
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
-              Vaste Prijzen naar Schiphol
-            </h2>
-            <p className="text-secondary-600 max-w-2xl mx-auto">
-              Transparante tarieven voor uw taxi naar Schiphol. De prijs die u ziet is de prijs die u betaalt - geen verrassingen.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <div className="grid grid-cols-3 gap-4 p-4 bg-primary-600 text-white font-semibold">
-                <div>Vertrekpunt</div>
-                <div className="text-center">Reistijd</div>
-                <div className="text-right">Prijs</div>
-              </div>
-              {pricing.map((item, index) => (
-                <div
-                  key={index}
-                  className={`grid grid-cols-3 gap-4 p-4 items-center ${
-                    index % 2 === 0 ? 'bg-white' : 'bg-secondary-50'
-                  }`}
-                >
-                  <div className="font-medium text-secondary-900">{item.location}</div>
-                  <div className="text-center text-secondary-600">~{item.duration}</div>
-                  <div className="text-right">
-                    <span className="text-2xl font-bold text-primary-600">€{item.price}</span>
-                    <span className="text-secondary-500 text-sm">,-</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <p className="text-center text-secondary-500 mt-6 text-sm">
-              * Alle prijzen voor taxi naar Schiphol zijn inclusief bagage en 30 minuten wachttijd. Uw locatie niet in de lijst? Neem contact op voor een offerte.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-24 bg-white">
+      {/* Why Choose Us Section - Same style as homepage */}
+      <section className="section-gray">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Image */}
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/Taxi naar Schiphol .webp"
-                  alt="Taxi naar Schiphol - Premium Tesla Service"
-                  width={600}
-                  height={450}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-6 -left-6 w-full h-full rounded-2xl bg-primary-200/50 -z-10" />
-              {/* Badge */}
-              <div className="absolute -top-4 -right-4 bg-white rounded-xl shadow-lg p-4 border border-secondary-100">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
-                    <svg className="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="font-bold text-secondary-900">Flight</div>
-                    <div className="text-sm text-secondary-500">Tracking</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Content */}
             <div>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-6">
-                Waarom Enjoy Taxi naar Schiphol
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-6">
-                De Beste Taxi naar Schiphol
+              <span className="section-eyebrow-accent">Waarom Enjoy Taxi</span>
+              <h2 className="heading-2 mb-6">
+                Uw Betrouwbare Schiphol Taxi
               </h2>
-              <p className="text-lg text-secondary-600 mb-8">
-                Enjoy Taxi is uw partner voor premium vervoer naar Schiphol. Tesla comfort, vaste prijzen,
-                en 24/7 beschikbaar vanuit Den Haag, Leiden en omgeving.
+              <p className="text-lead mb-10">
+                Al jaren de betrouwbare keuze voor luchthaven transfers. Tesla comfort, vaste prijzen en altijd op tijd.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {features.slice(0, 4).map((feature, index) => (
-                  <div key={index} className="flex gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center flex-shrink-0">
+                {features.map((feature) => (
+                  <div key={feature.title} className="flex gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-white border border-secondary-200 flex items-center justify-center flex-shrink-0 text-primary-600">
                       {feature.icon}
                     </div>
                     <div>
-                      <h3 className="font-semibold text-secondary-900 mb-1">{feature.title}</h3>
-                      <p className="text-sm text-secondary-600">{feature.description}</p>
+                      <h3 className="font-semibold text-secondary-900 mb-1">
+                        {feature.title}
+                      </h3>
+                      <p className="text-sm text-secondary-600">
+                        {feature.description}
+                      </p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* How It Works Section */}
-      <section className="py-24 bg-gradient-to-br from-secondary-900 via-secondary-800 to-primary-900">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white text-sm font-medium mb-6">
-              Hoe Werkt Het
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Taxi naar Schiphol Boeken
-            </h2>
-            <p className="text-white/70 max-w-2xl mx-auto">
-              In 4 eenvoudige stappen uw taxi naar Schiphol geboekt
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-400 to-primary-600 text-white text-2xl font-bold flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  {item.step}
+            {/* Stats Card */}
+            <div className="relative">
+              <div className="bg-white rounded-2xl border border-secondary-200 shadow-lg overflow-hidden">
+                <div className="bg-primary-600 p-8 text-center">
+                  <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">Schiphol Taxi in Cijfers</h3>
+                  <p className="text-white/80 text-sm">Onze prestaties spreken voor zich</p>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
-                <p className="text-white/70">{item.description}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA */}
-          <div className="text-center mt-12">
-            <a
-              href="tel:+31620172767"
-              className="inline-flex items-center px-8 py-4 bg-white text-primary-900 font-semibold rounded-xl hover:bg-primary-50 transition-all shadow-lg"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              Boek Nu Uw Schiphol Taxi
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* All Features Section */}
-      <section className="py-24 bg-secondary-50">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-6">
-              Onze Service
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
-              Taxi naar Schiphol Service
-            </h2>
-            <p className="text-secondary-600 max-w-2xl mx-auto">
-              Alles voor een zorgeloze reis naar Schiphol Airport
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl p-6 border border-secondary-200 hover:shadow-lg hover:border-primary-200 transition-all"
-              >
-                <div className="w-12 h-12 rounded-xl bg-primary-100 text-primary-600 flex items-center justify-center mb-4">
-                  {feature.icon}
+                <div className="grid grid-cols-2 divide-x divide-y divide-secondary-200">
+                  <div className="p-6 text-center">
+                    <div className="text-3xl font-bold text-primary-600 mb-1">1000+</div>
+                    <div className="text-sm text-secondary-500">Schiphol Ritten</div>
+                  </div>
+                  <div className="p-6 text-center">
+                    <div className="text-3xl font-bold text-primary-600 mb-1">100%</div>
+                    <div className="text-sm text-secondary-500">Op Tijd</div>
+                  </div>
+                  <div className="p-6 text-center">
+                    <div className="text-3xl font-bold text-accent-600 mb-1">5.0</div>
+                    <div className="text-sm text-secondary-500">Rating</div>
+                  </div>
+                  <div className="p-6 text-center">
+                    <div className="text-3xl font-bold text-primary-600 mb-1">24/7</div>
+                    <div className="text-sm text-secondary-500">Beschikbaar</div>
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-secondary-900 mb-2">{feature.title}</h3>
-                <p className="text-secondary-600">{feature.description}</p>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -534,14 +754,20 @@ export default function SchipholPage() {
       {/* Reviews Section */}
       <ReviewList />
 
-      {/* Trust Section */}
-      <section className="py-16 bg-gradient-to-r from-secondary-50 via-white to-secondary-50">
-        <div className="container-custom">
+      {/* Trust & Payment Section - Same style as homepage */}
+      <section className="relative py-16 bg-gradient-to-r from-secondary-50 via-white to-secondary-50 overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 opacity-50">
+          <div className="absolute top-0 left-0 w-64 h-64 bg-primary-100/50 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute bottom-0 right-0 w-64 h-64 bg-accent-100/50 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+        </div>
+
+        <div className="container-custom relative z-10">
           <div className="bg-white rounded-3xl shadow-xl shadow-secondary-900/5 border border-secondary-100 p-8 md:p-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               {/* Trust badges */}
               <div>
-                <h3 className="text-lg font-bold text-secondary-900 mb-6">Waarom klanten onze Schiphol taxi vertrouwen</h3>
+                <h3 className="text-lg font-bold text-secondary-900 mb-6">Waarom klanten ons vertrouwen</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div className="flex items-center gap-3 p-4 bg-green-50 rounded-xl border border-green-100">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center shadow-lg shadow-green-500/20">
@@ -605,86 +831,128 @@ export default function SchipholPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-24 bg-white">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-4">
-                FAQ
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
-                Veelgestelde Vragen over Taxi naar Schiphol
-              </h2>
-            </div>
+      {/* FAQ Section - Same style as homepage */}
+      <section className="section-gray">
+        <div className="container-narrow">
+          <div className="section-header">
+            <span className="section-eyebrow-accent">FAQ</span>
+            <h2 className="heading-2 mb-4">Veelgestelde Vragen over Schiphol Taxi</h2>
+          </div>
 
-            <div className="space-y-4">
-              {faqs.map((faq, index) => (
-                <details
-                  key={index}
-                  className="group bg-secondary-50 rounded-xl border border-secondary-200 overflow-hidden"
-                >
-                  <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
-                    <span className="font-semibold text-secondary-900 pr-4">{faq.question}</span>
-                    <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-white flex items-center justify-center group-open:bg-primary-100 transition-colors">
-                      <svg
-                        className="w-4 h-4 text-secondary-500 group-open:text-primary-600 transition-transform group-open:rotate-180"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </span>
-                  </summary>
-                  <div className="px-5 pb-5">
-                    <p className="text-secondary-600">{faq.answer}</p>
-                  </div>
-                </details>
-              ))}
-            </div>
+          <div className="space-y-3">
+            {[
+              {
+                question: 'Wat kost een taxi naar Schiphol?',
+                answer: 'Onze Schiphol taxi tarieven zijn vast en all-inclusive. Vanaf Leiden €35, vanaf Den Haag €55, vanaf Delft €45. Geen verrassingen, ook niet bij files.',
+              },
+              {
+                question: 'Hoe boek ik een taxi naar Schiphol?',
+                answer: 'U kunt bellen naar 06 2017 2767, WhatsAppen of het contactformulier invullen. Vermeld uw vluchtgegevens zodat wij uw vlucht kunnen volgen.',
+              },
+              {
+                question: "Is de Schiphol taxi ook 's nachts beschikbaar?",
+                answer: 'Ja, onze Schiphol taxi service is 24/7 beschikbaar. Ook voor vroege ochtendvluchten of late nachtvluchten kunt u bij ons terecht.',
+              },
+              {
+                question: 'Wat als mijn vlucht vertraging heeft?',
+                answer: 'Wij volgen uw vlucht automatisch via flight tracking. Bij vertraging passen wij de ophaaltijd aan. Bovendien wachten wij 30 minuten gratis op Schiphol.',
+              },
+              {
+                question: 'Is bagage inbegrepen in de prijs?',
+                answer: 'Ja, standaard bagage (koffers en handbagage) is inbegrepen. Voor bijzondere items zoals ski\'s of fietsen, neem contact met ons op.',
+              },
+              {
+                question: 'Waar word ik opgehaald op Schiphol?',
+                answer: 'Onze chauffeur staat klaar bij de afgesproken ontmoetingsplek, meestal bij de aankomsthal. U ontvangt vooraf een bericht met de exacte locatie en het telefoonnummer van de chauffeur.',
+              },
+            ].map((faq, index) => (
+              <details
+                key={index}
+                className="group bg-white border border-secondary-200 rounded-xl overflow-hidden"
+              >
+                <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
+                  <span className="font-semibold text-secondary-900 pr-4">
+                    {faq.question}
+                  </span>
+                  <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-secondary-100 flex items-center justify-center group-open:bg-primary-100 transition-colors">
+                    <svg
+                      className="w-4 h-4 text-secondary-500 group-open:text-primary-600 transition-transform group-open:rotate-180"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </span>
+                </summary>
+                <div className="px-5 pb-5">
+                  <p className="text-secondary-600">{faq.answer}</p>
+                </div>
+              </details>
+            ))}
           </div>
         </div>
-      </section>
 
-      {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-primary-600 to-primary-700">
-        <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Klaar om Uw Taxi naar Schiphol te Boeken?
-          </h2>
-          <p className="text-white/80 mb-8 max-w-2xl mx-auto">
-            Boek nu uw taxi naar Schiphol en reis comfortabel in een Tesla. Vaste prijzen, geen verrassingen.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="tel:+31620172767"
-              className="inline-flex items-center px-8 py-4 bg-white text-primary-700 font-semibold rounded-xl hover:bg-primary-50 transition-all shadow-lg"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              Bel: 06 2017 2767
-            </a>
-            <a
-              href="https://wa.me/31620172767?text=Hallo,%20ik%20wil%20graag%20een%20taxi%20naar%20Schiphol%20boeken"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 bg-green-500 text-white font-semibold rounded-xl hover:bg-green-600 transition-all shadow-lg"
-            >
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-              </svg>
-              WhatsApp
-            </a>
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all border border-white/20"
-            >
-              Contact Formulier
-            </Link>
-          </div>
-        </div>
+        {/* FAQ Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: 'Wat kost een taxi naar Schiphol?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Onze Schiphol taxi tarieven zijn vast en all-inclusive. Vanaf Leiden €35, vanaf Den Haag €55, vanaf Delft €45. Geen verrassingen, ook niet bij files.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Hoe boek ik een taxi naar Schiphol?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'U kunt bellen naar 06 2017 2767, WhatsAppen of het contactformulier invullen. Vermeld uw vluchtgegevens zodat wij uw vlucht kunnen volgen.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: "Is de Schiphol taxi ook 's nachts beschikbaar?",
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Ja, onze Schiphol taxi service is 24/7 beschikbaar. Ook voor vroege ochtendvluchten of late nachtvluchten kunt u bij ons terecht.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Wat als mijn vlucht vertraging heeft?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Wij volgen uw vlucht automatisch via flight tracking. Bij vertraging passen wij de ophaaltijd aan. Bovendien wachten wij 30 minuten gratis op Schiphol.',
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Is bagage inbegrepen in de prijs?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: "Ja, standaard bagage (koffers en handbagage) is inbegrepen. Voor bijzondere items zoals ski's of fietsen, neem contact met ons op.",
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Waar word ik opgehaald op Schiphol?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Onze chauffeur staat klaar bij de afgesproken ontmoetingsplek, meestal bij de aankomsthal. U ontvangt vooraf een bericht met de exacte locatie en het telefoonnummer van de chauffeur.',
+                  },
+                },
+              ],
+            }),
+          }}
+        />
       </section>
 
       {/* Floating CTA */}
