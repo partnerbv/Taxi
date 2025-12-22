@@ -41,7 +41,7 @@ export default function Header() {
             className="flex items-center group"
             aria-label="Enjoy Taxi Home"
           >
-            <div className="w-28 md:w-36 h-11 md:h-12 overflow-hidden">
+            <div className="w-32 md:w-36 h-12 overflow-hidden">
               <Image
                 src="/logo.png"
                 alt="Enjoy Taxi Logo"
