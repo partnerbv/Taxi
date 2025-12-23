@@ -25,7 +25,7 @@ export const locations: Location[] = [
     name: 'Den Haag en Omgeving',
     region: 'Den Haag en Omgeving',
     description:
-      'Taxi Den Haag nodig? Enjoy Taxi biedt premium vervoer met Tesla in Den Haag en omgeving. Zakelijk vervoer, privé ritten of een taxi naar Scheveningen - wij rijden 24/7 met vaste prijzen.',
+      'Taxi Den Haag nodig? Enjoy Taxi biedt premium vervoer met Tesla in Den Haag en omgeving. Wij rijden 24/7 met vaste prijzen en professionele chauffeurs.',
     longDescription:
       'Bent u op zoek naar een betrouwbare taxi in Den Haag? Enjoy Taxi is uw premium taxiservice in de hofstad. Of u nu vanaf Den Haag Centraal Station, Den Haag HS, het Binnenhof of Scheveningen vertrekt - wij staan 24 uur per dag, 7 dagen per week voor u klaar. Onze Tesla vloot biedt maximaal comfort voor zowel zakelijke reizigers als toeristen. Met vaste prijzen vooraf weet u precies wat u betaalt, zonder verrassingen door files of omrijden. Taxi Den Haag bestellen was nog nooit zo makkelijk.',
     highlights: ['Binnenhof & Tweede Kamer', 'Den Haag Centraal & HS', 'Scheveningen', 'World Forum', 'Madurodam', 'Vredespaleis'],
