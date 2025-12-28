@@ -22,7 +22,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="container-custom relative z-10 pt-28 pb-20 lg:pt-24 lg:pb-0">
+      <div className="container-custom relative z-10 py-20 lg:py-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Content */}
           <div>
