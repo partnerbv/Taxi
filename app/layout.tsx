@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     siteName: 'Enjoy Taxi',
     title: 'Taxi Den Haag & Leiden | 24/7 Premium Tesla Service',
     description:
-      'Premium taxi service in Den Haag en Leiden. Tesla vloot, vaste prijzen, 24/7 beschikbaar. Schiphol transfers vanaf €35.',
+      'Premium taxi service in Den Haag en omgeving. 100% Tesla vloot, vaste prijzen, 24/7 beschikbaar. Professionele chauffeurs.',
     images: [
       {
         url: '/Taxi Den haag.jpg',

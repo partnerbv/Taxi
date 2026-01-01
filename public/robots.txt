@@ -1,0 +1,24 @@
+# Robots.txt for Enjoy Taxi
+# https://enjoytaxi.nl
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://enjoytaxi.nl/sitemap.xml
+
+# Disallow admin/private areas
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Allow all crawlers to index
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl-delay for politeness
+User-agent: *
+Crawl-delay: 1

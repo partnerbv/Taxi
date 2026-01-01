@@ -4,13 +4,24 @@ import Link from 'next/link'
 import CTASection from '@/components/CTASection'
 
 export const metadata: Metadata = {
-  title: 'Over Ons | Enjoy Taxi - Premium Elektrische Taxi',
+  title: 'Over Enjoy Taxi Den Haag | 100% Tesla Taxi Service',
   description:
-    'Leer meer over Enjoy Taxi: onze missie, visie en toewijding aan duurzaam, luxe vervoer met 100% elektrische Tesla voertuigen.',
+    'Over Enjoy Taxi: premium taxi service in Den Haag met 100% elektrische Tesla vloot. ✓ Professionele chauffeurs ✓ Duurzaam ✓ Luxe comfort ✓ 24/7 service.',
+  keywords: [
+    'enjoy taxi den haag',
+    'tesla taxi service',
+    'elektrische taxi den haag',
+    'premium taxi den haag',
+    'duurzame taxi',
+  ],
   openGraph: {
-    title: 'Over Ons | Enjoy Taxi',
+    title: 'Over Enjoy Taxi | Premium Tesla Taxi Den Haag',
     description:
-      'Ontdek het verhaal achter Enjoy Taxi en onze passie voor duurzaam premium vervoer.',
+      'Ontdek het verhaal achter Enjoy Taxi en onze passie voor duurzaam premium vervoer met 100% Tesla vloot.',
+    url: 'https://enjoytaxi.nl/about',
+  },
+  alternates: {
+    canonical: 'https://enjoytaxi.nl/about',
   },
 }
 

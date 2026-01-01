@@ -5,9 +5,9 @@ import ReviewList from '@/components/ReviewList'
 import FloatingCTA from '@/components/FloatingCTA'
 
 export const metadata: Metadata = {
-  title: 'Taxi naar Schiphol | Vaste Prijzen vanaf €35 | Enjoy Taxi',
+  title: 'Taxi naar Schiphol Den Haag | Vaste Prijs €79 | Enjoy Taxi',
   description:
-    'Taxi naar Schiphol vanaf Den Haag €55, Leiden €35. ✓ Vaste prijzen ✓ Flight tracking ✓ 24/7 beschikbaar ✓ Tesla comfort. Boek nu uw Schiphol taxi!',
+    'Taxi naar Schiphol vanaf Den Haag voor €79. ✓ Vaste prijs ✓ Flight tracking ✓ 24/7 beschikbaar ✓ 100% Tesla comfort. Boek nu uw Schiphol taxi!',
   keywords: [
     'taxi schiphol',
     'schiphol taxi',
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     'taxi schiphol vaste prijs',
   ],
   openGraph: {
-    title: 'Taxi naar Schiphol | Vaste Prijzen vanaf €35 | Enjoy Taxi',
+    title: 'Taxi naar Schiphol Den Haag | Vaste Prijs €79 | Enjoy Taxi',
     description:
-      'Premium taxi naar Schiphol Airport. Vaste prijzen, flight tracking, 24/7 beschikbaar. Tesla comfort voor uw luchthaven transfer.',
+      'Premium taxi naar Schiphol Airport vanaf Den Haag voor €79. Flight tracking, 24/7 beschikbaar. 100% Tesla comfort voor uw luchthaven transfer.',
     url: 'https://enjoytaxi.nl/schiphol',
     images: [
       {
@@ -202,14 +202,20 @@ export default function SchipholPage() {
               itemListElement: [
                 {
                   '@type': 'Offer',
-                  itemOffered: { '@type': 'Service', name: 'Taxi Leiden - Schiphol' },
-                  price: '35',
+                  itemOffered: { '@type': 'Service', name: 'Taxi Den Haag - Schiphol' },
+                  price: '79',
                   priceCurrency: 'EUR',
                 },
                 {
                   '@type': 'Offer',
-                  itemOffered: { '@type': 'Service', name: 'Taxi Den Haag - Schiphol' },
+                  itemOffered: { '@type': 'Service', name: 'Taxi Den Haag - Rotterdam Airport' },
                   price: '55',
+                  priceCurrency: 'EUR',
+                },
+                {
+                  '@type': 'Offer',
+                  itemOffered: { '@type': 'Service', name: 'Taxi Den Haag - Eindhoven Airport' },
+                  price: '149',
                   priceCurrency: 'EUR',
                 },
               ],
@@ -906,7 +912,7 @@ export default function SchipholPage() {
                   name: 'Wat kost een taxi naar Schiphol?',
                   acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'Onze Schiphol taxi tarieven zijn vast en all-inclusive. Vanaf Leiden €35, vanaf Den Haag €55, vanaf Delft €45. Geen verrassingen, ook niet bij files.',
+                    text: 'Onze Schiphol taxi vanaf Den Haag kost €79, vast tarief en all-inclusive. Naar Rotterdam Airport €55 en Eindhoven Airport €149. Geen verrassingen, ook niet bij files.',
                   },
                 },
                 {

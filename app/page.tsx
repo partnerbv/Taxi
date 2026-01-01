@@ -218,10 +218,10 @@ export default function HomePage() {
                   },
                   priceSpecification: {
                     '@type': 'PriceSpecification',
-                    price: '35',
+                    price: '79',
                     priceCurrency: 'EUR',
-                    minPrice: '35',
-                    description: 'Vanaf Leiden naar Schiphol',
+                    minPrice: '79',
+                    description: 'Vanaf Den Haag naar Schiphol',
                   },
                 },
                 {

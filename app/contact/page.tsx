@@ -4,13 +4,24 @@ import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
 
 export const metadata: Metadata = {
-  title: 'Contact | Enjoy Taxi - Boek Uw Elektrische Taxi',
+  title: 'Contact Taxi Den Haag | Bel 06 2017 2767 | Enjoy Taxi',
   description:
-    'Neem contact op met Enjoy Taxi. Bel direct, WhatsApp of vraag een offerte aan voor premium elektrische taxi service.',
+    'Contact Enjoy Taxi Den Haag. ✓ Bel 06 2017 2767 ✓ WhatsApp ✓ Direct boeken. Premium Tesla taxi service 24/7 beschikbaar in Den Haag en omgeving.',
+  keywords: [
+    'taxi den haag contact',
+    'taxi bellen den haag',
+    'taxi bestellen den haag',
+    'enjoy taxi contact',
+    'taxi boeken den haag',
+  ],
   openGraph: {
-    title: 'Contact | Enjoy Taxi',
+    title: 'Contact Taxi Den Haag | Bel Direct | Enjoy Taxi',
     description:
-      'Neem contact op voor een vrijblijvende offerte of boek direct uw premium elektrische taxi.',
+      'Neem contact op met Enjoy Taxi. Bel 06 2017 2767 of WhatsApp voor directe boeking van uw premium Tesla taxi.',
+    url: 'https://enjoytaxi.nl/contact',
+  },
+  alternates: {
+    canonical: 'https://enjoytaxi.nl/contact',
   },
 }
 
