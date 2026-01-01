@@ -219,7 +219,7 @@ export default function LocatiesPage() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {denHaagOmgeving.map((location, index) => (
+            {denHaagOmgeving.map((location) => (
               <Link
                 key={location.slug}
                 href={`/locations/${location.slug}`}
@@ -256,7 +256,7 @@ export default function LocatiesPage() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {leidenRegion.map((location, index) => (
+            {leidenRegion.map((location) => (
               <Link
                 key={location.slug}
                 href={`/locations/${location.slug}`}

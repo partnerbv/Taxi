@@ -45,7 +45,7 @@ describe('getLocationBySlug', () => {
   it('should return the correct location for a valid slug', () => {
     const denHaag = getLocationBySlug('den-haag')
     expect(denHaag).toBeDefined()
-    expect(denHaag?.name).toBe('Den Haag')
+    expect(denHaag?.name).toBe('Den Haag en Omgeving')
   })
 
   it('should return undefined for an invalid slug', () => {

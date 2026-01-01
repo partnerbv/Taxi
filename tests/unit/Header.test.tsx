@@ -14,17 +14,17 @@ describe('Header Component', () => {
   it('renders the logo', () => {
     render(<Header />)
 
-    expect(screen.getByText('Enjoy')).toBeInTheDocument()
-    expect(screen.getByText('Taxi')).toBeInTheDocument()
+    expect(screen.getByAltText('Enjoy Taxi Logo')).toBeInTheDocument()
   })
 
   it('renders navigation links', () => {
     render(<Header />)
 
-    expect(screen.getByRole('link', { name: /home/i })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /diensten/i })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /over ons/i })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /contact/i })).toBeInTheDocument()
+    // Use getAllByRole since there are desktop and mobile nav links
+    expect(screen.getAllByRole('link', { name: /^home$/i }).length).toBeGreaterThan(0)
+    expect(screen.getAllByRole('link', { name: /diensten/i }).length).toBeGreaterThan(0)
+    expect(screen.getAllByRole('link', { name: /over ons/i }).length).toBeGreaterThan(0)
+    expect(screen.getAllByRole('link', { name: /contact/i }).length).toBeGreaterThan(0)
   })
 
   it('renders the Boek Nu button', () => {

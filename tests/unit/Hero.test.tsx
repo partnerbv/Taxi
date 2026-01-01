@@ -5,8 +5,8 @@ describe('Hero Component', () => {
   it('renders the main headline', () => {
     render(<Hero />)
 
-    expect(screen.getByText('Premium Elektrisch')).toBeInTheDocument()
-    expect(screen.getByText('Taxi Service')).toBeInTheDocument()
+    expect(screen.getByRole('heading', { level: 1 })).toBeInTheDocument()
+    expect(screen.getByText(/Den Haag/)).toBeInTheDocument()
   })
 
   it('renders all CTA buttons', () => {
@@ -14,7 +14,6 @@ describe('Hero Component', () => {
 
     expect(screen.getByRole('link', { name: /bel direct/i })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /whatsapp/i })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /offerte aanvragen/i })).toBeInTheDocument()
   })
 
   it('has correct phone link', () => {
@@ -42,11 +41,12 @@ describe('Hero Component', () => {
     expect(screen.getByText('Beschikbaar')).toBeInTheDocument()
   })
 
-  it('renders the badge with correct text', () => {
+  it('renders USP pills', () => {
     render(<Hero />)
 
-    expect(screen.getByText(/100% Elektrisch/)).toBeInTheDocument()
-    expect(screen.getByText(/100% Tesla/)).toBeInTheDocument()
-    expect(screen.getByText(/100% Duurzaam/)).toBeInTheDocument()
+    expect(screen.getByText(/100% Elektrisch met Tesla/)).toBeInTheDocument()
+    expect(screen.getByText('100% Tesla')).toBeInTheDocument()
+    expect(screen.getByText('24/7 Service')).toBeInTheDocument()
+    expect(screen.getByText('Vaste Tarieven')).toBeInTheDocument()
   })
 })

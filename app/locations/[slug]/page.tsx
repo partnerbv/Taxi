@@ -237,7 +237,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
 
               {/* Main Title */}
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
-                Taxi <span className="bg-gradient-to-r from-primary-300 via-primary-400 to-emerald-400 bg-clip-text text-transparent">{location.name}</span>
+                Taxi {location.name} <span className="block text-3xl md:text-4xl lg:text-5xl mt-2 bg-gradient-to-r from-primary-300 via-primary-400 to-emerald-400 bg-clip-text text-transparent">Bestellen</span>
               </h1>
 
               <p className="text-xl md:text-2xl text-white/80 mb-8 leading-relaxed max-w-xl">
@@ -308,8 +308,8 @@ export default async function LocationPage({ params }: LocationPageProps) {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
                     </div>
-                    <h3 className="text-xl font-bold text-white">Uw Taxi in {location.name}</h3>
-                    <span className="text-primary-300 text-sm">Premium Tesla Service</span>
+                    <h3 className="text-xl font-bold text-white">Taxi {location.name} Bellen</h3>
+                    <span className="text-primary-300 text-sm">24/7 Tesla Taxi Service</span>
                   </div>
 
                   <div className="space-y-3 mb-6">
@@ -384,8 +384,8 @@ export default async function LocationPage({ params }: LocationPageProps) {
               </div>
 
               <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6 leading-tight">
-                Uw Betrouwbare<br />
-                <span className="text-primary-600">Taxi Partner</span>
+                Taxi {location.name}<br />
+                <span className="text-primary-600">24/7 Beschikbaar</span>
               </h2>
 
               <p className="text-xl text-secondary-600 leading-relaxed mb-8">
@@ -399,7 +399,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
               {/* Highlights */}
               <div className="mb-10">
                 <h3 className="text-lg font-bold text-secondary-900 mb-4">
-                  Bekende locaties in {location.name}
+                  Taxi ophalen in {location.name}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {location.highlights.map((highlight, index) => (
@@ -425,7 +425,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary-900/90 via-secondary-900/50 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <h3 className="text-xl font-bold text-white mb-3">
-                    Onze Diensten in {location.name}
+                    Taxi Service {location.name}
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {['Zakelijk Vervoer', 'Luchthaven Transfers', 'Privé Ritten', 'Evenementen'].map((dienst, i) => (
@@ -443,7 +443,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
               <div className="sticky top-32 space-y-6">
                 {/* Quick Contact Card */}
                 <div className="bg-gradient-to-br from-secondary-900 to-secondary-800 rounded-3xl p-8 text-white shadow-2xl">
-                  <h3 className="text-2xl font-bold mb-6">Direct Boeken</h3>
+                  <h3 className="text-2xl font-bold mb-6">Taxi {location.name} Boeken</h3>
 
                   <div className="space-y-4 mb-8">
                     {[
@@ -552,8 +552,8 @@ export default async function LocationPage({ params }: LocationPageProps) {
               </div>
 
               <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6 leading-tight">
-                Taxi naar de<br />
-                <span className="text-primary-600">Luchthaven</span>
+                Taxi {location.name}<br />
+                <span className="text-primary-600">naar Schiphol</span>
               </h2>
 
               <p className="text-xl text-secondary-600 mb-10">
@@ -622,15 +622,15 @@ export default async function LocationPage({ params }: LocationPageProps) {
               Waarom Enjoy Taxi
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-4">
-              Uw Taxi in {location.name}
+              Waarom Taxi {location.name} bij Enjoy?
             </h2>
             <p className="text-xl text-secondary-600 max-w-2xl mx-auto">
-              Ontdek waarom klanten in {location.name} kiezen voor Enjoy Taxi
+              Premium Tesla taxi service met vaste prijzen in {location.name}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit) => (
               <div
                 key={benefit.title}
                 className="group relative p-8 bg-white rounded-3xl border border-secondary-200 hover:border-transparent hover:shadow-2xl transition-all duration-500 overflow-hidden"
@@ -661,10 +661,10 @@ export default async function LocationPage({ params }: LocationPageProps) {
               Veelgestelde Vragen
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-4">
-              FAQ Taxi {location.name}
+              Taxi {location.name} Veelgestelde Vragen
             </h2>
             <p className="text-xl text-secondary-600">
-              Antwoorden op de meest gestelde vragen
+              Alles over taxi bestellen in {location.name}
             </p>
           </div>
 
@@ -714,10 +714,10 @@ export default async function LocationPage({ params }: LocationPageProps) {
                 <span className="text-sm font-semibold text-primary-700 uppercase tracking-wider">{location.region}</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
-                Taxi Service in <span className="text-primary-600">{location.region}</span>
+                Taxi Service <span className="text-primary-600">{location.region}</span>
               </h2>
               <p className="text-lg text-secondary-600 max-w-xl mx-auto">
-                Ook actief in deze plaatsen - dezelfde kwaliteit en service
+                Ook taxi bestellen in deze plaatsen met vaste prijzen
               </p>
             </div>
 
@@ -792,10 +792,10 @@ export default async function LocationPage({ params }: LocationPageProps) {
               <span className="text-sm font-semibold text-white uppercase tracking-wider">Taxi Regio</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Al Onze <span className="text-primary-300">Locaties</span>
+              Taxi Bestellen <span className="text-primary-300">{location.name}</span>
             </h2>
             <p className="text-xl text-white/70 max-w-xl mx-auto">
-              Premium taxi service in Den Haag, Leiden en heel Zuid-Holland
+              Ook taxi service in deze locaties met vaste prijzen
             </p>
           </div>
 
