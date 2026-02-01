@@ -291,33 +291,6 @@ export default async function LocationPage({ params }: LocationPageProps) {
         </div>
       </section>
 
-      {/* STATS BAR - Modern Design */}
-      <section className="py-12 bg-white relative z-10">
-        <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { value: '15', unit: 'min', label: 'Gemiddelde ophaaltijd', icon: '⚡' },
-              { value: '100', unit: '%', label: 'Betrouwbare service', icon: '🚗' },
-              { value: '24', unit: '/7', label: 'Altijd beschikbaar', icon: '🕐' },
-              { value: '5.0', unit: '★', label: 'Google Rating', icon: '⭐' },
-            ].map((stat, index) => (
-              <div
-                key={index}
-                className="group relative p-6 bg-gradient-to-br from-secondary-50 to-white rounded-2xl border border-secondary-100 hover:border-primary-200 hover:shadow-xl transition-all duration-300"
-              >
-                <div className="absolute top-4 right-4 text-2xl opacity-50 group-hover:opacity-100 group-hover:scale-110 transition-all">
-                  {stat.icon}
-                </div>
-                <div className="text-4xl font-bold text-secondary-900 mb-1">
-                  {stat.value}<span className="text-primary-600">{stat.unit}</span>
-                </div>
-                <div className="text-sm text-secondary-500">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ABOUT SECTION - Modern Layout */}
       <section className="py-20 bg-white">
         <div className="container-custom">
