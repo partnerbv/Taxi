@@ -50,8 +50,8 @@ const services = [
 
 const features = [
   {
-    title: '100% Elektrisch',
-    description: 'Onze volledige vloot bestaat uit Tesla voertuigen. Zero emissie.',
+    title: 'Luxe Voertuigen',
+    description: 'Onze volledige vloot bestaat uit luxe voertuigen. Altijd comfortabel.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -60,7 +60,7 @@ const features = [
   },
   {
     title: 'Premium Comfort',
-    description: 'Ruime Tesla Model S en Model X met lederen interieur.',
+    description: 'Ruime Ruime voertuigen met lederen interieur en airco.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
@@ -128,7 +128,7 @@ const processSteps = [
   {
     step: '4',
     title: 'Geniet van de Rit',
-    description: 'Uw chauffeur staat op tijd klaar. Relax en geniet van de Tesla ervaring.',
+    description: 'Uw chauffeur staat op tijd klaar. Relax en geniet van de premium rit.',
   },
 ]
 
@@ -147,7 +147,7 @@ export default function HomePage() {
             alternateName: 'Enjoy Taxi Den Haag',
             url: 'https://enjoytaxi.nl',
             logo: 'https://enjoytaxi.nl/logo.png',
-            description: 'Premium taxi service in Den Haag en Leiden met 100% Tesla vloot. 24/7 beschikbaar voor luchthaven transfers, zakelijk vervoer en VIP service.',
+            description: 'Premium taxi service in Den Haag en Leiden met 100% betrouwbare service. 24/7 beschikbaar voor luchthaven transfers, zakelijk vervoer en VIP service.',
             telephone: '+31620172767',
             email: 'info@enjoytaxi.nl',
             address: {
@@ -191,7 +191,7 @@ export default function HomePage() {
             '@type': 'TaxiService',
             '@id': 'https://enjoytaxi.nl/#taxiservice',
             name: 'Enjoy Taxi - Premium Taxi Den Haag & Leiden',
-            description: 'Premium taxi service met Tesla vloot voor Den Haag, Leiden en omgeving. Luchthaven transfers, zakelijk vervoer, evenementen en VIP service.',
+            description: 'Premium taxi service met betrouwbare service voor Den Haag, Leiden en omgeving. Luchthaven transfers, zakelijk vervoer, evenementen en VIP service.',
             provider: {
               '@id': 'https://enjoytaxi.nl/#organization',
             },
@@ -237,7 +237,7 @@ export default function HomePage() {
                   itemOffered: {
                     '@type': 'Service',
                     name: 'VIP Taxi Service',
-                    description: 'Exclusieve VIP service met Tesla Model S of Model X',
+                    description: 'Exclusieve VIP service met Premium voertuig',
                   },
                 },
               ],
@@ -323,7 +323,7 @@ export default function HomePage() {
                 </div>
                 <div className="text-center p-4 bg-white rounded-xl border border-secondary-200">
                   <div className="text-2xl font-bold text-primary-600">100%</div>
-                  <div className="text-sm text-secondary-500">Tesla</div>
+                  <div className="text-sm text-secondary-500">Betrouwbaar</div>
                 </div>
               </div>
             </div>
@@ -556,7 +556,7 @@ export default function HomePage() {
                 Uw Betrouwbare Taxi in Den Haag
               </h2>
               <p className="text-lead mb-10">
-                Enjoy Taxi is uw partner voor premium vervoer. Tesla comfort, vaste prijzen, en 24/7 beschikbaar in Den Haag, Leiden en omgeving.
+                Enjoy Taxi is uw partner voor premium vervoer. premium comfort, vaste prijzen, en 24/7 beschikbaar in Den Haag, Leiden en omgeving.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -593,7 +593,7 @@ export default function HomePage() {
                 <div className="grid grid-cols-2 divide-x divide-y divide-secondary-200">
                   <div className="p-6 text-center">
                     <div className="text-3xl font-bold text-primary-600 mb-1">100%</div>
-                    <div className="text-sm text-secondary-500">Elektrisch</div>
+                    <div className="text-sm text-secondary-500">Betrouwbaar</div>
                   </div>
                   <div className="p-6 text-center">
                     <div className="text-3xl font-bold text-primary-600 mb-1">1000+</div>
