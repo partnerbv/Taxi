@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import CTASection from '@/components/CTASection'
+import ReviewList from '@/components/ReviewList'
 
 export const metadata: Metadata = {
   title: 'Over Enjoy Taxi Den Haag | Betrouwbare Taxi Service | Vaste Prijzen',
@@ -73,7 +74,7 @@ const milestones = [
   { year: '2021', title: 'Groei', description: 'Uitbreiding naar 5 voertuigen' },
   { year: '2022', title: 'Uitbreiding', description: 'Service in Den Haag & Leiden' },
   { year: '2023', title: '1000 Klanten', description: 'Mijlpaal: 1000 tevreden klanten' },
-  { year: '2024', title: 'Uitbreiding', description: 'Launch VIP & Event service' },
+  { year: '2024', title: 'Nieuwe Services', description: 'Launch VIP & Event service' },
 ]
 
 const stats = [
@@ -123,19 +124,37 @@ export default function AboutPage() {
               <span className="text-white">Over Ons</span>
             </nav>
 
-            <span className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-              <span className="w-2 h-2 bg-primary-400 rounded-full animate-pulse" />
-              <span className="text-sm text-white/90">Sinds 2020</span>
-            </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
               De Toekomst van
               <span className="block text-primary-300">Betrouwbaar Vervoer</span>
             </h1>
-            <p className="text-xl text-white/80 max-w-2xl mx-auto">
+            <p className="text-xl text-white/80 max-w-2xl mx-auto mb-8">
               Enjoy Taxi is geboren uit de overtuiging dat comfortabel vervoer en
               duurzaamheid perfect samengaan. Wij brengen u in stijl naar uw
               bestemming, zonder compromissen.
             </p>
+
+            {/* USP Pills */}
+            <div className="flex flex-wrap justify-center gap-3">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+                <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <span className="text-sm font-medium text-white">Betaalbare Prijzen</span>
+              </div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+                <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span className="text-sm font-medium text-white">24/7 Service</span>
+              </div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+                <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span className="text-sm font-medium text-white">Professioneel</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -161,9 +180,6 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="badge badge-accent mb-4">
-                Ons Verhaal
-              </span>
               <h2 className="heading-2 mb-6">
                 Van Visie naar Realiteit
               </h2>
@@ -232,9 +248,6 @@ export default function AboutPage() {
       <section className="section-gray">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <span className="badge badge-primary mb-4">
-              Onze Waarden
-            </span>
             <h2 className="heading-2 mb-4">
               Waar Wij Voor Staan
             </h2>
@@ -263,9 +276,6 @@ export default function AboutPage() {
       <section className="section bg-white">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="badge badge-accent mb-4">
-              Ons Team
-            </span>
             <h2 className="heading-2 mb-6">
               Gedreven Professionals
             </h2>
@@ -291,6 +301,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Reviews Section */}
+      <ReviewList />
 
       {/* CTA Section */}
       <CTASection

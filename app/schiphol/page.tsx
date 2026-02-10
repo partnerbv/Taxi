@@ -7,7 +7,7 @@ import FloatingCTA from '@/components/FloatingCTA'
 export const metadata: Metadata = {
   title: 'Taxi naar Schiphol Den Haag | Vaste Prijs €79 | Enjoy Taxi',
   description:
-    'Taxi naar Schiphol vanaf Den Haag voor €79. ✓ Vaste prijs ✓ Flight tracking ✓ 24/7 beschikbaar ✓ 100% maximaal comfort. Boek nu uw Schiphol taxi!',
+    'Taxi naar Schiphol vanaf Den Haag voor €79. ✓ Vaste prijs ✓ Vlucht tracking ✓ 24/7 beschikbaar ✓ 100% maximaal comfort. Boek nu uw Schiphol taxi!',
   keywords: [
     'taxi schiphol',
     'schiphol taxi',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Taxi naar Schiphol Den Haag | Vaste Prijs €79 | Enjoy Taxi',
     description:
-      'Betrouwbare taxi naar Schiphol Airport vanaf Den Haag voor €79. Flight tracking, 24/7 beschikbaar. 100% maximaal comfort voor uw luchthaven transfer.',
+      'Betrouwbare taxi naar Schiphol Airport vanaf Den Haag voor €79. Vlucht tracking, 24/7 beschikbaar. 100% maximaal comfort voor uw luchthaven transfer.',
     url: 'https://enjoytaxi.nl/schiphol',
     images: [
       {
@@ -51,7 +51,7 @@ const services = [
     href: '#prijzen',
   },
   {
-    title: 'Flight Tracking',
+    title: 'Vlucht Tracking',
     description: 'Wij volgen uw vlucht. Bij vertraging passen wij de ophaaltijd aan.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -93,7 +93,7 @@ const features = [
     ),
   },
   {
-    title: 'Flight Tracking',
+    title: 'Vlucht Tracking',
     description: 'Wij volgen uw vlucht en passen de ophaaltijd automatisch aan.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -177,7 +177,7 @@ export default function SchipholPage() {
             '@context': 'https://schema.org',
             '@type': 'Service',
             name: 'Taxi naar Schiphol - Enjoy Taxi',
-            description: 'Betrouwbare taxi service naar Schiphol Airport vanuit Den Haag, Leiden en omgeving. Vaste prijzen, flight tracking en 24/7 beschikbaar.',
+            description: 'Betrouwbare taxi service naar Schiphol Airport vanuit Den Haag, Leiden en omgeving. Vaste prijzen, vlucht tracking en 24/7 beschikbaar.',
             provider: {
               '@type': 'LocalBusiness',
               name: 'Enjoy Taxi',
@@ -232,7 +232,7 @@ export default function SchipholPage() {
             '@context': 'https://schema.org',
             '@type': 'TaxiService',
             name: 'Schiphol Taxi Service - Enjoy Taxi',
-            description: 'Betrouwbare taxi service naar Schiphol Airport met vaste prijzen en flight tracking.',
+            description: 'Betrouwbare taxi service naar Schiphol Airport met vaste prijzen en vlucht tracking.',
             provider: {
               '@type': 'Organization',
               name: 'Enjoy Taxi',
@@ -272,14 +272,6 @@ export default function SchipholPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Column - Content */}
             <div>
-              {/* Badge */}
-              <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-                <span className="w-2 h-2 bg-primary-400 rounded-full animate-pulse" />
-                <span className="text-sm font-medium text-white/90">
-                  Vaste Prijzen naar Schiphol
-                </span>
-              </div>
-
               {/* Main Headline */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
                 Taxi naar{' '}
@@ -289,7 +281,7 @@ export default function SchipholPage() {
               {/* Subheadline */}
               <p className="text-lg md:text-xl text-white/80 mb-8 max-w-lg leading-relaxed">
                 Stressvrij naar Schiphol Airport met onze betrouwbare taxi service.
-                Vaste prijzen, flight tracking en 30 minuten gratis wachttijd.
+                Vaste prijzen, vlucht tracking en 30 minuten gratis wachttijd.
               </p>
 
               {/* CTA Buttons */}
@@ -338,19 +330,19 @@ export default function SchipholPage() {
                   <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <span className="text-sm font-medium text-white">Vaste Prijzen</span>
-                </div>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
-                  <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                  </svg>
-                  <span className="text-sm font-medium text-white">Flight Tracking</span>
+                  <span className="text-sm font-medium text-white">Betaalbare Prijzen</span>
                 </div>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
                   <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   <span className="text-sm font-medium text-white">24/7 Service</span>
+                </div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+                  <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span className="text-sm font-medium text-white">Professioneel</span>
                 </div>
               </div>
             </div>
@@ -453,7 +445,7 @@ export default function SchipholPage() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <span className="text-xs font-semibold text-secondary-800">Flight Tracking</span>
+                      <span className="text-xs font-semibold text-secondary-800">Vlucht Tracking</span>
                     </div>
                   </div>
                 </div>
@@ -464,17 +456,11 @@ export default function SchipholPage() {
 
             {/* Right - Content & Pricing */}
             <div>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-6">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                </svg>
-                Luchthaven Transfers
-              </span>
               <h2 className="heading-2 mb-4">
                 Taxi naar de Luchthaven
               </h2>
               <p className="text-lead mb-8">
-                Stressvrij naar Schiphol of Rotterdam Airport. Vaste prijzen, flight tracking en 30 minuten gratis wachttijd bij vertragingen.
+                Stressvrij naar Schiphol of Rotterdam Airport. Vaste prijzen, vlucht tracking en 30 minuten gratis wachttijd bij vertragingen.
               </p>
 
               {/* Pricing Cards */}
@@ -553,15 +539,11 @@ export default function SchipholPage() {
 
         <div className="container-custom relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary-100 to-primary-50 border border-primary-200 mb-6">
-              <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse" />
-              <span className="text-sm font-semibold text-primary-700 uppercase tracking-wider">Schiphol Diensten</span>
-            </div>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6">
               Taxi Service naar <span className="text-primary-600">Schiphol</span>
             </h2>
             <p className="text-xl text-secondary-600 max-w-2xl mx-auto">
-              Alles voor een zorgeloze reis naar Schiphol Airport. Van flight tracking tot groepsvervoer.
+              Alles voor een zorgeloze reis naar Schiphol Airport. Van vlucht tracking tot groepsvervoer.
             </p>
           </div>
 
@@ -629,7 +611,7 @@ export default function SchipholPage() {
                     </svg>
                   </div>
                   <div>
-                    <div className="font-bold text-secondary-900">Flight Tracking</div>
+                    <div className="font-bold text-secondary-900">Vlucht Tracking</div>
                     <div className="text-sm text-secondary-500">Automatisch</div>
                   </div>
                 </div>
@@ -638,9 +620,6 @@ export default function SchipholPage() {
 
             {/* Content */}
             <div className="order-1 lg:order-2">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
-                Hoe Werkt Het
-              </span>
               <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-6">
                 Schiphol Taxi Boeken in 4 Stappen
               </h2>
@@ -694,12 +673,11 @@ export default function SchipholPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="section-eyebrow-accent">Waarom Enjoy Taxi</span>
               <h2 className="heading-2 mb-6">
                 Uw Betrouwbare Schiphol Taxi
               </h2>
               <p className="text-lead mb-10">
-                Al jaren de betrouwbare keuze voor luchthaven transfers. maximaal comfort, vaste prijzen en altijd op tijd.
+                Al jaren de betrouwbare keuze voor luchthaven transfers. Maximaal comfort, vaste prijzen en altijd op tijd.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -841,7 +819,6 @@ export default function SchipholPage() {
       <section className="section-gray">
         <div className="container-narrow">
           <div className="section-header">
-            <span className="section-eyebrow-accent">FAQ</span>
             <h2 className="heading-2 mb-4">Veelgestelde Vragen over Schiphol Taxi</h2>
           </div>
 
@@ -849,7 +826,7 @@ export default function SchipholPage() {
             {[
               {
                 question: 'Wat kost een taxi naar Schiphol?',
-                answer: 'Onze Schiphol taxi tarieven zijn vast en all-inclusive. Vanaf Leiden €35, vanaf Den Haag €55, vanaf Delft €45. Geen verrassingen, ook niet bij files.',
+                answer: 'Onze Schiphol taxi tarieven zijn vast en all-inclusive. Vanaf Den Haag naar Schiphol €79, naar Rotterdam Airport €55 en naar Eindhoven Airport €149. Geen verrassingen, ook niet bij files.',
               },
               {
                 question: 'Hoe boek ik een taxi naar Schiphol?',
@@ -861,7 +838,7 @@ export default function SchipholPage() {
               },
               {
                 question: 'Wat als mijn vlucht vertraging heeft?',
-                answer: 'Wij volgen uw vlucht automatisch via flight tracking. Bij vertraging passen wij de ophaaltijd aan. Bovendien wachten wij 30 minuten gratis op Schiphol.',
+                answer: 'Wij volgen uw vlucht automatisch via vlucht tracking. Bij vertraging passen wij de ophaaltijd aan. Bovendien wachten wij 30 minuten gratis op Schiphol.',
               },
               {
                 question: 'Is bagage inbegrepen in de prijs?',
@@ -936,7 +913,7 @@ export default function SchipholPage() {
                   name: 'Wat als mijn vlucht vertraging heeft?',
                   acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'Wij volgen uw vlucht automatisch via flight tracking. Bij vertraging passen wij de ophaaltijd aan. Bovendien wachten wij 30 minuten gratis op Schiphol.',
+                    text: 'Wij volgen uw vlucht automatisch via vlucht tracking. Bij vertraging passen wij de ophaaltijd aan. Bovendien wachten wij 30 minuten gratis op Schiphol.',
                   },
                 },
                 {

@@ -12,9 +12,6 @@ export default function LocationSEOSection({ location }: LocationSEOSectionProps
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Content */}
           <div>
-            <span className="badge badge-primary mb-4">
-              {location.region}
-            </span>
             <h2 className="heading-2 mb-6">
               Taxi {location.name} - Vaste Prijzen
             </h2>

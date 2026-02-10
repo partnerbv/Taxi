@@ -43,7 +43,7 @@ export default function Footer() {
             </Link>
             <p className="text-secondary-300 mb-6 max-w-md">
               Betrouwbare taxi service met vaste prijzen. Comfortabel vervoer.
-              Betaalbaar en comfortabel reizen voor de moderne reiziger.
+              Betaalbaar en betrouwbaar reizen voor de moderne reiziger.
             </p>
             {/* Contact Info */}
             <div className="space-y-3">

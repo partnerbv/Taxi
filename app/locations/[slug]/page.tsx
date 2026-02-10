@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { locations, getLocationBySlug, getAllLocationSlugs } from '@/data/locations'
 import FloatingCTA from '@/components/FloatingCTA'
+import ReviewList from '@/components/ReviewList'
 
 interface LocationPageProps {
   params: Promise<{
@@ -100,7 +101,7 @@ function getLocationFaqs(locationName: string) {
     },
     {
       question: `Rijden jullie vanaf ${locationName} naar de luchthaven?`,
-      answer: `Ja, wij verzorgen dagelijks luchthaven transfers naar Schiphol, Rotterdam Airport en Eindhoven Airport. Inclusief flight tracking en gratis wachttijd.`,
+      answer: `Ja, wij verzorgen dagelijks luchthaven transfers naar Schiphol, Rotterdam Airport en Eindhoven Airport. Inclusief vlucht tracking en gratis wachttijd.`,
     },
     {
       question: 'Welke betaalmethoden accepteren jullie?',
@@ -174,15 +175,6 @@ export default async function LocationPage({ params }: LocationPageProps) {
                 <span className="text-primary-300">{location.name}</span>
               </nav>
 
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-400"></span>
-                </span>
-                <span className="text-sm font-medium text-white/90">Nu beschikbaar in {location.region}</span>
-              </div>
-
               {/* Main Title */}
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
                 Taxi {location.name} <span className="block text-3xl md:text-4xl lg:text-5xl mt-2 bg-gradient-to-r from-primary-300 via-primary-400 to-emerald-400 bg-clip-text text-transparent">Bestellen</span>
@@ -225,7 +217,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                   <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
-                  <span className="text-sm font-medium text-white">Vaste Prijzen</span>
+                  <span className="text-sm font-medium text-white">Betaalbare Prijzen</span>
                 </div>
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
                   <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -237,7 +229,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                   <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <span className="text-sm font-medium text-white">Vaste Tarieven</span>
+                  <span className="text-sm font-medium text-white">Professioneel</span>
                 </div>
               </div>
             </div>
@@ -275,7 +267,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                     href="tel:+31620172767"
                     className="block w-full py-4 bg-gradient-to-r from-primary-500 to-primary-600 text-white font-bold rounded-xl text-center transition-all duration-300 hover:from-primary-600 hover:to-primary-700 hover:shadow-lg hover:shadow-primary-500/30"
                   >
-                    Bel Nu - 06 2017 2767
+                    Bel Nu
                   </a>
                 </div>
               </div>
@@ -297,13 +289,6 @@ export default async function LocationPage({ params }: LocationPageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
             {/* Main Content - 3 columns */}
             <div className="lg:col-span-3">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                Over Taxi {location.name}
-              </div>
-
               <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6 leading-tight">
                 Taxi {location.name}<br />
                 <span className="text-primary-600">24/7 Beschikbaar</span>
@@ -386,7 +371,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
-                      06 2017 2767
+                      Bel Direct
                     </a>
                     <a
                       href="https://wa.me/31620172767"
@@ -454,7 +439,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <span className="text-xs font-semibold text-secondary-800">Flight Tracking</span>
+                      <span className="text-xs font-semibold text-secondary-800">Vlucht Tracking</span>
                     </div>
                   </div>
                 </div>
@@ -465,20 +450,13 @@ export default async function LocationPage({ params }: LocationPageProps) {
 
             {/* Content */}
             <div className="order-1 lg:order-2">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                </svg>
-                Luchthaven Transfers
-              </div>
-
               <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6 leading-tight">
                 Taxi {location.name}<br />
                 <span className="text-primary-600">naar Schiphol</span>
               </h2>
 
               <p className="text-xl text-secondary-600 mb-10">
-                Stressvrij naar Schiphol, Rotterdam of Eindhoven Airport. Vaste prijzen, flight tracking en 30 minuten gratis wachttijd.
+                Stressvrij naar Schiphol, Rotterdam of Eindhoven Airport. Vaste prijzen, vlucht tracking en 30 minuten gratis wachttijd.
               </p>
 
               {/* Airport Price Cards */}
@@ -539,9 +517,6 @@ export default async function LocationPage({ params }: LocationPageProps) {
       <section className="py-20 bg-gradient-to-br from-secondary-50 to-white">
         <div className="container-narrow">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
-              Veelgestelde Vragen
-            </div>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-4">
               Taxi {location.name} Veelgestelde Vragen
             </h2>
@@ -589,12 +564,6 @@ export default async function LocationPage({ params }: LocationPageProps) {
 
           <div className="container-custom relative z-10">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary-100 to-primary-50 border border-primary-200 mb-6">
-                <svg className="w-4 h-4 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                </svg>
-                <span className="text-sm font-semibold text-primary-700 uppercase tracking-wider">{location.region}</span>
-              </div>
               <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
                 Taxi Service <span className="text-primary-600">{location.region}</span>
               </h2>
@@ -667,12 +636,6 @@ export default async function LocationPage({ params }: LocationPageProps) {
 
         <div className="container-custom relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-              <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span className="text-sm font-semibold text-white uppercase tracking-wider">Taxi Regio</span>
-            </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Taxi Bestellen <span className="text-primary-300">{location.name}</span>
             </h2>
@@ -735,6 +698,9 @@ export default async function LocationPage({ params }: LocationPageProps) {
           </div>
         </div>
       </section>
+
+      {/* Reviews Section */}
+      <ReviewList />
 
       {/* Floating Mobile CTA - Hidden on hero and footer */}
       <FloatingCTA />

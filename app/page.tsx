@@ -51,7 +51,7 @@ const services = [
 const features = [
   {
     title: 'Comfortabele Voertuigen',
-    description: 'Onze volledige vloot bestaat uit comfortabele voertuigen. Altijd comfortabel.',
+    description: 'Onze volledige vloot bestaat uit comfortabele voertuigen. Altijd op tijd.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -60,7 +60,7 @@ const features = [
   },
   {
     title: 'Maximaal Comfort',
-    description: 'Ruime Ruime voertuigen met lederen interieur en airco.',
+    description: 'Ruime voertuigen met lederen interieur en airco.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
@@ -297,13 +297,6 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
             {/* Content */}
             <div>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                Onze Locaties
-              </span>
               <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-6">
                 Taxi Den Haag & Omgeving
               </h2>
@@ -397,10 +390,6 @@ export default function HomePage() {
 
         <div className="container-custom relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary-100 to-primary-50 border border-primary-200 mb-6">
-              <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse" />
-              <span className="text-sm font-semibold text-primary-700 uppercase tracking-wider">Taxi Diensten</span>
-            </div>
             <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6">
               Taxi Service <span className="text-primary-600">Den Haag</span> & Leiden
             </h2>
@@ -495,9 +484,6 @@ export default function HomePage() {
 
             {/* Content */}
             <div className="order-1 lg:order-2">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-6">
-                Hoe Werkt Het
-              </span>
               <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-6">
                 In 4 Stappen Geboekt
               </h2>
@@ -549,17 +535,17 @@ export default function HomePage() {
       {/* Why Choose Us Section */}
       <section className="section-gray">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <span className="section-eyebrow-accent">Waarom Enjoy Taxi</span>
+          <div>
+            <div className="text-center mb-12">
               <h2 className="heading-2 mb-6">
                 Uw Betrouwbare Taxi in Den Haag
               </h2>
-              <p className="text-lead mb-10">
+              <p className="text-lead max-w-2xl mx-auto">
                 Enjoy Taxi is uw partner voor betrouwbaar vervoer. Maximaal comfort, vaste prijzen, en 24/7 beschikbaar in Den Haag, Leiden en omgeving.
               </p>
+            </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {features.map((feature) => (
                   <div key={feature.title} className="flex gap-4">
                     <div className="w-12 h-12 rounded-xl bg-white border border-secondary-200 flex items-center justify-center flex-shrink-0 text-primary-600">
@@ -576,40 +562,6 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
-            </div>
-
-            {/* Stats Card */}
-            <div className="relative">
-              <div className="bg-white rounded-2xl border border-secondary-200 shadow-lg overflow-hidden">
-                <div className="bg-primary-600 p-8 text-center">
-                  <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Enjoy Taxi in Cijfers</h3>
-                  <p className="text-white/80 text-sm">Onze prestaties spreken voor zich</p>
-                </div>
-                <div className="grid grid-cols-2 divide-x divide-y divide-secondary-200">
-                  <div className="p-6 text-center">
-                    <div className="text-3xl font-bold text-primary-600 mb-1">100%</div>
-                    <div className="text-sm text-secondary-500">Betrouwbaar</div>
-                  </div>
-                  <div className="p-6 text-center">
-                    <div className="text-3xl font-bold text-primary-600 mb-1">1000+</div>
-                    <div className="text-sm text-secondary-500">Klanten</div>
-                  </div>
-                  <div className="p-6 text-center">
-                    <div className="text-3xl font-bold text-accent-600 mb-1">5.0</div>
-                    <div className="text-sm text-secondary-500">Rating</div>
-                  </div>
-                  <div className="p-6 text-center">
-                    <div className="text-3xl font-bold text-primary-600 mb-1">24/7</div>
-                    <div className="text-sm text-secondary-500">Beschikbaar</div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -641,7 +593,7 @@ export default function HomePage() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <span className="text-xs font-semibold text-secondary-800">Flight Tracking</span>
+                      <span className="text-xs font-semibold text-secondary-800">Vlucht Tracking</span>
                     </div>
                   </div>
                 </div>
@@ -652,17 +604,11 @@ export default function HomePage() {
 
             {/* Right - Content & Pricing */}
             <div>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-6">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                </svg>
-                Luchthaven Transfers
-              </span>
               <h2 className="heading-2 mb-4">
                 Taxi naar de Luchthaven
               </h2>
               <p className="text-lead mb-8">
-                Stressvrij naar Schiphol of Rotterdam Airport. Vaste prijzen, flight tracking en 30 minuten gratis wachttijd bij vertragingen.
+                Stressvrij naar Schiphol of Rotterdam Airport. Vaste prijzen, vlucht tracking en 30 minuten gratis wachttijd bij vertragingen.
               </p>
 
               {/* Pricing Cards */}
@@ -814,7 +760,6 @@ export default function HomePage() {
       <section className="section-gray">
         <div className="container-narrow">
           <div className="section-header">
-            <span className="section-eyebrow-accent">FAQ</span>
             <h2 className="heading-2 mb-4">Veelgestelde Vragen over Taxi Den Haag</h2>
           </div>
 
@@ -826,7 +771,7 @@ export default function HomePage() {
               },
               {
                 question: 'Wat kost een taxi van Den Haag naar Schiphol?',
-                answer: 'Een taxi van Den Haag naar Schiphol kost €55 (vaste prijs). Vanaf Leiden naar Schiphol betaalt u €35. Geen verrassingen, ook niet bij files.',
+                answer: 'Een taxi van Den Haag naar Schiphol kost €79 (vaste prijs). Geen verrassingen, ook niet bij files.',
               },
               {
                 question: 'Is de taxi 24 uur per dag beschikbaar?',
@@ -889,7 +834,7 @@ export default function HomePage() {
                   name: 'Wat kost een taxi van Den Haag naar Schiphol?',
                   acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'Een taxi van Den Haag naar Schiphol kost €55 (vaste prijs). Vanaf Leiden naar Schiphol betaalt u €35. Geen verrassingen, ook niet bij files.',
+                    text: 'Een taxi van Den Haag naar Schiphol kost €79 (vaste prijs). Geen verrassingen, ook niet bij files.',
                   },
                 },
                 {

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { locations } from '@/data/locations'
+import ReviewList from '@/components/ReviewList'
 
 export const metadata: Metadata = {
   title: 'Taxi Locaties | Den Haag, Leiden, Delft & Meer | Enjoy Taxi',
@@ -71,13 +72,6 @@ export default function LocatiesPage() {
         <div className="container-custom relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-              <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              <span className="text-sm font-semibold text-white uppercase tracking-wider">{locations.length} Locaties</span>
-            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Taxi Service in <span className="text-primary-300">Zuid-Holland</span>
             </h1>
@@ -85,6 +79,28 @@ export default function LocatiesPage() {
               Betaalbare taxi service in Den Haag, Leiden, Delft en omgeving.
               24/7 beschikbaar met vaste prijzen.
             </p>
+
+            {/* USP Pills */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+                <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <span className="text-sm font-medium text-white">Betaalbare Prijzen</span>
+              </div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+                <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span className="text-sm font-medium text-white">24/7 Service</span>
+              </div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+                <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span className="text-sm font-medium text-white">Professioneel</span>
+              </div>
+            </div>
             <div className="flex flex-wrap justify-center lg:justify-start gap-4">
               <a
                 href="tel:+31620172767"
@@ -134,7 +150,7 @@ export default function LocatiesPage() {
               Luchthaven Transfers
             </h2>
             <p className="text-white/60 max-w-2xl mx-auto">
-              Stressvrij naar de luchthaven met vaste prijzen en flight tracking
+              Stressvrij naar de luchthaven met vaste prijzen en vlucht tracking
             </p>
           </div>
 
@@ -171,9 +187,6 @@ export default function LocatiesPage() {
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-4">
-              Den Haag Wijken
-            </span>
             <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
               Taxi in Den Haag Wijken
             </h2>
@@ -207,9 +220,6 @@ export default function LocatiesPage() {
       <section className="py-20 bg-secondary-50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium mb-4">
-              Regio Den Haag
-            </span>
             <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
               Taxi Den Haag & Omgeving
             </h2>
@@ -244,9 +254,6 @@ export default function LocatiesPage() {
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-700 text-sm font-medium mb-4">
-              Regio Leiden
-            </span>
             <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
               Taxi Leiden & Omgeving
             </h2>
@@ -301,6 +308,9 @@ export default function LocatiesPage() {
         </div>
       </section>
 
+      {/* Reviews Section */}
+      <ReviewList />
+
       {/* CTA Section */}
       <section className="py-20 bg-white">
         <div className="container-custom">
@@ -319,7 +329,7 @@ export default function LocatiesPage() {
                 <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                Bel: 06 2017 2767
+                Bel Direct
               </a>
               <a
                 href="https://wa.me/31620172767"

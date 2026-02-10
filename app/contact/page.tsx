@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
+import ReviewList from '@/components/ReviewList'
 
 export const metadata: Metadata = {
   title: 'Contact Taxi Den Haag | Bel 06 2017 2767 | Enjoy Taxi',
@@ -101,18 +102,36 @@ export default function ContactPage() {
               <span className="text-white">Contact</span>
             </nav>
 
-            <span className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-              <span className="w-2 h-2 bg-primary-400 rounded-full animate-pulse" />
-              <span className="text-sm text-white/90">24/7 Bereikbaar</span>
-            </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
               Neem Contact
               <span className="block text-primary-300">Met Ons Op</span>
             </h1>
-            <p className="text-xl text-white/80">
+            <p className="text-xl text-white/80 mb-8">
               Heeft u vragen of wilt u een offerte aanvragen? Wij staan 24/7 voor
               u klaar via telefoon, WhatsApp of het contactformulier.
             </p>
+
+            {/* USP Pills */}
+            <div className="flex flex-wrap justify-center gap-3">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+                <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <span className="text-sm font-medium text-white">Betaalbare Prijzen</span>
+              </div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+                <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span className="text-sm font-medium text-white">24/7 Service</span>
+              </div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+                <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span className="text-sm font-medium text-white">Professioneel</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -274,6 +293,9 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Reviews Section */}
+      <ReviewList />
 
       {/* Structured Data */}
       <script

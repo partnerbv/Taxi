@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import CTASection from '@/components/CTASection'
+import ReviewList from '@/components/ReviewList'
 
 export const metadata: Metadata = {
   title: 'Taxi Diensten Den Haag & Leiden | Luchthaven Transfer, Zakelijk, VIP | Enjoy Taxi',
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     'zakelijk vervoer leiden',
     'vip taxi service',
     'taxi vaste prijs',
-    'taxi vaste prijs',
+    'taxi bestellen',
     'evenementen vervoer',
   ],
   openGraph: {
@@ -102,7 +103,7 @@ const services = [
       'Comfortabel voertuig',
       'Persoonlijke vaste chauffeur',
       'Maximale privacy & discretie',
-      'Complimentary versnaperingen',
+      'Gratis versnaperingen',
       'Priority service & flexibiliteit',
       'Concierge service op aanvraag',
     ],
@@ -245,10 +246,6 @@ export default function ServicesPage() {
               <span className="text-white">Diensten</span>
             </nav>
 
-            <span className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-              <span className="w-2 h-2 bg-primary-400 rounded-full animate-pulse" />
-              <span className="text-sm text-white/90">Maximaal Comfort</span>
-            </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
               Onze Taxi Diensten
               <span className="block text-primary-300">Den Haag & Leiden</span>
@@ -264,7 +261,7 @@ export default function ServicesPage() {
                 <svg className="w-5 h-5 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
-                <span className="text-sm font-medium">Vaste Prijzen</span>
+                <span className="text-sm font-medium">Betaalbare Prijzen</span>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm">
                 <svg className="w-5 h-5 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -276,7 +273,7 @@ export default function ServicesPage() {
                 <svg className="w-5 h-5 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span className="text-sm font-medium">Vaste Tarieven</span>
+                <span className="text-sm font-medium">Professioneel</span>
               </div>
             </div>
           </div>
@@ -307,7 +304,7 @@ export default function ServicesPage() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <span className="text-xs font-semibold text-secondary-800">Flight Tracking</span>
+                      <span className="text-xs font-semibold text-secondary-800">Vlucht Tracking</span>
                     </div>
                   </div>
                 </div>
@@ -318,17 +315,11 @@ export default function ServicesPage() {
 
             {/* Right - Content & Pricing */}
             <div>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-6">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                </svg>
-                Luchthaven Transfers
-              </span>
               <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
                 Taxi naar de Luchthaven
               </h2>
               <p className="text-lg text-secondary-600 mb-8">
-                Stressvrij naar Schiphol of Rotterdam Airport. Vaste prijzen, flight tracking en 30 minuten gratis wachttijd bij vertragingen.
+                Stressvrij naar Schiphol of Rotterdam Airport. Vaste prijzen, vlucht tracking en 30 minuten gratis wachttijd bij vertragingen.
               </p>
 
               {/* Pricing Cards */}
@@ -411,9 +402,6 @@ export default function ServicesPage() {
       <section className="py-20 bg-secondary-50">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-4">
-              Onze Diensten
-            </span>
             <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
               Betrouwbare Taxi Service
             </h2>
@@ -482,19 +470,17 @@ export default function ServicesPage() {
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-6">
-                Waarom Enjoy Taxi
-              </span>
+          <div>
+            <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-6">
-                Vaste Prijzen, Vaste Prijzen
+                Vaste Prijzen, Altijd Betrouwbaar
               </h2>
-              <p className="text-lg text-secondary-600 mb-8">
+              <p className="text-lg text-secondary-600 max-w-2xl mx-auto">
                 Onze volledige vloot bestaat uit moderne comfortabele voertuigen. Maximaal comfort, altijd op tijd en de nieuwste technologie.
               </p>
+            </div>
 
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center flex-shrink-0">
                     <svg className="w-5 h-5 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -502,8 +488,8 @@ export default function ServicesPage() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-secondary-900">Vaste Prijzen</h4>
-                    <p className="text-sm text-secondary-500">Zero emissie rijden</p>
+                    <h4 className="font-semibold text-secondary-900">Betaalbaar</h4>
+                    <p className="text-sm text-secondary-500">Eerlijke tarieven</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -524,7 +510,7 @@ export default function ServicesPage() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-secondary-900">Vaste Prijzen</h4>
+                    <h4 className="font-semibold text-secondary-900">Transparant</h4>
                     <p className="text-sm text-secondary-500">Geen verrassingen</p>
                   </div>
                 </div>
@@ -540,39 +526,6 @@ export default function ServicesPage() {
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="relative">
-              <div className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-2xl p-8 text-white">
-                <div className="text-center mb-8">
-                  <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">Enjoy Taxi in Cijfers</h3>
-                  <p className="text-white/70 text-sm">Onze prestaties spreken voor zich</p>
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white/10 rounded-xl p-4 text-center">
-                    <div className="text-3xl font-bold mb-1">100%</div>
-                    <div className="text-sm text-white/70">Betrouwbaar</div>
-                  </div>
-                  <div className="bg-white/10 rounded-xl p-4 text-center">
-                    <div className="text-3xl font-bold mb-1">1000+</div>
-                    <div className="text-sm text-white/70">Klanten</div>
-                  </div>
-                  <div className="bg-white/10 rounded-xl p-4 text-center">
-                    <div className="text-3xl font-bold mb-1">5.0</div>
-                    <div className="text-sm text-white/70">Rating</div>
-                  </div>
-                  <div className="bg-white/10 rounded-xl p-4 text-center">
-                    <div className="text-3xl font-bold mb-1">24/7</div>
-                    <div className="text-sm text-white/70">Beschikbaar</div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -581,9 +534,6 @@ export default function ServicesPage() {
       <section className="py-20 bg-secondary-50">
         <div className="container-custom max-w-3xl">
           <div className="text-center mb-12">
-            <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary-100 text-primary-700 text-xs font-semibold uppercase tracking-wider mb-4">
-              FAQ
-            </span>
             <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">Veelgestelde Vragen</h2>
             <p className="text-lg text-secondary-600">
               Antwoorden op de meest gestelde vragen over onze diensten.
@@ -619,6 +569,9 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      {/* Reviews Section */}
+      <ReviewList />
 
       {/* CTA Section */}
       <CTASection

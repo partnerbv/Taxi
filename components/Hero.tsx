@@ -25,14 +25,6 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Content */}
           <div>
-            {/* Badge */}
-            <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-              <span className="w-2 h-2 bg-primary-400 rounded-full animate-pulse" />
-              <span className="text-sm font-medium text-white/90">
-                Vaste Prijzen · 24/7 Service
-              </span>
-            </div>
-
             {/* Main Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
               Taxi{' '}
@@ -93,7 +85,7 @@ export default function Hero() {
                 <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
-                <span className="text-sm font-medium text-white">Vaste Prijzen</span>
+                <span className="text-sm font-medium text-white">Betaalbare Prijzen</span>
               </div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
                 <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -105,7 +97,7 @@ export default function Hero() {
                 <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span className="text-sm font-medium text-white">Vaste Tarieven</span>
+                <span className="text-sm font-medium text-white">Professioneel</span>
               </div>
             </div>
           </div>
@@ -146,8 +138,8 @@ export default function Hero() {
                   <div className="text-xs text-white/70">Beschikbaar</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-4 text-center">
-                  <div className="text-2xl font-bold text-primary-300 mb-1">5.0</div>
-                  <div className="text-xs text-white/70">Rating</div>
+                  <div className="text-2xl font-bold text-primary-300 mb-1">100%</div>
+                  <div className="text-xs text-white/70">Betrouwbaar</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-4 text-center">
                   <div className="text-2xl font-bold text-white mb-1">15 min</div>
