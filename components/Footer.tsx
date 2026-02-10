@@ -42,8 +42,8 @@ export default function Footer() {
               />
             </Link>
             <p className="text-secondary-300 mb-6 max-w-md">
-              Premium taxi service met vaste prijzen. Betrouwbaar en comfortabel vervoer.
-              Duurzaam, luxe en comfortabel reizen voor de moderne reiziger.
+              Betrouwbare taxi service met vaste prijzen. Comfortabel vervoer.
+              Betaalbaar en comfortabel reizen voor de moderne reiziger.
             </p>
             {/* Contact Info */}
             <div className="space-y-3">

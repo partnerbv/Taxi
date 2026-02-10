@@ -31,7 +31,7 @@ const reviews: Review[] = [
     id: '3',
     name: 'Thomas Bakker',
     rating: 5,
-    text: 'De vaste prijzen en het luxe comfort waren voor mij de doorslaggevende factor. Geweldige ervaring, zeker voor herhaling vatbaar.',
+    text: 'De vaste prijzen en het comfortabele vervoer waren voor mij de doorslaggevende factor. Geweldige ervaring, zeker voor herhaling vatbaar.',
     date: '2024-11-25',
     service: 'VIP Service',
     avatar: 'TB',

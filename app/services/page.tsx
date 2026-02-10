@@ -6,7 +6,7 @@ import CTASection from '@/components/CTASection'
 export const metadata: Metadata = {
   title: 'Taxi Diensten Den Haag & Leiden | Luchthaven Transfer, Zakelijk, VIP | Enjoy Taxi',
   description:
-    'Premium taxi diensten met vaste prijzen in Den Haag en Leiden. Luchthaven transfers naar Schiphol, zakelijk vervoer, evenementen en VIP service. 100% betrouwbare service, 24/7 beschikbaar.',
+    'Betrouwbare taxi diensten met vaste prijzen in Den Haag en Leiden. Luchthaven transfers naar Schiphol, zakelijk vervoer, evenementen en VIP service. 24/7 beschikbaar.',
   keywords: [
     'taxi diensten den haag',
     'luchthaven transfer schiphol',
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
     'evenementen vervoer',
   ],
   openGraph: {
-    title: 'Premium Taxi Diensten | Enjoy Taxi Den Haag & Leiden',
+    title: 'Taxi Diensten | Enjoy Taxi Den Haag & Leiden',
     description:
-      'Ontdek onze premium taxi diensten met vaste prijzen. Van Schiphol transfers tot VIP service - altijd betrouwbaar.',
+      'Ontdek onze betrouwbare taxi diensten met vaste prijzen. Van Schiphol transfers tot VIP service - altijd betrouwbaar.',
     url: 'https://enjoytaxi.nl/services',
     type: 'website',
   },
@@ -55,7 +55,7 @@ const services = [
     title: 'Zakelijk Vervoer',
     subtitle: 'Professioneel & discreet',
     description:
-      'Maak indruk op uw zakenpartners met onze premium service. Discrete service, WiFi aan boord en opladers voor al uw devices.',
+      'Maak indruk op uw zakenpartners met onze professionele service. Discrete service, WiFi aan boord en opladers voor al uw devices.',
     features: [
       'Professionele, discrete chauffeurs',
       'WiFi en USB-C/Lightning opladers',
@@ -76,9 +76,9 @@ const services = [
     title: 'Evenementen Vervoer',
     subtitle: 'Maak het onvergetelijk',
     description:
-      'Van bruiloften tot congressen, van galadiner tot sportevenement. Meerdere premium voertuigen beschikbaar voor groepsvervoer in stijl.',
+      'Van bruiloften tot congressen, van galadiner tot sportevenement. Meerdere comfortabele voertuigen beschikbaar voor groepsvervoer.',
     features: [
-      'Meerdere premium voertuigen beschikbaar',
+      'Meerdere comfortabele voertuigen beschikbaar',
       'Professionele coördinatie groepsvervoer',
       'Speciale decoratie op aanvraag (bruiloft)',
       'Flexibele planning en routes',
@@ -95,11 +95,11 @@ const services = [
   {
     id: 'vip',
     title: 'VIP Service',
-    subtitle: 'Ultieme luxe & privacy',
+    subtitle: 'Persoonlijke aandacht & privacy',
     description:
-      'Exclusieve service voor de meest veeleisende reizigers. Maximale privacy, persoonlijke aandacht en onze beste voertuigen.',
+      'Persoonlijke service voor veeleisende reizigers. Maximale privacy, persoonlijke aandacht en onze beste voertuigen.',
     features: [
-      'Premium voertuig',
+      'Comfortabel voertuig',
       'Persoonlijke vaste chauffeur',
       'Maximale privacy & discretie',
       'Complimentary versnaperingen',
@@ -155,7 +155,7 @@ const faqs = [
   {
     question: 'Hoeveel bagage kan ik meenemen?',
     answer:
-      'In onze premium voertuigen passen 2-3 grote koffers en handbagage. Neem bij twijfel contact met ons op.',
+      'In onze voertuigen passen 2-3 grote koffers en handbagage. Neem bij twijfel contact met ons op.',
   },
   {
     question: 'Zijn er kinderzitjes beschikbaar?',
@@ -247,14 +247,14 @@ export default function ServicesPage() {
 
             <span className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
               <span className="w-2 h-2 bg-primary-400 rounded-full animate-pulse" />
-              <span className="text-sm text-white/90">Premium Comfort</span>
+              <span className="text-sm text-white/90">Maximaal Comfort</span>
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
               Onze Taxi Diensten
               <span className="block text-primary-300">Den Haag & Leiden</span>
             </h1>
             <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-              Van luchthaven transfers tot exclusieve VIP service. Ontdek hoe Enjoy
+              Van luchthaven transfers tot VIP service. Ontdek hoe Enjoy
               Taxi u in stijl en comfort naar uw bestemming brengt.
             </p>
 
@@ -415,10 +415,10 @@ export default function ServicesPage() {
               Onze Diensten
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
-              Premium Taxi Service
+              Betrouwbare Taxi Service
             </h2>
             <p className="text-lg text-secondary-600 max-w-2xl mx-auto">
-              Van luchthaven transfers tot VIP service - wij bieden een complete range aan premium taxi diensten.
+              Van luchthaven transfers tot VIP service - wij bieden een complete range aan betrouwbare taxi diensten.
             </p>
           </div>
 
@@ -491,7 +491,7 @@ export default function ServicesPage() {
                 Vaste Prijzen, Vaste Prijzen
               </h2>
               <p className="text-lg text-secondary-600 mb-8">
-                Onze volledige vloot bestaat uit premium premium voertuigen. Maximaal comfort, altijd op tijd en de nieuwste technologie.
+                Onze volledige vloot bestaat uit moderne comfortabele voertuigen. Maximaal comfort, altijd op tijd en de nieuwste technologie.
               </p>
 
               <div className="grid grid-cols-2 gap-6">
@@ -535,8 +535,8 @@ export default function ServicesPage() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-secondary-900">Premium Comfort</h4>
-                    <p className="text-sm text-secondary-500">Luxe interieur</p>
+                    <h4 className="font-semibold text-secondary-900">Maximaal Comfort</h4>
+                    <p className="text-sm text-secondary-500">Comfortabel interieur</p>
                   </div>
                 </div>
               </div>
@@ -622,7 +622,7 @@ export default function ServicesPage() {
 
       {/* CTA Section */}
       <CTASection
-        title="Klaar voor Premium Betrouwbaar Vervoer?"
+        title="Klaar voor Betrouwbaar Vervoer?"
         subtitle="Neem contact op voor een vrijblijvende offerte of boek direct uw rit in Den Haag of Leiden."
       />
     </>

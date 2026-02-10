@@ -23,7 +23,7 @@ export default function LocationSEOSection({ location }: LocationSEOSectionProps
                 {location.description}
               </p>
               <p className="text-secondary-600 mb-6">
-                Met onze 100% betrouwbare service bieden wij premium taxiservice
+                Met onze 100% betrouwbare service bieden wij professionele taxiservice
                 in {location.name} en omgeving. Of u nu naar{' '}
                 {location.nearbyAirport || 'de luchthaven'} moet, een zakelijke afspraak
                 heeft, of gewoon comfortabel wilt reizen - Enjoy Taxi staat voor u klaar.
@@ -116,8 +116,8 @@ export default function LocationSEOSection({ location }: LocationSEOSectionProps
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-secondary-900">Premium Service</h3>
-                  <p className="text-sm text-secondary-500">Luxe comfortabele voertuigen</p>
+                  <h3 className="font-semibold text-secondary-900">Betrouwbare Service</h3>
+                  <p className="text-sm text-secondary-500">Comfortabele voertuigen</p>
                 </div>
               </div>
             </div>

@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
     `taxi ${location.name.toLowerCase()} 24 uur`,
     `taxi reserveren ${location.name.toLowerCase()}`,
     `taxi bellen ${location.name.toLowerCase()}`,
-    'premium taxi', 'taxi vaste prijs', '24/7 taxi', 'vaste prijs taxi',
+    'betaalbare taxi', 'taxi vaste prijs', '24/7 taxi', 'vaste prijs taxi',
     'zakelijk vervoer', 'luchthaven taxi', 'taxi zuid-holland',
   ]
 
@@ -257,7 +257,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                       </svg>
                     </div>
                     <h3 className="text-xl font-bold text-white">Taxi {location.name} Bellen</h3>
-                    <span className="text-primary-300 text-sm">24/7 Premium Taxi Service</span>
+                    <span className="text-primary-300 text-sm">24/7 Betrouwbare Taxi Service</span>
                   </div>
 
                   <div className="space-y-3 mb-6">

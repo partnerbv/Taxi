@@ -46,7 +46,7 @@ export default function LocatiesPage() {
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
             name: 'Enjoy Taxi',
-            description: 'Premium taxi service in Zuid-Holland',
+            description: 'Betrouwbare taxi service in Zuid-Holland',
             areaServed: locations.map(loc => ({
               '@type': 'City',
               name: loc.name,
@@ -82,7 +82,7 @@ export default function LocatiesPage() {
               Taxi Service in <span className="text-primary-300">Zuid-Holland</span>
             </h1>
             <p className="text-xl text-white/70 mb-8">
-              Premium taxi service in Den Haag, Leiden, Delft en omgeving.
+              Betaalbare taxi service in Den Haag, Leiden, Delft en omgeving.
               24/7 beschikbaar met vaste prijzen.
             </p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-4">
@@ -112,7 +112,7 @@ export default function LocatiesPage() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/Taxi Den haag.jpg"
-                  alt="Taxi Den Haag - Premium Taxi Service"
+                  alt="Taxi Den Haag - Betrouwbare Taxi Service"
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover"
@@ -178,7 +178,7 @@ export default function LocatiesPage() {
               Taxi in Den Haag Wijken
             </h2>
             <p className="text-secondary-600 max-w-2xl mx-auto">
-              Premium taxi service in alle wijken van Den Haag - van Bezuidenhout tot Loosduinen
+              Betaalbare taxi service in alle wijken van Den Haag - van Bezuidenhout tot Loosduinen
             </p>
           </div>
 
@@ -214,7 +214,7 @@ export default function LocatiesPage() {
               Taxi Den Haag & Omgeving
             </h2>
             <p className="text-secondary-600 max-w-2xl mx-auto">
-              Premium taxi service in Scheveningen, Delft, Wassenaar, Rijswijk en meer
+              Betaalbare taxi service in Scheveningen, Delft, Wassenaar, Rijswijk en meer
             </p>
           </div>
 

@@ -7,7 +7,7 @@ import FloatingCTA from '@/components/FloatingCTA'
 export const metadata: Metadata = {
   title: 'Taxi naar Schiphol Den Haag | Vaste Prijs €79 | Enjoy Taxi',
   description:
-    'Taxi naar Schiphol vanaf Den Haag voor €79. ✓ Vaste prijs ✓ Flight tracking ✓ 24/7 beschikbaar ✓ 100% premium comfort. Boek nu uw Schiphol taxi!',
+    'Taxi naar Schiphol vanaf Den Haag voor €79. ✓ Vaste prijs ✓ Flight tracking ✓ 24/7 beschikbaar ✓ 100% maximaal comfort. Boek nu uw Schiphol taxi!',
   keywords: [
     'taxi schiphol',
     'schiphol taxi',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Taxi naar Schiphol Den Haag | Vaste Prijs €79 | Enjoy Taxi',
     description:
-      'Premium taxi naar Schiphol Airport vanaf Den Haag voor €79. Flight tracking, 24/7 beschikbaar. 100% premium comfort voor uw luchthaven transfer.',
+      'Betrouwbare taxi naar Schiphol Airport vanaf Den Haag voor €79. Flight tracking, 24/7 beschikbaar. 100% maximaal comfort voor uw luchthaven transfer.',
     url: 'https://enjoytaxi.nl/schiphol',
     images: [
       {
@@ -111,8 +111,8 @@ const features = [
     ),
   },
   {
-    title: 'Premium Comfort',
-    description: 'Reis in stijl met onze luxe voertuigen naar Schiphol.',
+    title: 'Maximaal Comfort',
+    description: 'Reis in stijl met onze comfortabele voertuigen naar Schiphol.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -162,7 +162,7 @@ const processSteps = [
   {
     step: '4',
     title: 'Comfortabel Reizen',
-    description: 'Uw chauffeur staat klaar. Geniet van de premium rit naar of van Schiphol.',
+    description: 'Uw chauffeur staat klaar. Geniet van de comfortabele rit naar of van Schiphol.',
   },
 ]
 
@@ -177,7 +177,7 @@ export default function SchipholPage() {
             '@context': 'https://schema.org',
             '@type': 'Service',
             name: 'Taxi naar Schiphol - Enjoy Taxi',
-            description: 'Premium taxi service naar Schiphol Airport vanuit Den Haag, Leiden en omgeving. Vaste prijzen, flight tracking en 24/7 beschikbaar.',
+            description: 'Betrouwbare taxi service naar Schiphol Airport vanuit Den Haag, Leiden en omgeving. Vaste prijzen, flight tracking en 24/7 beschikbaar.',
             provider: {
               '@type': 'LocalBusiness',
               name: 'Enjoy Taxi',
@@ -254,7 +254,7 @@ export default function SchipholPage() {
         <div className="absolute inset-0">
           <Image
             src="/Taxi naar Schiphol .webp"
-            alt="Taxi naar Schiphol - Premium Luchthaven Transfer"
+            alt="Taxi naar Schiphol - Betrouwbare Luchthaven Transfer"
             fill
             className="object-cover"
             priority
@@ -288,7 +288,7 @@ export default function SchipholPage() {
 
               {/* Subheadline */}
               <p className="text-lg md:text-xl text-white/80 mb-8 max-w-lg leading-relaxed">
-                Stressvrij naar Schiphol Airport met onze premium taxi service.
+                Stressvrij naar Schiphol Airport met onze betrouwbare taxi service.
                 Vaste prijzen, flight tracking en 30 minuten gratis wachttijd.
               </p>
 
@@ -699,7 +699,7 @@ export default function SchipholPage() {
                 Uw Betrouwbare Schiphol Taxi
               </h2>
               <p className="text-lead mb-10">
-                Al jaren de betrouwbare keuze voor luchthaven transfers. premium comfort, vaste prijzen en altijd op tijd.
+                Al jaren de betrouwbare keuze voor luchthaven transfers. maximaal comfort, vaste prijzen en altijd op tijd.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

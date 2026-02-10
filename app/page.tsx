@@ -38,7 +38,7 @@ const services = [
   },
   {
     title: 'VIP Service',
-    description: 'Exclusieve service met maximale privacy en persoonlijke aandacht.',
+    description: 'Persoonlijke service met maximale privacy en aandacht.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
@@ -50,8 +50,8 @@ const services = [
 
 const features = [
   {
-    title: 'Luxe Voertuigen',
-    description: 'Onze volledige vloot bestaat uit luxe voertuigen. Altijd comfortabel.',
+    title: 'Comfortabele Voertuigen',
+    description: 'Onze volledige vloot bestaat uit comfortabele voertuigen. Altijd comfortabel.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -59,7 +59,7 @@ const features = [
     ),
   },
   {
-    title: 'Premium Comfort',
+    title: 'Maximaal Comfort',
     description: 'Ruime Ruime voertuigen met lederen interieur en airco.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -128,7 +128,7 @@ const processSteps = [
   {
     step: '4',
     title: 'Geniet van de Rit',
-    description: 'Uw chauffeur staat op tijd klaar. Relax en geniet van de premium rit.',
+    description: 'Uw chauffeur staat op tijd klaar. Relax en geniet van de comfortabele rit.',
   },
 ]
 
@@ -147,7 +147,7 @@ export default function HomePage() {
             alternateName: 'Enjoy Taxi Den Haag',
             url: 'https://enjoytaxi.nl',
             logo: 'https://enjoytaxi.nl/logo.png',
-            description: 'Premium taxi service in Den Haag en Leiden met 100% betrouwbare service. 24/7 beschikbaar voor luchthaven transfers, zakelijk vervoer en VIP service.',
+            description: 'Betrouwbare taxi service in Den Haag en Leiden. 24/7 beschikbaar voor luchthaven transfers, zakelijk vervoer en VIP service.',
             telephone: '+31620172767',
             email: 'info@enjoytaxi.nl',
             address: {
@@ -190,8 +190,8 @@ export default function HomePage() {
             '@context': 'https://schema.org',
             '@type': 'TaxiService',
             '@id': 'https://enjoytaxi.nl/#taxiservice',
-            name: 'Enjoy Taxi - Premium Taxi Den Haag & Leiden',
-            description: 'Premium taxi service met betrouwbare service voor Den Haag, Leiden en omgeving. Luchthaven transfers, zakelijk vervoer, evenementen en VIP service.',
+            name: 'Enjoy Taxi - Taxi Den Haag & Leiden',
+            description: 'Betrouwbare taxi service voor Den Haag, Leiden en omgeving. Luchthaven transfers, zakelijk vervoer, evenementen en VIP service.',
             provider: {
               '@id': 'https://enjoytaxi.nl/#organization',
             },
@@ -237,7 +237,7 @@ export default function HomePage() {
                   itemOffered: {
                     '@type': 'Service',
                     name: 'VIP Taxi Service',
-                    description: 'Exclusieve VIP service met Premium voertuig',
+                    description: 'VIP service met comfortabel voertuig',
                   },
                 },
               ],
@@ -308,7 +308,7 @@ export default function HomePage() {
                 Taxi Den Haag & Omgeving
               </h2>
               <p className="text-lg text-secondary-600 mb-8">
-                Premium taxi service in <strong>Den Haag</strong> en omgeving. Van <strong>Wassenaar</strong> tot <strong>Voorburg</strong>, van <strong>Leidschendam</strong> tot <strong>Scheveningen</strong> - wij rijden overal.
+                Betaalbare taxi service in <strong>Den Haag</strong> en omgeving. Van <strong>Wassenaar</strong> tot <strong>Voorburg</strong>, van <strong>Leidschendam</strong> tot <strong>Scheveningen</strong> - wij rijden overal.
               </p>
 
               {/* Quick stats */}
@@ -405,7 +405,7 @@ export default function HomePage() {
               Taxi Service <span className="text-primary-600">Den Haag</span> & Leiden
             </h2>
             <p className="text-xl text-secondary-600 max-w-2xl mx-auto">
-              Schiphol transfers, zakelijk vervoer en VIP service - uw premium taxi in Den Haag en Leiden.
+              Schiphol transfers, zakelijk vervoer en VIP service - uw betrouwbare taxi in Den Haag en Leiden.
             </p>
           </div>
 
@@ -470,7 +470,7 @@ export default function HomePage() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/Taxi.jpg"
-                  alt="Premium Taxi Service - Chauffeur met klant"
+                  alt="Taxi Service - Chauffeur met klant"
                   width={600}
                   height={450}
                   className="w-full h-auto object-cover"
@@ -556,7 +556,7 @@ export default function HomePage() {
                 Uw Betrouwbare Taxi in Den Haag
               </h2>
               <p className="text-lead mb-10">
-                Enjoy Taxi is uw partner voor premium vervoer. premium comfort, vaste prijzen, en 24/7 beschikbaar in Den Haag, Leiden en omgeving.
+                Enjoy Taxi is uw partner voor betrouwbaar vervoer. Maximaal comfort, vaste prijzen, en 24/7 beschikbaar in Den Haag, Leiden en omgeving.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

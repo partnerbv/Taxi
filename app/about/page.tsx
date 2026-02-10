@@ -4,20 +4,20 @@ import Link from 'next/link'
 import CTASection from '@/components/CTASection'
 
 export const metadata: Metadata = {
-  title: 'Over Enjoy Taxi Den Haag | Premium Taxi Service | Vaste Prijzen',
+  title: 'Over Enjoy Taxi Den Haag | Betrouwbare Taxi Service | Vaste Prijzen',
   description:
-    'Over Enjoy Taxi: premium taxi service in Den Haag met 100% betrouwbare service. ✓ Professionele chauffeurs ✓ Duurzaam ✓ Luxe comfort ✓ 24/7 service.',
+    'Over Enjoy Taxi: betrouwbare taxi service in Den Haag. ✓ Professionele chauffeurs ✓ Duurzaam ✓ Comfortabel reizen ✓ 24/7 service.',
   keywords: [
     'enjoy taxi den haag',
     'taxi vaste prijzen',
     'taxi vaste prijs den haag',
-    'premium taxi den haag',
+    'betaalbare taxi den haag',
     'duurzame taxi',
   ],
   openGraph: {
-    title: 'Over Enjoy Taxi | Premium Taxi Den Haag',
+    title: 'Over Enjoy Taxi | Taxi Den Haag',
     description:
-      'Ontdek het verhaal achter Enjoy Taxi en onze passie voor duurzaam premium vervoer met 100% betrouwbare service.',
+      'Ontdek het verhaal achter Enjoy Taxi en onze passie voor duurzaam betrouwbaar vervoer.',
     url: 'https://enjoytaxi.nl/about',
   },
   alternates: {
@@ -29,7 +29,7 @@ const values = [
   {
     title: 'Duurzaamheid',
     description:
-      'Wij geloven dat luxe en duurzaamheid hand in hand gaan. Onze 100% betrouwbare service is ons commitment aan een schonere toekomst.',
+      'Wij geloven dat comfort en duurzaamheid hand in hand gaan. Onze 100% betrouwbare service is ons commitment aan een schonere toekomst.',
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -59,7 +59,7 @@ const values = [
   {
     title: 'Innovatie',
     description:
-      'Wij blijven vooroplopen in technologie en service. premium voertuigen, geavanceerde boekingssystemen en continue verbetering.',
+      'Wij blijven vooroplopen in technologie en service. Moderne voertuigen, geavanceerde boekingssystemen en continue verbetering.',
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -69,11 +69,11 @@ const values = [
 ]
 
 const milestones = [
-  { year: '2020', title: 'Oprichting', description: 'Start met eerste premium voertuig' },
+  { year: '2020', title: 'Oprichting', description: 'Start met ons eerste voertuig' },
   { year: '2021', title: 'Groei', description: 'Uitbreiding naar 5 voertuigen' },
   { year: '2022', title: 'Uitbreiding', description: 'Service in Den Haag & Leiden' },
   { year: '2023', title: '1000 Klanten', description: 'Mijlpaal: 1000 tevreden klanten' },
-  { year: '2024', title: 'Premium', description: 'Launch VIP & Event service' },
+  { year: '2024', title: 'Uitbreiding', description: 'Launch VIP & Event service' },
 ]
 
 const stats = [
@@ -129,10 +129,10 @@ export default function AboutPage() {
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
               De Toekomst van
-              <span className="block text-primary-300">Premium Vervoer</span>
+              <span className="block text-primary-300">Betrouwbaar Vervoer</span>
             </h1>
             <p className="text-xl text-white/80 max-w-2xl mx-auto">
-              Enjoy Taxi is geboren uit de overtuiging dat luxe vervoer en
+              Enjoy Taxi is geboren uit de overtuiging dat comfortabel vervoer en
               duurzaamheid perfect samengaan. Wij brengen u in stijl naar uw
               bestemming, zonder compromissen.
             </p>
@@ -169,19 +169,19 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-secondary-600">
                 <p>
-                  Enjoy Taxi begon met een simpele vraag: waarom moet premium
+                  Enjoy Taxi begon met een simpele vraag: waarom moet goed
                   vervoer ten koste gaan van het milieu? In 2020 hebben we
                   besloten dat het anders kon en moest.
                 </p>
                 <p>
-                  Met onze eerste premium voertuig startten we een revolutie in de
+                  Met ons eerste voertuig startten we een revolutie in de
                   Nederlandse taxibranche. Geen compromissen op comfort, geen
                   compromissen op duurzaamheid.
                 </p>
                 <p>
                   Vandaag de dag bedienen we meer dan 1000 tevreden klanten in
-                  Den Haag, Leiden en omgeving, met een volledig betrouwbare service van premium
-                  premium voertuigen. En we zijn nog maar net begonnen.
+                  Den Haag, Leiden en omgeving, met een volledig betrouwbare service van
+                  comfortabele voertuigen. En we zijn nog maar net begonnen.
                 </p>
               </div>
             </div>
@@ -271,7 +271,7 @@ export default function AboutPage() {
             </h2>
             <p className="text-lg text-secondary-600 mb-8">
               Ons team bestaat uit ervaren professionals die passie delen voor
-              premium service en duurzaamheid. Elke chauffeur is zorgvuldig
+              betrouwbare service en duurzaamheid. Elke chauffeur is zorgvuldig
               geselecteerd en getraind om u de beste ervaring te bieden.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     apple: '/logo.png',
   },
   title: {
-    default: 'Taxi Den Haag & Leiden | 24/7 Premium Service | Enjoy Taxi',
+    default: 'Taxi Den Haag & Leiden | 24/7 Betrouwbare Service | Enjoy Taxi',
     template: '%s',
   },
   description:
-    'Taxi Den Haag en Leiden - Premium taxi service met vaste prijzen. ✓ 24/7 beschikbaar ✓ Vaste prijzen ✓ Schiphol transfers ✓ Zakelijk vervoer. Bel nu!',
+    'Taxi Den Haag en Leiden - Betrouwbare taxi service met vaste prijzen. ✓ 24/7 beschikbaar ✓ Vaste prijzen ✓ Schiphol transfers ✓ Zakelijk vervoer. Bel nu!',
   keywords: [
     'taxi den haag',
     'taxi leiden',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     'taxi delft',
     'luchthaven taxi',
     'taxi vaste prijs',
-    'premium taxi',
+    'betaalbare taxi',
     'taxi service den haag',
     'taxi service leiden',
     'zakelijk vervoer',
@@ -53,15 +53,15 @@ export const metadata: Metadata = {
     locale: 'nl_NL',
     url: 'https://enjoytaxi.nl',
     siteName: 'Enjoy Taxi',
-    title: 'Taxi Den Haag & Leiden | 24/7 Premium Service',
+    title: 'Taxi Den Haag & Leiden | 24/7 Betrouwbare Service',
     description:
-      'Premium taxi service in Den Haag en omgeving. 100% vaste prijzen, vaste prijzen, 24/7 beschikbaar. Professionele chauffeurs.',
+      'Betrouwbare taxi service in Den Haag en omgeving. 100% vaste prijzen, 24/7 beschikbaar. Professionele chauffeurs.',
     images: [
       {
         url: '/Taxi Den haag.jpg',
         width: 1200,
         height: 630,
-        alt: 'Enjoy Taxi - Premium Taxi Den Haag en Leiden',
+        alt: 'Enjoy Taxi - Taxi Den Haag en Leiden',
       },
     ],
   },
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Taxi Den Haag & Leiden | Enjoy Taxi',
     description:
-      'Premium taxi service met vaste prijzen. 24/7 beschikbaar, vaste prijzen, Schiphol transfers.',
+      'Betrouwbare taxi service met vaste prijzen. 24/7 beschikbaar, Schiphol transfers.',
     images: ['/Taxi Den haag.jpg'],
   },
   robots: {

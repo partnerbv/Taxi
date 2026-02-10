@@ -1,7 +1,7 @@
 {
   "name": "Enjoy Taxi",
   "short_name": "EnjoyTaxi",
-  "description": "Premium Taxi Service - Vaste Prijzen",
+  "description": "Betrouwbare Taxi Service - Vaste Prijzen",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0a0a0a",
