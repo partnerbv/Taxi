@@ -129,9 +129,8 @@ export default function AboutPage() {
               <span className="block text-primary-300">Betrouwbaar Vervoer</span>
             </h1>
             <p className="text-xl text-white/80 max-w-2xl mx-auto mb-8">
-              Enjoy Taxi is geboren uit de overtuiging dat comfortabel vervoer en
-              duurzaamheid perfect samengaan. Wij brengen u in stijl naar uw
-              bestemming, zonder compromissen.
+              Enjoy Taxi is ontstaan vanuit de overtuiging dat luxe, comfort en duurzaamheid perfect samen kunnen gaan. 
+              Wij brengen u stijlvol en zorgeloos naar uw bestemming – met oog voor kwaliteit én het milieu.
             </p>
 
             {/* USP Pills */}
