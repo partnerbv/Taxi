@@ -36,7 +36,7 @@ export default function Hero() {
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-white/80 mb-8 max-w-lg leading-relaxed">
               Betrouwbare taxi met transparante tarieven. 
-              Altijd op tijd, professionele chauffeurs en comfortabel vervoer.
+              Altijd op tijd, professioneel en comfortabel vervoer.
             </p>
 
             {/* CTA Buttons */}
