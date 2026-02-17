@@ -397,7 +397,7 @@ export default function HomePage() {
               Taxi Service <span className="text-primary-600">Den Haag</span> & Leiden
             </h2>
             <p className="text-xl text-secondary-600 max-w-2xl mx-auto">
-              Schiphol transfers, zakelijk vervoer en VIP service - uw betrouwbare taxi in Den Haag en Leiden.
+              Taxi naar Schiphol en comfortabel vervoer in Den Haag en Leiden. Stipt, professioneel en eenvoudig online te reserveren.
             </p>
           </div>
 
