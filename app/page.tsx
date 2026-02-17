@@ -150,7 +150,7 @@ export default function HomePage() {
             alternateName: 'Enjoy Taxi Den Haag',
             url: 'https://enjoytaxi.nl',
             logo: 'https://enjoytaxi.nl/logo.png',
-            description: 'Betrouwbare taxi service in Den Haag en Leiden. 24/7 beschikbaar voor luchthaven transfers, zakelijk vervoer en VIP service.',
+            description: 'Betrouwbare taxi service in Den Haag en Leiden. 24/7 beschikbaar voor luchthaven transfers, zakelijk en voor vervoer',
             telephone: '+31620172767',
             email: 'info@enjoytaxi.nl',
             address: {
