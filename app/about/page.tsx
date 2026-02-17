@@ -50,7 +50,7 @@ const values = [
   {
     title: 'Excellentie',
     description:
-      'Van onze voertuigen tot onze chauffeurs, alles is gericht op het bieden van de best mogelijke ervaring voor onze klanten.',
+      'Of het nu om onze voertuigen gaat of onze chauffeurs, we doen er alles aan om jou een topervaring te bezorgen.',
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
