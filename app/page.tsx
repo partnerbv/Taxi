@@ -18,7 +18,7 @@ const services = [
   },
   {
     title: 'Professioneel Vervoer met Comfort en Service | 24/7 Beschikbaar',
-description: 'Betrouwbaar en comfortabel vervoer voor iedere klant. Altijd op tijd. Reserveer eenvoudig online of bel ons.',
+description: 'Betrouwbaar en comfortabel vervoer voor iedere klant. Altijd op tijd. Reserveer eenvoudig online of bel ons',
 icon: (
 
     icon: (
