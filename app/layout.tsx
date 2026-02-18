@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: '%s',
   },
   description:
-    'Taxi Den Haag en Leiden - Betrouwbare taxi service met vaste prijzen. ✓ 24/7 beschikbaar ✓ Vaste prijzen ✓ Schiphol transfers ✓ Zakelijk vervoer. Bel nu!',
+    'Taxi Den Haag en Leiden - Betrouwbare taxi service met transparante prijzen. ✓ 24/7 beschikbaar ✓ Vaste prijzen ✓ Schiphol transfers ✓ Zakelijk vervoer. Bel nu!',
   keywords: [
     'taxi den haag',
     'taxi leiden',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     siteName: 'Enjoy Taxi',
     title: 'Taxi Den Haag & Leiden | 24/7 Betrouwbare Service',
     description:
-      'Betrouwbare taxi service in Den Haag en omgeving. 100% vaste prijzen, 24/7 beschikbaar. Professionele chauffeurs.',
+      'Betrouwbare taxi service in Den Haag en omgeving. 100% transparante prijzen, 24/7 beschikbaar. Professionele chauffeurs.',
     images: [
       {
         url: '/Taxi Den haag.jpg',
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Taxi Den Haag & Leiden | Enjoy Taxi',
     description:
-      'Betrouwbare taxi service met vaste prijzen. 24/7 beschikbaar, Schiphol transfers.',
+      'Betrouwbare taxi service met transparante prijzen. 24/7 beschikbaar, Schiphol transfers.',
     images: ['/Taxi Den haag.jpg'],
   },
   robots: {
