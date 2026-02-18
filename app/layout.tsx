@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     canonical: 'https://enjoytaxi.nl',
   },
   verification: {
-    google: 'google-site-verification-code',
+    google: 'eVIxnkET5LMObGGb63gVS1laDzUcAUwrRQ3ASobLSmc',
   },
   other: {
     'geo.region': 'NL-ZH',
