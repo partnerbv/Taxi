@@ -36,7 +36,34 @@ const nextConfig = {
         },
         {
           key: 'Content-Security-Policy',
-          value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://www.google.com https://googleads.g.doubleclick.net; frame-src https://www.googletagmanager.com https://googleads.g.doubleclick.net; frame-ancestors 'none'; base-uri 'self'; form-action 'self';",
+          value: `
+            default-src 'self';
+            script-src 'self' 'unsafe-inline' 'unsafe-eval'
+              https://www.googletagmanager.com
+              https://www.google-analytics.com
+              https://www.googleadservices.com
+              https://googleads.g.doubleclick.net
+              https://pagead2.googlesyndication.com
+              https://www.google.com;
+            style-src 'self' 'unsafe-inline';
+            img-src 'self' data: https:;
+            font-src 'self' data:;
+            connect-src 'self'
+              https://www.google-analytics.com
+              https://region1.google-analytics.com
+              https://www.googletagmanager.com
+              https://www.googleadservices.com
+              https://googleads.g.doubleclick.net
+              https://stats.g.doubleclick.net
+              https://www.google.com;
+            frame-src
+              https://www.googletagmanager.com
+              https://googleads.g.doubleclick.net
+              https://www.google.com;
+            frame-ancestors 'none';
+            base-uri 'self';
+            form-action 'self';
+          `.replace(/\n/g, ''),
         },
       ],
     },
