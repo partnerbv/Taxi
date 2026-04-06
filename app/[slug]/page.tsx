@@ -69,13 +69,13 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
     openGraph: {
       title: location.metaTitle,
       description: location.metaDescription,
-      url: `https://enjoytaxi.nl/locations/${location.slug}`,
+      url: `https://enjoytaxi.nl/${location.slug}`,
       type: 'website',
       locale: 'nl_NL',
-      images: [{ url: 'https://enjoytaxi.nl/enjoy taxi.webp', width: 1200, height: 630, alt: `Taxi ${location.name}` }],
+      images: [{ url: 'https://enjoytaxi.nl/enjoy-taxi.webp', width: 1200, height: 630, alt: `Taxi ${location.name}` }],
     },
     twitter: { card: 'summary_large_image', title: location.metaTitle, description: location.metaDescription },
-    alternates: { canonical: `https://enjoytaxi.nl/locations/${location.slug}` },
+    alternates: { canonical: `https://enjoytaxi.nl/${location.slug}` },
     other: { 'geo.region': 'NL-ZH', 'geo.placename': location.name },
   }
 }
@@ -136,9 +136,47 @@ export default async function LocationPage({ params }: LocationPageProps) {
             '@type': 'TaxiService',
             name: `Enjoy Taxi ${location.name}`,
             description: location.description,
-            url: `https://enjoytaxi.nl/locations/${location.slug}`,
+            url: `https://enjoytaxi.nl/${location.slug}`,
             telephone: '+31620172767',
             priceRange: '€€',
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '5.0',
+              reviewCount: '127',
+              bestRating: '5',
+              worstRating: '1',
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: locationFaqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://enjoytaxi.nl' },
+              { '@type': 'ListItem', position: 2, name: 'Locaties', item: 'https://enjoytaxi.nl/locaties' },
+              { '@type': 'ListItem', position: 3, name: location.name, item: `https://enjoytaxi.nl/${location.slug}` },
+            ],
           }),
         }}
       />
@@ -148,7 +186,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
         {/* Background */}
         <div className="absolute inset-0">
           <Image
-            src="/enjoy taxi.webp"
+            src="/enjoy-taxi.webp"
             alt={`Taxi ${location.name}`}
             fill
             className="object-cover"
@@ -322,7 +360,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
               {/* Diensten overzicht */}
               <div className="relative overflow-hidden rounded-2xl">
                 <Image
-                  src="/Taxi-Den-Haag.webp"
+                  src="/taxi-den-haag-hero.webp"
                   alt={`Taxi service ${location.name}`}
                   width={600}
                   height={400}
@@ -423,7 +461,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
             <div className="relative order-2 lg:order-1">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/Taxi naar Schiphol .webp"
+                  src="/taxi-naar-schiphol.webp"
                   alt={`Taxi ${location.name} naar Schiphol`}
                   width={650}
                   height={500}
@@ -583,7 +621,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
                 return (
                   <Link
                     key={loc.slug}
-                    href={`/locations/${loc.slug}`}
+                    href={`/${loc.slug}`}
                     className="group relative bg-white rounded-2xl p-6 border border-secondary-200 hover:border-primary-300 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
                   >
                     {/* Hover gradient */}
@@ -659,7 +697,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
               return (
                 <Link
                   key={loc.slug}
-                  href={`/locations/${loc.slug}`}
+                  href={`/${loc.slug}`}
                   className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-5 border border-white/10 hover:bg-white/10 hover:border-white/25 transition-all duration-300 overflow-hidden"
                 >
                   {/* Hover gradient */}

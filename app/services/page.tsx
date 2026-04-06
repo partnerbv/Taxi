@@ -18,11 +18,19 @@ export const metadata: Metadata = {
     'evenementen vervoer',
   ],
   openGraph: {
-    title: 'Taxi Diensten | Enjoy Taxi Den Haag & Leiden',
+    title: 'Taxi Diensten Den Haag & Leiden | Luchthaven Transfer, Zakelijk, VIP | Enjoy Taxi',
     description:
-      'Ontdek onze betrouwbare taxi diensten met vaste prijzen. Van Schiphol transfers tot VIP service - altijd betrouwbaar.',
+      'Betrouwbare taxi diensten met vaste prijzen in Den Haag en Leiden. Luchthaven transfers naar Schiphol, zakelijk vervoer, evenementen en VIP service. 24/7 beschikbaar.',
     url: 'https://enjoytaxi.nl/services',
     type: 'website',
+    locale: 'nl_NL',
+    images: [{ url: 'https://enjoytaxi.nl/enjoy-taxi.webp', width: 1200, height: 630, alt: 'Enjoy Taxi' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Taxi Diensten Den Haag & Leiden | Luchthaven Transfer, Zakelijk, VIP | Enjoy Taxi',
+    description:
+      'Betrouwbare taxi diensten met vaste prijzen in Den Haag en Leiden. Luchthaven transfers naar Schiphol, zakelijk vervoer, evenementen en VIP service. 24/7 beschikbaar.',
   },
   alternates: {
     canonical: 'https://enjoytaxi.nl/services',

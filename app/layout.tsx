@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   title: {
     default: 'Taxi Den Haag & Leiden | 24/7 Betrouwbare Service | Enjoy Taxi',
-    template: '%s',
+    template: '%s | Enjoy Taxi',
   },
   description:
     'Taxi Den Haag en Leiden - Betrouwbare taxi service met vaste prijzen. ✓ 24/7 beschikbaar ✓ Vaste prijzen ✓ Schiphol transfers ✓ Zakelijk vervoer. Bel nu!',
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
       'Betrouwbare taxi service in Den Haag en omgeving. 100% vaste prijzen, 24/7 beschikbaar. Professionele chauffeurs.',
     images: [
       {
-        url: '/Taxi Den haag.jpg',
+        url: '/taxi-den-haag.jpg',
         width: 1200,
         height: 630,
         alt: 'Enjoy Taxi - Taxi Den Haag en Leiden',
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     title: 'Taxi Den Haag & Leiden | Enjoy Taxi',
     description:
       'Betrouwbare taxi service met vaste prijzen. 24/7 beschikbaar, Schiphol transfers.',
-    images: ['/Taxi Den haag.jpg'],
+    images: ['/taxi-den-haag.jpg'],
   },
   robots: {
     index: true,
@@ -85,9 +85,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://enjoytaxi.nl',
-  },
-  verification: {
-    google: 'google-site-verification-code',
   },
   other: {
     'geo.region': 'NL-ZH',
@@ -121,8 +118,27 @@ export default function RootLayout({
         </Script>
       </head>
       <body className="font-sans">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary-600 focus:text-white focus:rounded-lg focus:outline-none">
+          Ga naar inhoud
+        </a>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'Enjoy Taxi',
+              url: 'https://enjoytaxi.nl',
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: 'https://enjoytaxi.nl/locaties?q={search_term_string}',
+                'query-input': 'required name=search_term_string',
+              },
+            }),
+          }}
+        />
         <Header />
-        <main className="min-h-screen">{children}</main>
+        <main id="main-content" className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

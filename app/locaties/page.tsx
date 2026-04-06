@@ -16,6 +16,19 @@ export const metadata: Metadata = {
     'taxi wassenaar',
     'taxi zuid-holland',
   ],
+  openGraph: {
+    title: 'Taxi Locaties | Den Haag, Leiden, Delft & Meer | Enjoy Taxi',
+    description: 'Taxi service in heel Zuid-Holland. Den Haag, Leiden, Delft, Scheveningen, Zoetermeer en meer. 24/7 beschikbaar met vaste prijzen. Boek nu!',
+    url: 'https://enjoytaxi.nl/locaties',
+    type: 'website',
+    locale: 'nl_NL',
+    images: [{ url: 'https://enjoytaxi.nl/enjoy-taxi.webp', width: 1200, height: 630, alt: 'Enjoy Taxi' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Taxi Locaties | Den Haag, Leiden, Delft & Meer | Enjoy Taxi',
+    description: 'Taxi service in heel Zuid-Holland. Den Haag, Leiden, Delft, Scheveningen, Zoetermeer en meer. 24/7 beschikbaar met vaste prijzen. Boek nu!',
+  },
   alternates: {
     canonical: 'https://enjoytaxi.nl/locaties',
   },
@@ -127,7 +140,7 @@ export default function LocatiesPage() {
             <div className="relative hidden lg:block">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/Taxi Den haag.jpg"
+                  src="/taxi-den-haag.jpg"
                   alt="Taxi Den Haag - Betrouwbare Taxi Service"
                   width={600}
                   height={400}
@@ -158,7 +171,7 @@ export default function LocatiesPage() {
             {airports.map((location, index) => (
               <Link
                 key={location.slug}
-                href={location.slug === 'schiphol' ? '/schiphol' : `/locations/${location.slug}`}
+                href={location.slug === 'taxi-schiphol' ? '/schiphol' : `/${location.slug}`}
                 className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
               >
                 <div className="flex items-center gap-6">
@@ -199,7 +212,7 @@ export default function LocatiesPage() {
             {denHaagWijken.map((location, index) => (
               <Link
                 key={location.slug}
-                href={`/locations/${location.slug}`}
+                href={`/${location.slug}`}
                 className="group p-6 bg-secondary-50 rounded-xl border border-secondary-200 hover:border-primary-300 hover:shadow-lg transition-all text-center"
               >
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${gradients[index % gradients.length]} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
@@ -232,7 +245,7 @@ export default function LocatiesPage() {
             {denHaagOmgeving.map((location) => (
               <Link
                 key={location.slug}
-                href={`/locations/${location.slug}`}
+                href={`/${location.slug}`}
                 className="group p-6 bg-white rounded-xl border border-secondary-200 hover:border-emerald-300 hover:shadow-lg transition-all text-center"
               >
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
@@ -266,7 +279,7 @@ export default function LocatiesPage() {
             {leidenRegion.map((location) => (
               <Link
                 key={location.slug}
-                href={`/locations/${location.slug}`}
+                href={`/${location.slug}`}
                 className="group p-6 bg-secondary-50 rounded-xl border border-secondary-200 hover:border-purple-300 hover:shadow-lg transition-all text-center"
               >
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>

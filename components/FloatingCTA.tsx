@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { SITE_CONFIG } from '@/data/constants'
 
 export default function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false)
@@ -32,7 +33,7 @@ export default function FloatingCTA() {
       <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl shadow-secondary-900/20 border border-secondary-200 p-4">
         <div className="flex items-center gap-3">
           <a
-            href="tel:+31620172767"
+            href={SITE_CONFIG.phoneLink}
             className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3.5 bg-gradient-to-r from-primary-600 to-primary-500 text-white font-semibold rounded-xl shadow-lg shadow-primary-500/30 hover:shadow-xl transition-shadow"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -41,7 +42,7 @@ export default function FloatingCTA() {
             Bel Direct
           </a>
           <a
-            href="https://wa.me/31620172767"
+            href={SITE_CONFIG.whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center w-14 h-14 bg-green-500 text-white rounded-xl shadow-lg shadow-green-500/30 hover:bg-green-600 transition-colors"

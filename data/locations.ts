@@ -21,7 +21,7 @@ export interface Location {
 export const locations: Location[] = [
   // Den Haag en omgeving
   {
-    slug: 'den-haag',
+    slug: 'taxi-den-haag',
     name: 'Den Haag en Omgeving',
     region: 'Den Haag en Omgeving',
     description:
@@ -43,7 +43,7 @@ export const locations: Location[] = [
   },
   // Den Haag Wijken
   {
-    slug: 'bezuidenhout',
+    slug: 'taxi-bezuidenhout',
     name: 'Bezuidenhout',
     region: 'Den Haag',
     description:
@@ -64,7 +64,7 @@ export const locations: Location[] = [
       'Taxi Bezuidenhout bestellen? ✓ vaste prijzen ✓ Beatrixkwartier ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
   {
-    slug: 'centrum-den-haag',
+    slug: 'taxi-centrum-den-haag',
     name: 'Centrum',
     region: 'Den Haag',
     description:
@@ -85,7 +85,7 @@ export const locations: Location[] = [
       'Taxi Den Haag Centrum bestellen? ✓ vaste prijzen ✓ Binnenhof ✓ Passage ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
   {
-    slug: 'laak',
+    slug: 'taxi-laak',
     name: 'Laak',
     region: 'Den Haag',
     description:
@@ -106,7 +106,7 @@ export const locations: Location[] = [
       'Taxi Laak bestellen? ✓ vaste prijzen ✓ Den Haag HS ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
   {
-    slug: 'loosduinen',
+    slug: 'taxi-loosduinen',
     name: 'Loosduinen',
     region: 'Den Haag',
     description:
@@ -127,7 +127,7 @@ export const locations: Location[] = [
       'Taxi Loosduinen bestellen? ✓ vaste prijzen ✓ Kijkduin ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
   {
-    slug: 'segbroek',
+    slug: 'taxi-segbroek',
     name: 'Segbroek',
     region: 'Den Haag',
     description:
@@ -148,7 +148,7 @@ export const locations: Location[] = [
       'Taxi Segbroek bestellen? ✓ vaste prijzen ✓ Regentessekwartier ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
   {
-    slug: 'ypenburg',
+    slug: 'taxi-ypenburg',
     name: 'Ypenburg',
     region: 'Den Haag',
     description:
@@ -169,7 +169,7 @@ export const locations: Location[] = [
       'Taxi Ypenburg bestellen? ✓ vaste prijzen ✓ A4/A13 nabij ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
   {
-    slug: 'leidschenveen',
+    slug: 'taxi-leidschenveen',
     name: 'Leidschenveen',
     region: 'Den Haag',
     description:
@@ -190,7 +190,7 @@ export const locations: Location[] = [
       'Taxi Leidschenveen bestellen? ✓ vaste prijzen ✓ 24/7 beschikbaar ✓ Vaste prijzen ✓ Bel 06 2017 2767!',
   },
   {
-    slug: 'mariahoeve',
+    slug: 'taxi-mariahoeve',
     name: 'Mariahoeve',
     region: 'Den Haag',
     description:
@@ -211,7 +211,7 @@ export const locations: Location[] = [
       'Taxi Mariahoeve bestellen? ✓ vaste prijzen ✓ Clingendael ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
   {
-    slug: 'statenkwartier',
+    slug: 'taxi-statenkwartier',
     name: 'Statenkwartier',
     region: 'Den Haag',
     description:
@@ -232,7 +232,7 @@ export const locations: Location[] = [
       'Taxi Statenkwartier bestellen? ✓ vaste prijzen ✓ Vredespaleis ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
   {
-    slug: 'benoordenhout',
+    slug: 'taxi-benoordenhout',
     name: 'Benoordenhout',
     region: 'Den Haag',
     description:
@@ -253,7 +253,7 @@ export const locations: Location[] = [
       'Taxi Benoordenhout bestellen? ✓ Betrouwbare service ✓ Haagse Bos ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
   {
-    slug: 'scheveningen',
+    slug: 'taxi-scheveningen',
     name: 'Scheveningen',
     region: 'Den Haag en Omgeving',
     description:
@@ -274,7 +274,7 @@ export const locations: Location[] = [
       'Taxi Scheveningen bestellen? ✓ vaste prijzen ✓ Kurhaus & Boulevard ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
   {
-    slug: 'delft',
+    slug: 'taxi-delft',
     name: 'Delft',
     region: 'Den Haag en Omgeving',
     description:
@@ -295,7 +295,7 @@ export const locations: Location[] = [
       'Taxi Delft bestellen? ✓ vaste prijzen ✓ TU Delft ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
   {
-    slug: 'rijswijk',
+    slug: 'taxi-rijswijk',
     name: 'Rijswijk',
     region: 'Den Haag en Omgeving',
     description:
@@ -316,7 +316,7 @@ export const locations: Location[] = [
       'Taxi Rijswijk bestellen? ✓ vaste prijzen ✓ 24/7 beschikbaar ✓ Vaste prijzen ✓ Bel 06 2017 2767!',
   },
   {
-    slug: 'zoetermeer',
+    slug: 'taxi-zoetermeer',
     name: 'Zoetermeer',
     region: 'Den Haag en Omgeving',
     description:
@@ -337,7 +337,7 @@ export const locations: Location[] = [
       'Taxi Zoetermeer bestellen? ✓ vaste prijzen ✓ Snowworld ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
   {
-    slug: 'leidschendam',
+    slug: 'taxi-leidschendam',
     name: 'Leidschendam',
     region: 'Den Haag en Omgeving',
     description:
@@ -358,7 +358,7 @@ export const locations: Location[] = [
       'Taxi Leidschendam bestellen? ✓ vaste prijzen ✓ Mall of the Netherlands ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
   {
-    slug: 'voorburg',
+    slug: 'taxi-voorburg',
     name: 'Voorburg',
     region: 'Den Haag en Omgeving',
     description:
@@ -379,7 +379,7 @@ export const locations: Location[] = [
       'Taxi Voorburg bestellen? ✓ vaste prijzen ✓ 24/7 beschikbaar ✓ Professionele chauffeurs ✓ Bel 06 2017 2767!',
   },
   {
-    slug: 'wassenaar',
+    slug: 'taxi-wassenaar',
     name: 'Wassenaar',
     region: 'Den Haag en Omgeving',
     description:
@@ -401,7 +401,7 @@ export const locations: Location[] = [
   },
   // Leiden en omgeving
   {
-    slug: 'leiden',
+    slug: 'taxi-leiden',
     name: 'Leiden',
     region: 'Leiden e.o.',
     description:
@@ -422,7 +422,7 @@ export const locations: Location[] = [
       'Taxi Leiden bestellen? ✓ vaste prijzen ✓ Universiteit ✓ LUMC ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
   {
-    slug: 'katwijk',
+    slug: 'taxi-katwijk',
     name: 'Katwijk',
     region: 'Leiden e.o.',
     description:
@@ -443,7 +443,7 @@ export const locations: Location[] = [
       'Taxi Katwijk bestellen? ✓ vaste prijzen ✓ ESA/ESTEC ✓ Strand ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
   {
-    slug: 'noordwijk',
+    slug: 'taxi-noordwijk',
     name: 'Noordwijk',
     region: 'Leiden e.o.',
     description:
@@ -464,7 +464,7 @@ export const locations: Location[] = [
       'Taxi Noordwijk bestellen? ✓ vaste prijzen ✓ Space Expo ✓ Congressen ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
   {
-    slug: 'voorschoten',
+    slug: 'taxi-voorschoten',
     name: 'Voorschoten',
     region: 'Leiden e.o.',
     description:
@@ -485,7 +485,7 @@ export const locations: Location[] = [
       'Taxi Voorschoten bestellen? ✓ vaste prijzen ✓ 24/7 beschikbaar ✓ Vaste prijzen ✓ Bel 06 2017 2767!',
   },
   {
-    slug: 'oegstgeest',
+    slug: 'taxi-oegstgeest',
     name: 'Oegstgeest',
     region: 'Leiden e.o.',
     description:
@@ -506,7 +506,7 @@ export const locations: Location[] = [
       'Taxi Oegstgeest bestellen? ✓ vaste prijzen ✓ LUMC ✓ Bio Science Park ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
   {
-    slug: 'leiderdorp',
+    slug: 'taxi-leiderdorp',
     name: 'Leiderdorp',
     region: 'Leiden e.o.',
     description:
@@ -528,7 +528,7 @@ export const locations: Location[] = [
   },
   // Luchthavens
   {
-    slug: 'schiphol',
+    slug: 'taxi-schiphol',
     name: 'Schiphol Airport',
     region: 'Luchthaven',
     description:
@@ -549,7 +549,7 @@ export const locations: Location[] = [
       'Schiphol taxi naar Den Haag €79. ✓ Vaste prijs ✓ Flight tracking ✓ vaste prijzen ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
   {
-    slug: 'rotterdam-the-hague-airport',
+    slug: 'taxi-rotterdam-the-hague-airport',
     name: 'Rotterdam The Hague Airport',
     region: 'Luchthaven',
     description:

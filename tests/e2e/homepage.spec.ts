@@ -109,7 +109,7 @@ test.describe('Contact Page', () => {
 
 test.describe('Location Pages', () => {
   test('should display Den Haag location page correctly', async ({ page }) => {
-    await page.goto('/locations/den-haag')
+    await page.goto('/taxi-den-haag')
 
     await expect(page.getByRole('heading', { name: /den haag/i })).toBeVisible()
     await expect(page.getByText('Den Haag e.o.')).toBeVisible()
@@ -117,7 +117,7 @@ test.describe('Location Pages', () => {
   })
 
   test('should have correct meta data for location pages', async ({ page }) => {
-    await page.goto('/locations/den-haag')
+    await page.goto('/taxi-den-haag')
 
     await expect(page).toHaveTitle(/den haag/i)
 
@@ -126,10 +126,10 @@ test.describe('Location Pages', () => {
   })
 
   test('should navigate between location pages', async ({ page }) => {
-    await page.goto('/locations/den-haag')
+    await page.goto('/taxi-den-haag')
 
     // Find link to another location
     await page.getByRole('link', { name: /leiden/i }).first().click()
-    await expect(page).toHaveURL('/locations/leiden')
+    await expect(page).toHaveURL('/taxi-leiden')
   })
 })

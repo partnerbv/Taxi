@@ -35,6 +35,19 @@
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-primary-500;
   }
+
+  /* Enhanced focus styles for accessibility */
+  *:focus-visible {
+    outline: 2px solid #79ba3a;
+    outline-offset: 2px;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid #79ba3a;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
 }
 
 @layer components {

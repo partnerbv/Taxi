@@ -16,10 +16,19 @@ export const metadata: Metadata = {
     'taxi boeken den haag',
   ],
   openGraph: {
-    title: 'Contact Taxi Den Haag | Bel Direct | Enjoy Taxi',
+    title: 'Contact Taxi Den Haag | Bel 06 2017 2767 | Enjoy Taxi',
     description:
-      'Neem contact op met Enjoy Taxi. Bel 06 2017 2767 of WhatsApp voor directe boeking van uw taxi.',
+      'Contact Enjoy Taxi Den Haag. Bel 06 2017 2767, WhatsApp of direct boeken. Betrouwbare taxi service 24/7 beschikbaar in Den Haag en omgeving.',
     url: 'https://enjoytaxi.nl/contact',
+    type: 'website',
+    locale: 'nl_NL',
+    images: [{ url: 'https://enjoytaxi.nl/enjoy-taxi.webp', width: 1200, height: 630, alt: 'Enjoy Taxi' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Taxi Den Haag | Bel 06 2017 2767 | Enjoy Taxi',
+    description:
+      'Contact Enjoy Taxi Den Haag. Bel 06 2017 2767, WhatsApp of direct boeken. Betrouwbare taxi service 24/7 beschikbaar in Den Haag en omgeving.',
   },
   alternates: {
     canonical: 'https://enjoytaxi.nl/contact',
@@ -70,8 +79,8 @@ export default function ContactPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/enjoy taxi.webp"
-            alt="Enjoy Taxi - Taxi Den Haag met Vaste Prijzen"
+            src="/enjoy-taxi.webp"
+            alt="Contact Enjoy Taxi - Neem Contact Op"
             fill
             className="object-cover"
             priority
@@ -311,6 +320,43 @@ export default function ContactPage() {
               email: 'info@enjoytaxi.nl',
               url: 'https://enjoytaxi.nl/contact',
             },
+          }),
+        }}
+      />
+
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Hoe snel kan ik een taxi krijgen?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Bij directe beschikbaarheid kunnen wij binnen 15-30 minuten bij u zijn. Voor geplande ritten adviseren wij minimaal 24 uur vooruit te boeken.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Wat zijn de betaalmogelijkheden?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Wij accepteren contant, PIN, creditcard en voor zakelijke klanten ook op factuur. Vooraf betalen via iDEAL is ook mogelijk.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Kan ik annuleren?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Annuleren is kosteloos tot 2 uur voor de geplande ophaaltijd. Bij latere annulering kunnen kosten in rekening worden gebracht.',
+                },
+              },
+            ],
           }),
         }}
       />

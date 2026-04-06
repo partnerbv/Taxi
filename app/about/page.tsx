@@ -16,10 +16,19 @@ export const metadata: Metadata = {
     'duurzame taxi',
   ],
   openGraph: {
-    title: 'Over Enjoy Taxi | Taxi Den Haag',
+    title: 'Over Enjoy Taxi Den Haag | Betrouwbare Taxi Service | Vaste Prijzen',
     description:
-      'Ontdek het verhaal achter Enjoy Taxi en onze passie voor duurzaam betrouwbaar vervoer.',
+      'Over Enjoy Taxi: betrouwbare taxi service in Den Haag. Professionele chauffeurs, duurzaam, comfortabel reizen, 24/7 service.',
     url: 'https://enjoytaxi.nl/about',
+    type: 'website',
+    locale: 'nl_NL',
+    images: [{ url: 'https://enjoytaxi.nl/enjoy-taxi.webp', width: 1200, height: 630, alt: 'Enjoy Taxi' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Over Enjoy Taxi Den Haag | Betrouwbare Taxi Service | Vaste Prijzen',
+    description:
+      'Over Enjoy Taxi: betrouwbare taxi service in Den Haag. Professionele chauffeurs, duurzaam, comfortabel reizen, 24/7 service.',
   },
   alternates: {
     canonical: 'https://enjoytaxi.nl/about',
@@ -92,8 +101,8 @@ export default function AboutPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/enjoy taxi.webp"
-            alt="Enjoy Taxi - Taxi Den Haag met Vaste Prijzen"
+            src="/enjoy-taxi.webp"
+            alt="Over Enjoy Taxi - Ons Verhaal"
             fill
             className="object-cover"
             priority

@@ -26,7 +26,7 @@ export default function PageHero({
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/enjoy taxi.webp"
+          src="/enjoy-taxi.webp"
           alt="Enjoy Taxi - Taxi Den Haag met Vaste Prijzen"
           fill
           className="object-cover"

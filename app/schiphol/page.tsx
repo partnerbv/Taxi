@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     url: 'https://enjoytaxi.nl/schiphol',
     images: [
       {
-        url: '/Taxi naar Schiphol .webp',
+        url: '/taxi-naar-schiphol.webp',
         width: 1200,
         height: 630,
         alt: 'Taxi naar Schiphol - Enjoy Taxi',
@@ -253,7 +253,7 @@ export default function SchipholPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/Taxi naar Schiphol .webp"
+            src="/taxi-naar-schiphol.webp"
             alt="Taxi naar Schiphol - Betrouwbare Luchthaven Transfer"
             fill
             className="object-cover"
@@ -429,7 +429,7 @@ export default function SchipholPage() {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/Taxi naar Schiphol .webp"
+                  src="/taxi-naar-schiphol.webp"
                   alt="Taxi naar Schiphol - Luchthaven Transfer"
                   width={600}
                   height={450}
@@ -594,7 +594,7 @@ export default function SchipholPage() {
             <div className="relative order-2 lg:order-1">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/Taxi.jpg"
+                  src="/taxi.jpg"
                   alt="Schiphol Taxi Service - Enjoy Taxi"
                   width={600}
                   height={450}

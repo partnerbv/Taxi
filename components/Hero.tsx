@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { SITE_CONFIG } from '@/data/constants'
 
 export default function Hero() {
   return (
@@ -6,7 +7,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/enjoy taxi.webp"
+          src="/enjoy-taxi.webp"
           alt="Enjoy Taxi - Taxi Den Haag 24/7 Beschikbaar"
           fill
           className="object-cover"
@@ -42,7 +43,7 @@ export default function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <a
-                href="tel:+31620172767"
+                href={SITE_CONFIG.phoneLink}
                 className="inline-flex items-center justify-center px-7 py-3.5 font-semibold text-primary-600 text-sm bg-white rounded-lg transition-all duration-200 hover:bg-primary-50 hover:shadow-lg"
               >
                 <svg
@@ -62,7 +63,7 @@ export default function Hero() {
                 Bel Direct
               </a>
               <a
-                href="https://wa.me/31620172767"
+                href={SITE_CONFIG.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-7 py-3.5 font-semibold text-white text-sm bg-transparent border border-white/30 rounded-lg transition-all duration-200 hover:bg-white/10"
@@ -82,19 +83,19 @@ export default function Hero() {
             {/* USP Pills */}
             <div className="flex flex-wrap gap-3">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
-                <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
                 <span className="text-sm font-medium text-white">Betaalbare Prijzen</span>
               </div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
-                <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span className="text-sm font-medium text-white">24/7 Service</span>
               </div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
-                <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-4 h-4 text-primary-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span className="text-sm font-medium text-white">Professioneel</span>
@@ -149,10 +150,10 @@ export default function Hero() {
 
               {/* Quick Book CTA */}
               <a
-                href="tel:+31620172767"
+                href={SITE_CONFIG.phoneLink}
                 className="flex items-center justify-center gap-2 w-full bg-white text-primary-600 font-semibold py-3.5 px-6 rounded-lg text-center hover:bg-primary-50 transition-colors text-sm"
               >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
                 Bel Nu
@@ -172,6 +173,7 @@ export default function Hero() {
             xmlns="http://www.w3.org/2000/svg"
             className="absolute bottom-0 w-full h-[80px] md:h-[120px]"
             preserveAspectRatio="none"
+            aria-hidden="true"
           >
             {/* Main wave - white background */}
             <path
@@ -222,6 +224,7 @@ export default function Hero() {
                 xmlns="http://www.w3.org/2000/svg"
                 className="drop-shadow-2xl w-14 h-7 md:w-20 md:h-10"
                 style={{ transform: 'rotateX(10deg)' }}
+                aria-hidden="true"
               >
                 {/* Car body - main shape with 3D gradient */}
                 <defs>

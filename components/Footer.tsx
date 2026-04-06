@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { SITE_CONFIG } from '@/data/constants'
 
 const footerLinks = {
   diensten: [
@@ -9,10 +10,10 @@ const footerLinks = {
     { name: 'VIP Service', href: '/services#vip' },
   ],
   regio: [
-    { name: 'Den Haag', href: '/locations/den-haag' },
-    { name: 'Leiden', href: '/locations/leiden' },
-    { name: 'Delft', href: '/locations/delft' },
-    { name: 'Schiphol', href: '/locations/schiphol' },
+    { name: 'Den Haag', href: '/taxi-den-haag' },
+    { name: 'Leiden', href: '/taxi-leiden' },
+    { name: 'Delft', href: '/taxi-delft' },
+    { name: 'Schiphol', href: '/taxi-schiphol' },
   ],
   bedrijf: [
     { name: 'Over Ons', href: '/about' },
@@ -26,7 +27,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-secondary-900 text-white">
+    <footer className="bg-secondary-900 text-white" aria-label="Footer">
       {/* Main Footer */}
       <div className="container-custom py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
@@ -48,7 +49,7 @@ export default function Footer() {
             {/* Contact Info */}
             <div className="space-y-3">
               <a
-                href="tel:+31620172767"
+                href={SITE_CONFIG.phoneLink}
                 className="flex items-center space-x-3 text-secondary-300 hover:text-primary-400 transition-colors"
               >
                 <svg
@@ -65,10 +66,10 @@ export default function Footer() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span>06 2017 2767</span>
+                <span>{SITE_CONFIG.phone}</span>
               </a>
               <a
-                href="mailto:info@enjoytaxi.nl"
+                href={`mailto:${SITE_CONFIG.email}`}
                 className="flex items-center space-x-3 text-secondary-300 hover:text-primary-400 transition-colors"
               >
                 <svg
@@ -85,14 +86,14 @@ export default function Footer() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span>info@enjoytaxi.nl</span>
+                <span>{SITE_CONFIG.email}</span>
               </a>
             </div>
             {/* Business Info */}
             <div className="mt-6 pt-6 border-t border-secondary-700">
               <div className="text-sm text-secondary-400 space-y-1">
-                <p>KVK: 27293969</p>
-                <p>BTW: NL002455187B87</p>
+                <p>KVK: {SITE_CONFIG.kvk}</p>
+                <p>BTW: {SITE_CONFIG.btw}</p>
               </div>
             </div>
           </div>

@@ -6,8 +6,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date()
 
   // High priority location slugs (main cities and airports)
-  const highPriorityLocations = ['den-haag', 'leiden', 'schiphol']
-  const mediumPriorityLocations = ['delft', 'scheveningen', 'zoetermeer', 'rotterdam-the-hague-airport']
+  const highPriorityLocations = ['taxi-den-haag', 'taxi-leiden', 'taxi-schiphol']
+  const mediumPriorityLocations = ['taxi-delft', 'taxi-scheveningen', 'taxi-zoetermeer', 'taxi-rotterdam-the-hague-airport']
 
   // Static pages - optimized priorities
   const staticPages: MetadataRoute.Sitemap = [
@@ -47,6 +47,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/terms`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.3,
+    },
   ]
 
   // Location pages with tiered priorities
@@ -60,7 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
 
     return {
-      url: `${baseUrl}/locations/${location.slug}`,
+      url: `${baseUrl}/${location.slug}`,
       lastModified,
       changeFrequency: 'weekly' as const,
       priority,

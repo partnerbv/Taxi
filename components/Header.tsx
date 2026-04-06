@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
+import { SITE_CONFIG } from '@/data/constants'
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -33,7 +34,7 @@ export default function Header() {
           : 'backdrop-blur-sm'
       }`}
     >
-      <nav className="container-custom overflow-hidden">
+      <nav className="container-custom overflow-hidden" aria-label="Hoofdnavigatie">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link
@@ -73,7 +74,7 @@ export default function Header() {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="tel:+31620172767"
+              href={SITE_CONFIG.phoneLink}
               className={`flex items-center space-x-2 transition-colors ${
                 isScrolled
                   ? 'text-primary-600 hover:text-primary-700'
@@ -168,7 +169,7 @@ export default function Header() {
             ))}
             <div className="flex flex-col space-y-3 pt-4">
               <a
-                href="tel:+31620172767"
+                href={SITE_CONFIG.phoneLink}
                 className="flex items-center justify-center space-x-2 text-primary-600 py-3 border-2 border-primary-500 rounded-full"
               >
                 <svg

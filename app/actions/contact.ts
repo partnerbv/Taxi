@@ -118,23 +118,13 @@ export async function submitContactForm(
     // Simulate processing time
     await new Promise((resolve) => setTimeout(resolve, 1000))
 
-    // Log submission (replace with actual handling in production)
-    console.log('Contact form submission:', {
-      name: validationResult.data.name,
-      email: validationResult.data.email,
-      phone: validationResult.data.phone,
-      service: validationResult.data.service,
-      date: validationResult.data.date,
-      message: validationResult.data.message,
-      timestamp: new Date().toISOString(),
-    })
+    // TODO: In production, send email notification, store in database, send to CRM, etc.
 
     return {
       success: true,
       message: 'Bedankt voor uw aanvraag! Wij nemen binnen 24 uur contact met u op.',
     }
   } catch (error) {
-    console.error('Contact form error:', error)
     return {
       success: false,
       message: 'Er is een fout opgetreden. Probeer het later opnieuw of bel ons direct.',
