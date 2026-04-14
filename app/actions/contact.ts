@@ -1,6 +1,7 @@
 'use server'
 
 import { z } from 'zod'
+import nodemailer from 'nodemailer'
 
 // Rate limiting store (in production, use Redis or similar)
 const rateLimitStore = new Map<string, { count: number; resetTime: number }>()
@@ -56,14 +57,80 @@ function checkRateLimit(identifier: string): boolean {
   return true
 }
 
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST,
+  port: Number(process.env.SMTP_PORT) || 587,
+  secure: Number(process.env.SMTP_PORT) === 465,
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+})
+
+async function sendEmail(data: {
+  name: string
+  email: string
+  phone: string
+  service?: string
+  date?: string
+  message: string
+}) {
+  const serviceLabel = data.service || 'Niet opgegeven'
+  const dateLabel = data.date || 'Niet opgegeven'
+
+  await transporter.sendMail({
+    from: `"Enjoy Taxi Website" <${process.env.SMTP_FROM}>`,
+    to: process.env.SMTP_TO,
+    replyTo: data.email,
+    subject: `Nieuwe aanvraag van ${data.name}`,
+    html: `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <div style="background-color: #79ba3a; padding: 20px; border-radius: 8px 8px 0 0;">
+          <h1 style="color: white; margin: 0; font-size: 24px;">Nieuwe Taxi Aanvraag</h1>
+        </div>
+        <div style="background-color: #f9f9f9; padding: 24px; border: 1px solid #e0e0e0;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+              <td style="padding: 12px 0; border-bottom: 1px solid #e0e0e0; font-weight: bold; width: 140px;">Naam:</td>
+              <td style="padding: 12px 0; border-bottom: 1px solid #e0e0e0;">${data.name}</td>
+            </tr>
+            <tr>
+              <td style="padding: 12px 0; border-bottom: 1px solid #e0e0e0; font-weight: bold;">E-mail:</td>
+              <td style="padding: 12px 0; border-bottom: 1px solid #e0e0e0;"><a href="mailto:${data.email}">${data.email}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 12px 0; border-bottom: 1px solid #e0e0e0; font-weight: bold;">Telefoon:</td>
+              <td style="padding: 12px 0; border-bottom: 1px solid #e0e0e0;"><a href="tel:${data.phone}">${data.phone}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 12px 0; border-bottom: 1px solid #e0e0e0; font-weight: bold;">Dienst:</td>
+              <td style="padding: 12px 0; border-bottom: 1px solid #e0e0e0;">${serviceLabel}</td>
+            </tr>
+            <tr>
+              <td style="padding: 12px 0; border-bottom: 1px solid #e0e0e0; font-weight: bold;">Datum:</td>
+              <td style="padding: 12px 0; border-bottom: 1px solid #e0e0e0;">${dateLabel}</td>
+            </tr>
+          </table>
+          <div style="margin-top: 20px;">
+            <h3 style="margin: 0 0 8px 0; color: #333;">Bericht:</h3>
+            <div style="background-color: white; padding: 16px; border-radius: 6px; border: 1px solid #e0e0e0; white-space: pre-wrap;">${data.message}</div>
+          </div>
+        </div>
+        <div style="background-color: #333; padding: 16px; border-radius: 0 0 8px 8px; text-align: center;">
+          <p style="color: #999; margin: 0; font-size: 12px;">Verstuurd via enjoytaxi.nl contactformulier</p>
+        </div>
+      </div>
+    `,
+    text: `Nieuwe aanvraag van ${data.name}\n\nNaam: ${data.name}\nE-mail: ${data.email}\nTelefoon: ${data.phone}\nDienst: ${serviceLabel}\nDatum: ${dateLabel}\n\nBericht:\n${data.message}`,
+  })
+}
+
 export async function submitContactForm(
   prevState: ContactFormState,
   formData: FormData
 ): Promise<ContactFormState> {
-  // Simulate a client identifier (in production, use IP or session)
   const clientId = 'client-' + (formData.get('email') || 'unknown')
 
-  // Check rate limit
   if (!checkRateLimit(clientId)) {
     return {
       success: false,
@@ -71,7 +138,6 @@ export async function submitContactForm(
     }
   }
 
-  // Extract form data
   const rawData = {
     name: formData.get('name') as string,
     email: formData.get('email') as string,
@@ -79,10 +145,9 @@ export async function submitContactForm(
     service: formData.get('service') as string,
     date: formData.get('date') as string,
     message: formData.get('message') as string,
-    website: formData.get('website') as string, // Honeypot
+    website: formData.get('website') as string,
   }
 
-  // Validate with Zod
   const validationResult = contactSchema.safeParse(rawData)
 
   if (!validationResult.success) {
@@ -99,9 +164,7 @@ export async function submitContactForm(
     }
   }
 
-  // If honeypot field is filled, silently reject (spam)
   if (rawData.website) {
-    // Pretend success to fool spammers
     return {
       success: true,
       message: 'Bedankt voor uw aanvraag! Wij nemen zo snel mogelijk contact met u op.',
@@ -109,25 +172,16 @@ export async function submitContactForm(
   }
 
   try {
-    // In production, here you would:
-    // 1. Send email notification
-    // 2. Store in database
-    // 3. Send to CRM
-    // 4. etc.
-
-    // Simulate processing time
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-
-    // TODO: In production, send email notification, store in database, send to CRM, etc.
+    await sendEmail(validationResult.data)
 
     return {
       success: true,
       message: 'Bedankt voor uw aanvraag! Wij nemen binnen 24 uur contact met u op.',
     }
-  } catch (error) {
+  } catch {
     return {
       success: false,
-      message: 'Er is een fout opgetreden. Probeer het later opnieuw of bel ons direct.',
+      message: 'Er is een fout opgetreden bij het versturen. Bel ons direct op 06 2017 2767.',
     }
   }
 }
