@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================
+   Base Styles
+   ============================================ */
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -9,10 +12,15 @@
   }
 
   body {
-    @apply bg-white text-secondary-800 antialiased;
-    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    @apply bg-white text-accent-800 antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+    min-height: 100vh;
     overflow-x: hidden;
     max-width: 100vw;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight text-accent-900;
   }
 
   ::selection {
@@ -23,344 +31,175 @@
   ::-webkit-scrollbar {
     width: 8px;
   }
-
   ::-webkit-scrollbar-track {
-    @apply bg-secondary-100;
+    @apply bg-accent-100;
   }
-
   ::-webkit-scrollbar-thumb {
-    @apply bg-secondary-300 rounded-full;
+    @apply bg-accent-300 rounded-full;
   }
-
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-primary-500;
   }
 
-  /* Enhanced focus styles for accessibility */
   *:focus-visible {
-    outline: 2px solid #79ba3a;
+    outline: 2px solid #2563eb;
     outline-offset: 2px;
-  }
-
-  a:focus-visible,
-  button:focus-visible {
-    outline: 2px solid #79ba3a;
-    outline-offset: 2px;
-    border-radius: 4px;
   }
 }
 
+/* ============================================
+   Luxury Component System (blauw)
+   ============================================ */
 @layer components {
-  /* Buttons */
+  /* Primary CTA - Blauwe gradient */
   .btn-primary {
-    @apply inline-flex items-center justify-center px-7 py-3.5 font-semibold text-white text-sm
-           bg-primary-600 rounded-lg transition-all duration-200
-           hover:bg-primary-700 hover:shadow-lg focus:outline-none focus:ring-2
-           focus:ring-primary-500 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center px-8 py-4 bg-gradient-blue text-white font-semibold rounded-xl shadow-blue transition-all duration-300 hover:shadow-blue-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
   }
 
+  /* Secondary button - Outline style */
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-7 py-3.5 font-semibold text-primary-600 text-sm
-           bg-white border border-secondary-300 rounded-lg transition-all duration-200
-           hover:border-primary-500 hover:bg-primary-50 focus:outline-none focus:ring-2
-           focus:ring-primary-500 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 font-semibold rounded-xl border-2 border-primary-200 shadow-luxury transition-all duration-300 hover:border-primary-500 hover:bg-primary-50 hover:shadow-luxury-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
   }
 
-  .btn-accent {
-    @apply inline-flex items-center justify-center px-7 py-3.5 font-semibold text-white text-sm
-           bg-accent-500 rounded-lg transition-all duration-200
-           hover:bg-accent-600 hover:shadow-lg focus:outline-none focus:ring-2
-           focus:ring-accent-500 focus:ring-offset-2;
+  /* Dark button variant */
+  .btn-dark {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-accent-900 text-white font-semibold rounded-xl shadow-luxury transition-all duration-300 hover:bg-accent-800 hover:shadow-luxury-lg focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2;
   }
 
-  .btn-white {
-    @apply inline-flex items-center justify-center px-7 py-3.5 font-semibold text-primary-600 text-sm
-           bg-white rounded-lg transition-all duration-200 shadow-sm
-           hover:shadow-md focus:outline-none focus:ring-2
-           focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-600;
+  /* Modern cards */
+  .card-luxury {
+    @apply bg-white rounded-2xl shadow-luxury p-8 transition-all duration-300 hover:shadow-luxury-lg border border-accent-100;
+  }
+  .card-interactive {
+    @apply bg-white rounded-2xl shadow-luxury p-8 transition-all duration-300 hover:shadow-luxury-xl hover:-translate-y-1 border border-accent-100;
+  }
+  .card-glass {
+    @apply bg-white/80 rounded-2xl shadow-luxury-lg p-8 border border-white/20;
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
   }
 
-  .btn-ghost {
-    @apply inline-flex items-center justify-center px-7 py-3.5 font-semibold text-secondary-700 text-sm
-           bg-transparent rounded-lg transition-all duration-200
-           hover:bg-secondary-100 focus:outline-none focus:ring-2
-           focus:ring-secondary-500 focus:ring-offset-2;
+  .section-padding {
+    @apply py-20 md:py-32 px-4 md:px-8;
   }
 
-  /* Cards */
-  .card {
-    @apply bg-white border border-secondary-200 rounded-xl p-6
-           transition-all duration-200;
+  .container-luxury {
+    @apply max-w-7xl mx-auto px-4 md:px-8;
   }
 
-  .card-hover {
-    @apply bg-white border border-secondary-200 rounded-xl p-6
-           transition-all duration-200
-           hover:shadow-lg hover:border-secondary-300 hover:-translate-y-1;
+  /* Badges */
+  .badge-primary {
+    @apply inline-flex items-center px-4 py-1.5 bg-primary-100 text-primary-700 text-sm font-semibold rounded-full;
+  }
+  .badge-accent {
+    @apply inline-flex items-center px-4 py-1.5 bg-accent-100 text-accent-700 text-sm font-semibold rounded-full;
   }
 
-  .card-highlight {
-    @apply bg-white border-2 border-primary-500 rounded-xl p-6
-           shadow-sm;
-  }
-
-  /* Sections */
-  .section {
-    @apply py-16 md:py-24;
-  }
-
-  .section-lg {
-    @apply py-20 md:py-32;
-  }
-
-  .section-gray {
-    @apply py-16 md:py-24 bg-secondary-50;
-  }
-
-  .section-dark {
-    @apply py-16 md:py-24 bg-secondary-900 text-white;
-  }
-
-  .section-primary {
-    @apply py-16 md:py-24 bg-primary-600 text-white;
-  }
-
-  /* Container */
+  /* ---- Legacy helpers (oudere pagina's) ---- */
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
-
   .container-narrow {
     @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
   }
-
-  /* Typography */
+  .section {
+    @apply py-16 md:py-24;
+  }
+  .section-gray {
+    @apply py-16 md:py-24 bg-accent-50;
+  }
+  .section-dark {
+    @apply py-16 md:py-24 bg-accent-900 text-white;
+  }
   .heading-1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-secondary-900 leading-tight;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-accent-900 leading-tight;
   }
-
   .heading-2 {
-    @apply text-3xl md:text-4xl font-bold tracking-tight text-secondary-900 leading-tight;
+    @apply text-3xl md:text-4xl font-bold tracking-tight text-accent-900 leading-tight;
   }
-
   .heading-3 {
-    @apply text-xl md:text-2xl font-bold tracking-tight text-secondary-900;
+    @apply text-xl md:text-2xl font-bold tracking-tight text-accent-900;
   }
-
-  .heading-4 {
-    @apply text-lg md:text-xl font-semibold text-secondary-900;
-  }
-
-  .text-gradient {
-    @apply bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent;
-  }
-
   .text-lead {
-    @apply text-lg md:text-xl text-secondary-600 leading-relaxed;
+    @apply text-lg md:text-xl text-accent-600 leading-relaxed;
   }
-
-  /* Section Header */
-  .section-header {
-    @apply text-center mb-12 md:mb-16;
+  .card {
+    @apply bg-white border border-accent-200 rounded-xl p-6 transition-all duration-200;
   }
-
-  .section-header-left {
-    @apply mb-12 md:mb-16;
+  .card-hover {
+    @apply bg-white border border-accent-200 rounded-xl p-6 transition-all duration-200 hover:shadow-lg hover:border-accent-300 hover:-translate-y-1;
   }
-
-  .section-eyebrow {
-    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4;
-  }
-
-  .section-eyebrow-primary {
-    @apply section-eyebrow bg-primary-100 text-primary-700;
-  }
-
-  .section-eyebrow-accent {
-    @apply section-eyebrow bg-accent-100 text-accent-700;
-  }
-
-  /* Input styles */
-  .input-field {
-    @apply w-full px-4 py-3 bg-white border border-secondary-300 rounded-lg
-           text-secondary-800 placeholder:text-secondary-400 transition-all duration-200
-           focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-100;
-  }
-
-  .input-error {
-    @apply border-red-500 focus:border-red-500 focus:ring-red-100;
-  }
-
-  /* Badge styles */
   .badge {
     @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold;
   }
-
-  .badge-primary {
-    @apply bg-primary-100 text-primary-700;
-  }
-
-  .badge-accent {
-    @apply bg-accent-100 text-accent-700;
-  }
-
   .badge-success {
     @apply bg-green-100 text-green-700;
   }
-
-  .badge-gray {
-    @apply bg-secondary-100 text-secondary-700;
+  .input-field {
+    @apply w-full px-4 py-3 bg-white border border-accent-300 rounded-lg text-accent-800 placeholder:text-accent-400 transition-all duration-200 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-100;
   }
-
-  /* Feature Card */
-  .feature-card {
-    @apply bg-white border border-secondary-200 rounded-xl p-6
-           transition-all duration-200
-           hover:shadow-lg hover:border-secondary-300;
+  .input-error {
+    @apply border-red-500 focus:border-red-500 focus:ring-red-100;
   }
-
-  .feature-icon {
-    @apply w-12 h-12 rounded-xl flex items-center justify-center mb-4;
-  }
-
-  .feature-icon-primary {
-    @apply feature-icon bg-primary-100 text-primary-600;
-  }
-
-  .feature-icon-accent {
-    @apply feature-icon bg-accent-100 text-accent-600;
-  }
-
-  /* Stats */
-  .stat-item {
-    @apply text-center;
-  }
-
-  .stat-value {
-    @apply text-3xl md:text-4xl font-bold text-secondary-900 mb-1;
-  }
-
-  .stat-value-primary {
-    @apply text-3xl md:text-4xl font-bold text-primary-600 mb-1;
-  }
-
-  .stat-label {
-    @apply text-sm text-secondary-500;
-  }
-
-  /* Dividers */
-  .divider {
-    @apply border-t border-secondary-200;
-  }
-
-  .divider-vertical {
-    @apply w-px bg-secondary-200;
-  }
-
-  /* Link styles */
   .link {
     @apply text-primary-600 hover:text-primary-700 transition-colors duration-200;
   }
-
-  .link-underline {
-    @apply text-primary-600 hover:text-primary-700 underline underline-offset-4 transition-colors duration-200;
-  }
 }
 
+/* ============================================
+   Utilities
+   ============================================ */
 @layer utilities {
+  /* Blauwe text gradient */
+  .text-gradient-blue {
+    @apply bg-gradient-blue bg-clip-text text-transparent;
+  }
+  /* Legacy alias */
+  .text-gradient {
+    @apply bg-gradient-blue bg-clip-text text-transparent;
+  }
+
   .text-balance {
     text-wrap: balance;
   }
 
-  .animate-delay-100 {
-    animation-delay: 100ms;
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
   }
-
-  .animate-delay-200 {
-    animation-delay: 200ms;
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
   }
-
-  .animate-delay-300 {
-    animation-delay: 300ms;
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
   }
-
-  .animate-delay-400 {
-    animation-delay: 400ms;
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
   }
+}
 
-  .animate-delay-500 {
-    animation-delay: 500ms;
-  }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
 
-  /* Driving car animation */
-  @keyframes drive {
-    0% {
-      left: -5%;
-      transform: translateY(0) rotateY(0deg);
-    }
-    25% {
-      transform: translateY(-8px) rotateY(0deg);
-    }
-    50% {
-      transform: translateY(0) rotateY(0deg);
-    }
-    75% {
-      transform: translateY(-5px) rotateY(0deg);
-    }
-    100% {
-      left: 105%;
-      transform: translateY(0) rotateY(0deg);
-    }
-  }
-
-  @keyframes wheelSpin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes carShadow {
-    0%, 100% {
-      transform: scaleX(1) translateX(-50%);
-      opacity: 0.3;
-    }
-    25%, 75% {
-      transform: scaleX(0.9) translateX(-50%);
-      opacity: 0.2;
-    }
-    50% {
-      transform: scaleX(1.1) translateX(-50%);
-      opacity: 0.35;
-    }
-  }
-
-  @keyframes headlightGlow {
-    0%, 100% {
-      opacity: 0.8;
-      filter: blur(2px);
-    }
-    50% {
-      opacity: 1;
-      filter: blur(4px);
-    }
-  }
-
-  .animate-drive {
-    animation: drive 12s linear infinite;
-  }
-
-  .animate-wheel {
-    animation: wheelSpin 0.5s linear infinite;
-  }
-
-  .animate-car-shadow {
-    animation: carShadow 12s linear infinite;
-  }
-
-  .animate-headlight {
-    animation: headlightGlow 1s ease-in-out infinite;
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

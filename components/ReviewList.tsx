@@ -126,12 +126,12 @@ function StarRating({ rating }: { rating: number }) {
 
 export default function ReviewList() {
   const gradients = [
-    'from-emerald-500 to-teal-500',
-    'from-purple-500 to-pink-500',
-    'from-orange-500 to-amber-500',
-    'from-blue-500 to-cyan-500',
-    'from-rose-500 to-pink-500',
-    'from-amber-500 to-yellow-500',
+    'from-primary-500 to-primary-600',
+    'from-primary-600 to-primary-700',
+    'from-accent-700 to-accent-900',
+    'from-primary-500 to-primary-700',
+    'from-accent-600 to-accent-800',
+    'from-primary-400 to-primary-600',
   ]
 
   return (
@@ -147,7 +147,7 @@ export default function ReviewList() {
             Wat Onze <span className="text-primary-600">Klanten</span> Zeggen
           </h2>
           <p className="text-xl text-secondary-600 max-w-2xl mx-auto">
-            Ontdek waarom meer dan 1000 tevreden klanten voor Enjoy Taxi kiezen
+            Ontdek waarom klanten in Den Haag en Leiden voor Enjoy Taxi kiezen
           </p>
         </div>
 
@@ -175,8 +175,8 @@ export default function ReviewList() {
               </div>
               <div className="h-10 w-px bg-secondary-200" />
               <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-primary-600">127</div>
-                <div className="text-xs sm:text-sm text-secondary-500 font-medium">Reviews</div>
+                <div className="text-3xl sm:text-4xl font-bold text-primary-600">100%</div>
+                <div className="text-xs sm:text-sm text-secondary-500 font-medium">Aanbevolen</div>
               </div>
             </div>
           </div>

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: 'https://enjoytaxi.nl/about',
     type: 'website',
     locale: 'nl_NL',
-    images: [{ url: 'https://enjoytaxi.nl/enjoy-taxi.webp', width: 1200, height: 630, alt: 'Enjoy Taxi' }],
+    images: [{ url: 'https://enjoytaxi.nl/taxi-vredespaleis.webp', width: 1200, height: 630, alt: 'Enjoy Taxi' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -39,7 +39,7 @@ const values = [
   {
     title: 'Duurzaamheid',
     description:
-      'Wij geloven dat comfort en duurzaamheid hand in hand gaan. Onze 100% betrouwbare service is ons commitment aan een schonere toekomst.',
+      'Wij rijden volledig elektrisch met de Mercedes EQS. Comfortabel reizen én een schonere stad gaan bij ons hand in hand.',
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -78,19 +78,18 @@ const values = [
   },
 ]
 
-const milestones = [
-  { year: '2020', title: 'Oprichting', description: 'Start met ons eerste voertuig' },
-  { year: '2021', title: 'Groei', description: 'Uitbreiding naar 5 voertuigen' },
-  { year: '2022', title: 'Uitbreiding', description: 'Service in Den Haag & Leiden' },
-  { year: '2023', title: '1000 Klanten', description: 'Mijlpaal: 1000 tevreden klanten' },
-  { year: '2024', title: 'Nieuwe Services', description: 'Launch VIP & Event service' },
+const principles = [
+  { title: 'Vaste prijzen vooraf', description: 'U weet altijd wat u betaalt — geen verrassingen, ook niet bij files of nachtritten.' },
+  { title: 'Persoonlijke service', description: 'Een herkenbaar gezicht achter het stuur en aandacht voor elke rit, geen anonieme taxi.' },
+  { title: 'Comfortabel & elektrisch', description: 'Reizen in een volledig elektrische Mercedes EQS — stil, schoon en comfortabel.' },
+  { title: '24/7 in Den Haag & Leiden', description: 'Dag en nacht bereikbaar voor heel Den Haag, Leiden en omgeving.' },
 ]
 
 const stats = [
-  { value: '100%', label: 'Betrouwbaar' },
-  { value: '1000+', label: 'Tevreden Klanten' },
-  { value: '5.0', label: 'Google Rating' },
   { value: '24/7', label: 'Beschikbaar' },
+  { value: 'Vast', label: 'Tarieven' },
+  { value: 'EQS', label: 'Elektrische Mercedes' },
+  { value: '0', label: 'Toeslagen' },
 ]
 
 export default function AboutPage() {
@@ -101,7 +100,7 @@ export default function AboutPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/enjoy-taxi.webp"
+            src="/taxi-vredespaleis.webp"
             alt="Over Enjoy Taxi - Ons Verhaal"
             fill
             className="object-cover"
@@ -135,7 +134,7 @@ export default function AboutPage() {
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
               De Toekomst van
-              <span className="block text-primary-300">Betrouwbaar Vervoer</span>
+              <span className="block text-gradient-blue">Betrouwbaar Vervoer</span>
             </h1>
             <p className="text-xl text-white/80 max-w-2xl mx-auto mb-8">
               Enjoy Taxi is geboren uit de overtuiging dat comfortabel vervoer en
@@ -194,55 +193,39 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-secondary-600">
                 <p>
-                  Enjoy Taxi begon met een simpele vraag: waarom moet goed
-                  vervoer ten koste gaan van het milieu? In 2020 hebben we
-                  besloten dat het anders kon en moest.
+                  Enjoy Taxi begon met een simpele overtuiging: betrouwbaar
+                  vervoer hoeft niet ten koste te gaan van comfort, eerlijkheid
+                  of het milieu.
                 </p>
                 <p>
-                  Met ons eerste voertuig startten we een revolutie in de
-                  Nederlandse taxibranche. Geen compromissen op comfort, geen
-                  compromissen op duurzaamheid.
+                  Daarom rijden wij in een volledig elektrische Mercedes EQS,
+                  werken we met vaste prijzen die u vooraf kent, en staan we
+                  24/7 voor u klaar — met persoonlijke service in plaats van
+                  een anonieme rit.
                 </p>
                 <p>
-                  Vandaag de dag bedienen we meer dan 1000 tevreden klanten in
-                  Den Haag, Leiden en omgeving, met een volledig betrouwbare service van
-                  comfortabele voertuigen. En we zijn nog maar net begonnen.
+                  Of u nu naar Schiphol moet, een zakelijke afspraak heeft of
+                  een avondje uit: wij brengen u stil, schoon en comfortabel
+                  naar uw bestemming in Den Haag, Leiden en omgeving.
                 </p>
               </div>
             </div>
 
-            {/* Timeline Visual */}
+            {/* Principes Visual */}
             <div className="relative">
-              <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-primary-500 to-accent-500" />
+              <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-primary-500 to-primary-300" />
               <div className="space-y-8">
-                {milestones.map((milestone, index) => (
-                  <div key={milestone.year} className="relative pl-12">
-                    <div
-                      className={`absolute left-0 w-8 h-8 rounded-full flex items-center justify-center ${
-                        index === milestones.length - 1
-                          ? 'bg-gradient-primary'
-                          : 'bg-white border-2 border-primary-500'
-                      }`}
-                    >
-                      <span
-                        className={`text-xs font-bold ${
-                          index === milestones.length - 1
-                            ? 'text-white'
-                            : 'text-primary-600'
-                        }`}
-                      >
-                        {milestone.year.slice(2)}
-                      </span>
+                {principles.map((principle, index) => (
+                  <div key={principle.title} className="relative pl-12">
+                    <div className="absolute left-0 w-8 h-8 rounded-full flex items-center justify-center bg-gradient-primary">
+                      <span className="text-xs font-bold text-white">{index + 1}</span>
                     </div>
                     <div className="card">
-                      <div className="text-sm text-primary-600 mb-1">
-                        {milestone.year}
-                      </div>
                       <h3 className="font-semibold text-secondary-900 mb-1">
-                        {milestone.title}
+                        {principle.title}
                       </h3>
                       <p className="text-sm text-secondary-500">
-                        {milestone.description}
+                        {principle.description}
                       </p>
                     </div>
                   </div>
@@ -295,16 +278,16 @@ export default function AboutPage() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="card">
-                <div className="text-3xl font-bold text-primary-600 mb-2">10+</div>
-                <p className="text-secondary-600">Ervaren Chauffeurs</p>
+                <div className="text-2xl font-bold text-primary-600 mb-2">Ervaren</div>
+                <p className="text-secondary-600">Professionele chauffeurs</p>
               </div>
               <div className="card">
-                <div className="text-3xl font-bold text-primary-600 mb-2">100%</div>
-                <p className="text-secondary-600">Gecertificeerd</p>
+                <div className="text-2xl font-bold text-primary-600 mb-2">Persoonlijk</div>
+                <p className="text-secondary-600">Herkenbare gezichten</p>
               </div>
               <div className="card">
-                <div className="text-3xl font-bold text-primary-600 mb-2">5.0</div>
-                <p className="text-secondary-600">Klanttevredenheid</p>
+                <div className="text-2xl font-bold text-primary-600 mb-2">Elektrisch</div>
+                <p className="text-secondary-600">Mercedes EQS</p>
               </div>
             </div>
           </div>
@@ -317,7 +300,7 @@ export default function AboutPage() {
       {/* CTA Section */}
       <CTASection
         title="Ontdek het Enjoy Taxi Verschil"
-        subtitle="Ervaar zelf waarom meer dan 1000 klanten voor ons kiezen."
+        subtitle="Ervaar zelf het gemak van vaste prijzen, persoonlijke service en comfortabel elektrisch vervoer."
       />
     </>
   )

@@ -1,174 +1,73 @@
 import Link from 'next/link'
-import type { Location } from '@/data/locations'
+import { locations } from '@/data/locations'
 
-interface LocationSEOSectionProps {
-  location: Location
-}
+// Belangrijkste locaties eerst tonen op de homepage
+const priorityOrder = [
+  'taxi-den-haag',
+  'taxi-leiden',
+  'taxi-scheveningen',
+  'taxi-delft',
+  'taxi-rijswijk',
+  'taxi-voorburg',
+  'taxi-wassenaar',
+  'taxi-leidschendam',
+]
 
-export default function LocationSEOSection({ location }: LocationSEOSectionProps) {
+export default function LocationSEOSection() {
+  const sorted = [...locations].sort((a, b) => {
+    const ai = priorityOrder.indexOf(a.slug)
+    const bi = priorityOrder.indexOf(b.slug)
+    if (ai === -1 && bi === -1) return 0
+    if (ai === -1) return 1
+    if (bi === -1) return -1
+    return ai - bi
+  })
+
+  const displayLocations = sorted.slice(0, 8)
+
   return (
-    <section className="section-gray">
-      <div className="container-custom">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Content */}
-          <div>
-            <h2 className="heading-2 mb-6">
-              Taxi {location.name} - Vaste Prijzen
-            </h2>
-            <div className="prose prose-lg max-w-none">
-              <p className="text-secondary-600 mb-4">
-                {location.description}
-              </p>
-              <p className="text-secondary-600 mb-6">
-                Met onze 100% betrouwbare service bieden wij professionele taxiservice
-                in {location.name} en omgeving. Of u nu naar{' '}
-                {location.nearbyAirport || 'de luchthaven'} moet, een zakelijke afspraak
-                heeft, of gewoon comfortabel wilt reizen - Enjoy Taxi staat voor u klaar.
-              </p>
-            </div>
+    <section id="locaties" className="relative py-20 md:py-28 bg-white">
+      <div className="container-luxury">
+        {/* Compact Header */}
+        <div className="text-center mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-accent-900 mb-3">
+            Taxi in Den Haag, Leiden &amp; Omgeving
+          </h2>
+          <p className="text-accent-600">
+            Wij rijden in heel de regio — klik voor tarieven en info per locatie
+          </p>
+        </div>
 
-            {/* Local Benefits */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
-              <div className="flex items-start space-x-3">
-                <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0">
-                  <svg
-                    className="w-5 h-5 text-primary-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-secondary-900">Snelle Ophaaltijd</h3>
-                  <p className="text-sm text-secondary-500">Binnen 15 minuten bij u</p>
-                </div>
+        {/* Compact Locations Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          {displayLocations.map((location) => (
+            <Link
+              key={location.slug}
+              href={`/${location.slug}`}
+              className="group bg-white rounded-xl p-4 shadow-sm border border-accent-100 hover:shadow-md hover:border-primary-200 transition-all duration-200"
+            >
+              <h3 className="font-semibold text-accent-900 group-hover:text-primary-600 transition-colors mb-1">
+                Taxi {location.name}
+              </h3>
+              <p className="text-xs text-accent-500 mb-2 line-clamp-1">Vaste tarieven, 24/7 beschikbaar</p>
+              <div className="flex items-center text-primary-700 text-sm font-medium">
+                <span>Bekijk info</span>
+                <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0">
-                  <svg
-                    className="w-5 h-5 text-primary-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-secondary-900">Vaste Prijzen</h3>
-                  <p className="text-sm text-secondary-500">Geen verrassingen achteraf</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-10 h-10 rounded-full bg-accent-100 flex items-center justify-center flex-shrink-0">
-                  <svg
-                    className="w-5 h-5 text-accent-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-secondary-900">Vaste Prijzen</h3>
-                  <p className="text-sm text-secondary-500">Duurzaam & stil rijden</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-10 h-10 rounded-full bg-accent-100 flex items-center justify-center flex-shrink-0">
-                  <svg
-                    className="w-5 h-5 text-accent-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-secondary-900">Betrouwbare Service</h3>
-                  <p className="text-sm text-secondary-500">Comfortabele voertuigen</p>
-                </div>
-              </div>
-            </div>
-          </div>
+            </Link>
+          ))}
+        </div>
 
-          {/* Popular Routes */}
-          <div className="bg-white rounded-2xl p-8 border border-secondary-200 shadow-soft">
-            <h3 className="heading-3 mb-6">
-              Populaire Routes vanuit {location.name}
-            </h3>
-            <ul className="space-y-4">
-              {location.popularRoutes.map((route, index) => (
-                <li
-                  key={index}
-                  className="flex items-center justify-between p-4 bg-secondary-50 rounded-xl"
-                >
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center">
-                      <svg
-                        className="w-4 h-4 text-primary-600"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                        />
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                        />
-                      </svg>
-                    </div>
-                    <span className="text-secondary-700">{route.destination}</span>
-                  </div>
-                  <span className="text-primary-600 font-semibold">
-                    vanaf &euro;{route.priceFrom}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-8">
-              <Link href="/contact" className="btn-primary w-full text-center">
-                Vraag Vrijblijvend Offerte Aan
-              </Link>
-            </div>
-          </div>
+        {/* View All Link */}
+        <div className="text-center">
+          <Link href="/locaties" className="inline-flex items-center gap-2 text-primary-700 hover:text-primary-800 font-medium">
+            <span>Bekijk alle {locations.length} locaties</span>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,4 +1,10 @@
 import type { Metadata } from 'next'
+import Hero from '@/components/Hero'
+import PricingSection from '@/components/PricingSection'
+import ServicesSection from '@/components/ServicesSection'
+import WhyChooseUs from '@/components/WhyChooseUs'
+import ReviewsSection from '@/components/ReviewsSection'
+import LocationSEOSection from '@/components/LocationSEOSection'
 
 export const metadata: Metadata = {
   title: 'Taxi Den Haag & Leiden | 24/7 Betrouwbare Service | Enjoy Taxi',
@@ -27,14 +33,7 @@ export const metadata: Metadata = {
     url: 'https://enjoytaxi.nl',
     type: 'website',
     locale: 'nl_NL',
-    images: [
-      {
-        url: '/enjoy-taxi.webp',
-        width: 1200,
-        height: 630,
-        alt: 'Enjoy Taxi',
-      },
-    ],
+    images: [{ url: '/taxi-vredespaleis.webp', width: 1200, height: 630, alt: 'Enjoy Taxi' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -42,21 +41,35 @@ export const metadata: Metadata = {
     description:
       'Enjoy Taxi - uw betrouwbare taxi service in Den Haag en Leiden. 24/7 beschikbaar met vaste prijzen. Schiphol transfers, zakelijk vervoer en meer.',
   },
-  alternates: {
-    canonical: 'https://enjoytaxi.nl',
-  },
+  alternates: { canonical: 'https://enjoytaxi.nl' },
 }
 
-import Hero from '@/components/Hero'
-import LocationsSection from '@/components/LocationsSection'
-import ServicesSection from '@/components/ServicesSection'
-import HowItWorks from '@/components/HowItWorks'
-import WhyChooseUs from '@/components/WhyChooseUs'
-import ReviewList from '@/components/ReviewList'
-import AirportPricing from '@/components/AirportPricing'
-import TrustPayment from '@/components/TrustPayment'
-import FAQ from '@/components/FAQ'
-import FloatingCTA from '@/components/FloatingCTA'
+const faqs = [
+  {
+    q: 'Hoe kan ik een taxi in Den Haag of Leiden bestellen?',
+    a: 'Een taxi bestellen kan eenvoudig telefonisch of via WhatsApp. Enjoy Taxi is 24/7 bereikbaar. Na uw boeking weet u direct de vaste ritprijs. Snel, eenvoudig en betrouwbaar.',
+  },
+  {
+    q: 'Wat zijn de taxi tarieven?',
+    a: 'Onze tarieven zijn vast en transparant. Taxi naar Schiphol: vanaf €79. Naar Rotterdam The Hague Airport: vanaf €55. Naar Eindhoven Airport: vanaf €149. De prijs die u hoort is inclusief BTW.',
+  },
+  {
+    q: 'Betaal ik extra voor nachtritten of bagage?',
+    a: 'Nee. Bij Enjoy Taxi betaalt u geen nachttoeslag, geen bagagetoeslag en geen extra kosten voor koffers. De afgesproken prijs is de prijs die u betaalt, all-in inclusief BTW.',
+  },
+  {
+    q: 'Hoe snel is er een taxi beschikbaar?',
+    a: 'Wij zijn 24 uur per dag, 7 dagen per week beschikbaar in Den Haag, Leiden en omgeving. U kunt ook vooraf reserveren, bijvoorbeeld voor een vroege vlucht naar Schiphol.',
+  },
+  {
+    q: 'In welke gebieden rijden jullie?',
+    a: 'Wij rijden door heel Den Haag en de regio (Wassenaar, Voorburg, Leidschendam, Rijswijk, Scheveningen, Delft) én de Leidse regio (Leiden, Katwijk, Noordwijk, Voorschoten, Oegstgeest). Ook luchthavenvervoer naar Schiphol, Rotterdam en Eindhoven.',
+  },
+  {
+    q: 'Kan ik gratis annuleren?',
+    a: 'Ja, u kunt uw taxirit kosteloos annuleren tot 1 uur voor de geplande ophaaltijd. Plannen veranderd? Bel of WhatsApp ons en wij regelen het direct.',
+  },
+]
 
 export default function HomePage() {
   return (
@@ -73,37 +86,16 @@ export default function HomePage() {
             alternateName: 'Enjoy Taxi Den Haag',
             url: 'https://enjoytaxi.nl',
             logo: 'https://enjoytaxi.nl/logo.png',
-            description: 'Betrouwbare taxi service in Den Haag en Leiden. 24/7 beschikbaar voor luchthaven transfers, zakelijk vervoer en VIP service.',
+            description:
+              'Betrouwbare taxi service in Den Haag en Leiden. 24/7 beschikbaar voor luchthaven transfers, zakelijk vervoer en VIP service.',
             telephone: '+31620172767',
             email: 'info@enjoytaxi.nl',
             address: {
               '@type': 'PostalAddress',
-              streetAddress: 'Den Haag',
               addressLocality: 'Den Haag',
               addressRegion: 'Zuid-Holland',
-              postalCode: '2500',
               addressCountry: 'NL',
             },
-            contactPoint: [
-              {
-                '@type': 'ContactPoint',
-                telephone: '+31620172767',
-                contactType: 'customer service',
-                availableLanguage: ['Dutch', 'English'],
-                hoursAvailable: {
-                  '@type': 'OpeningHoursSpecification',
-                  dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-                  opens: '00:00',
-                  closes: '23:59',
-                },
-              },
-              {
-                '@type': 'ContactPoint',
-                telephone: '+31620172767',
-                contactType: 'reservations',
-                availableLanguage: ['Dutch', 'English'],
-              },
-            ],
           }),
         }}
       />
@@ -117,132 +109,90 @@ export default function HomePage() {
             '@type': 'TaxiService',
             '@id': 'https://enjoytaxi.nl/#taxiservice',
             name: 'Enjoy Taxi - Taxi Den Haag & Leiden',
-            description: 'Betrouwbare taxi service voor Den Haag, Leiden en omgeving. Luchthaven transfers, zakelijk vervoer, evenementen en VIP service.',
-            provider: {
-              '@id': 'https://enjoytaxi.nl/#organization',
-            },
+            description:
+              'Betrouwbare taxi service voor Den Haag, Leiden en omgeving. Luchthaven transfers, zakelijk vervoer, evenementen en VIP service.',
+            provider: { '@id': 'https://enjoytaxi.nl/#organization' },
             serviceType: 'Taxi Service',
             areaServed: [
-              { '@type': 'City', name: 'Den Haag', '@id': 'https://www.wikidata.org/wiki/Q36600' },
-              { '@type': 'City', name: 'Leiden', '@id': 'https://www.wikidata.org/wiki/Q43631' },
-              { '@type': 'City', name: 'Delft', '@id': 'https://www.wikidata.org/wiki/Q33432984' },
-              { '@type': 'City', name: 'Zoetermeer' },
-              { '@type': 'City', name: 'Wassenaar' },
+              { '@type': 'City', name: 'Den Haag' },
+              { '@type': 'City', name: 'Leiden' },
+              { '@type': 'City', name: 'Delft' },
               { '@type': 'Airport', name: 'Schiphol Airport', iataCode: 'AMS' },
               { '@type': 'Airport', name: 'Rotterdam The Hague Airport', iataCode: 'RTM' },
             ],
-            hasOfferCatalog: {
-              '@type': 'OfferCatalog',
-              name: 'Taxi Diensten',
-              itemListElement: [
-                {
-                  '@type': 'Offer',
-                  itemOffered: {
-                    '@type': 'Service',
-                    name: 'Luchthaven Transfer Schiphol',
-                    description: 'Taxi van Den Haag of Leiden naar Schiphol Airport',
-                  },
-                  priceSpecification: {
-                    '@type': 'PriceSpecification',
-                    price: '79',
-                    priceCurrency: 'EUR',
-                    minPrice: '79',
-                    description: 'Vanaf Den Haag naar Schiphol',
-                  },
-                },
-                {
-                  '@type': 'Offer',
-                  itemOffered: {
-                    '@type': 'Service',
-                    name: 'Zakelijk Vervoer',
-                    description: 'Professioneel zakelijk vervoer met WiFi aan boord',
-                  },
-                },
-                {
-                  '@type': 'Offer',
-                  itemOffered: {
-                    '@type': 'Service',
-                    name: 'VIP Taxi Service',
-                    description: 'VIP service met comfortabel voertuig',
-                  },
-                },
-              ],
-            },
-            availableChannel: {
-              '@type': 'ServiceChannel',
-              serviceUrl: 'https://enjoytaxi.nl/contact',
-              servicePhone: '+31620172767',
-              availableLanguage: ['Dutch', 'English'],
-            },
-            termsOfService: 'https://enjoytaxi.nl/terms',
           }),
         }}
       />
 
-      {/* LocalBusiness Schema */}
+      {/* FAQ Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
-            '@id': 'https://enjoytaxi.nl/#localbusiness',
-            name: 'Enjoy Taxi Den Haag',
-            image: 'https://enjoytaxi.nl/enjoy-taxi.webp',
-            url: 'https://enjoytaxi.nl',
-            telephone: '+31620172767',
-            email: 'info@enjoytaxi.nl',
-            priceRange: '€€',
-            address: {
-              '@type': 'PostalAddress',
-              addressLocality: 'Den Haag',
-              addressRegion: 'Zuid-Holland',
-              addressCountry: 'NL',
-            },
-            geo: {
-              '@type': 'GeoCoordinates',
-              latitude: 52.0705,
-              longitude: 4.3007,
-            },
-            openingHoursSpecification: {
-              '@type': 'OpeningHoursSpecification',
-              dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-              opens: '00:00',
-              closes: '23:59',
-            },
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((f) => ({
+              '@type': 'Question',
+              name: f.q,
+              acceptedAnswer: { '@type': 'Answer', text: f.a },
+            })),
           }),
         }}
       />
 
-      {/* Hero Section */}
+      {/* 1. Hero */}
       <Hero />
 
-      {/* Locations Section */}
-      <LocationsSection />
+      {/* 2. Tarieven */}
+      <PricingSection />
 
-      {/* Services Section */}
+      {/* 3. Diensten */}
       <ServicesSection />
 
-      {/* How It Works Section */}
-      <HowItWorks />
-
-      {/* Why Choose Us Section */}
+      {/* 4. Waarom wij */}
       <WhyChooseUs />
 
-      {/* Reviews Section */}
-      <ReviewList />
+      {/* 5. Reviews */}
+      <ReviewsSection />
 
-      {/* Airport Transfers Section */}
-      <AirportPricing />
+      {/* 6. Locaties */}
+      <LocationSEOSection />
 
-      {/* Trust & Payment Section */}
-      <TrustPayment />
+      {/* 7. FAQ */}
+      <section className="py-20 md:py-28 bg-accent-50">
+        <div className="container-luxury">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 rounded-full mb-4">
+              <svg className="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span className="text-primary-700 text-sm font-semibold">Veelgestelde Vragen</span>
+            </div>
+            <h2 className="text-2xl md:text-3xl font-bold text-accent-900 mb-3">
+              Taxi Den Haag &amp; Leiden — <span className="text-gradient-blue">FAQ</span>
+            </h2>
+            <p className="text-accent-600 max-w-2xl mx-auto">
+              Antwoorden op de meest gestelde vragen over onze taxiservice.
+            </p>
+          </div>
 
-      {/* FAQ Section */}
-      <FAQ />
-
-      {/* Floating Mobile CTA */}
-      <FloatingCTA />
+          <div className="max-w-3xl mx-auto space-y-3">
+            {faqs.map((f) => (
+              <details key={f.q} className="group bg-white rounded-xl border border-accent-100 overflow-hidden">
+                <summary className="flex items-center justify-between cursor-pointer list-none p-5">
+                  <h3 className="font-semibold text-accent-900 pr-4">{f.q}</h3>
+                  <svg className="w-5 h-5 text-accent-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-5 pb-5">
+                  <p className="text-accent-600">{f.a}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   )
 }

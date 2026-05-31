@@ -6,47 +6,37 @@ describe('Hero Component', () => {
     render(<Hero />)
 
     expect(screen.getByRole('heading', { level: 1 })).toBeInTheDocument()
-    expect(screen.getByText(/Den Haag/)).toBeInTheDocument()
+    expect(screen.getAllByText(/Den Haag/).length).toBeGreaterThan(0)
   })
 
-  it('renders all CTA buttons', () => {
+  it('renders phone and WhatsApp CTA links', () => {
     render(<Hero />)
 
-    expect(screen.getByRole('link', { name: /bel direct/i })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /whatsapp/i })).toBeInTheDocument()
+    expect(screen.getAllByRole('link', { name: /bel/i }).length).toBeGreaterThan(0)
+    expect(screen.getAllByRole('link', { name: /whatsapp/i }).length).toBeGreaterThan(0)
   })
 
   it('has correct phone link', () => {
     render(<Hero />)
 
-    const phoneLink = screen.getByRole('link', { name: /bel direct/i })
+    const phoneLink = screen.getAllByRole('link', { name: /bel/i })[0]
     expect(phoneLink).toHaveAttribute('href', 'tel:+31620172767')
   })
 
   it('has correct WhatsApp link', () => {
     render(<Hero />)
 
-    const whatsappLink = screen.getByRole('link', { name: /whatsapp/i })
-    expect(whatsappLink).toHaveAttribute('href', 'https://wa.me/31620172767')
+    const whatsappLink = screen.getAllByRole('link', { name: /whatsapp/i })[0]
+    expect(whatsappLink.getAttribute('href')).toContain('wa.me/31620172767')
     expect(whatsappLink).toHaveAttribute('target', '_blank')
     expect(whatsappLink).toHaveAttribute('rel', 'noopener noreferrer')
   })
 
-  it('renders trust indicators', () => {
+  it('renders the benefit pills', () => {
     render(<Hero />)
 
-    expect(screen.getAllByText('5.0').length).toBeGreaterThan(0)
-    expect(screen.getAllByText('Rating').length).toBeGreaterThan(0)
-    expect(screen.getByText('24/7')).toBeInTheDocument()
-    expect(screen.getByText('Beschikbaar')).toBeInTheDocument()
-  })
-
-  it('renders USP pills', () => {
-    render(<Hero />)
-
-    expect(screen.getByText(/Vaste Prijzen · 24\/7 Service/)).toBeInTheDocument()
-    expect(screen.getByText('Vaste Prijzen')).toBeInTheDocument()
-    expect(screen.getByText('24/7 Service')).toBeInTheDocument()
-    expect(screen.getByText('Vaste Tarieven')).toBeInTheDocument()
+    expect(screen.getByText('Vaste prijzen')).toBeInTheDocument()
+    expect(screen.getByText('Professionele chauffeurs')).toBeInTheDocument()
+    expect(screen.getByText('24/7 bereikbaar')).toBeInTheDocument()
   })
 })

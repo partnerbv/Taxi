@@ -1,21 +1,23 @@
 {
   "name": "Enjoy Taxi",
-  "short_name": "EnjoyTaxi",
-  "description": "Betrouwbare Taxi Service - Vaste Prijzen",
+  "short_name": "Enjoy Taxi",
+  "description": "Taxi Den Haag & Leiden — vaste prijzen, 24/7 beschikbaar",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0a0a0a",
-  "theme_color": "#79ba3a",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
   "icons": [
     {
-      "src": "/logo.png",
+      "src": "/icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "/logo.png",
+      "src": "/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }

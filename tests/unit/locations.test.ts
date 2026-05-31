@@ -43,7 +43,7 @@ describe('Locations Data', () => {
 
 describe('getLocationBySlug', () => {
   it('should return the correct location for a valid slug', () => {
-    const denHaag = getLocationBySlug('den-haag')
+    const denHaag = getLocationBySlug('taxi-den-haag')
     expect(denHaag).toBeDefined()
     expect(denHaag?.name).toBe('Den Haag en Omgeving')
   })

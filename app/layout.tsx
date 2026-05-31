@@ -4,6 +4,7 @@ import Script from 'next/script'
 import '@/styles/globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import FloatingContact from '@/components/FloatingContact'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -14,9 +15,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://enjoytaxi.nl'),
   icons: {
-    icon: '/logo.png',
-    shortcut: '/logo.png',
-    apple: '/logo.png',
+    icon: '/icon-192.png',
+    shortcut: '/icon-192.png',
+    apple: '/icon-512.png',
   },
   title: {
     default: 'Taxi Den Haag & Leiden | 24/7 Betrouwbare Service | Enjoy Taxi',
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
       'Betrouwbare taxi service in Den Haag en omgeving. 100% vaste prijzen, 24/7 beschikbaar. Professionele chauffeurs.',
     images: [
       {
-        url: '/taxi-den-haag.jpg',
+        url: '/taxi-vredespaleis.webp',
         width: 1200,
         height: 630,
         alt: 'Enjoy Taxi - Taxi Den Haag en Leiden',
@@ -70,7 +71,7 @@ export const metadata: Metadata = {
     title: 'Taxi Den Haag & Leiden | Enjoy Taxi',
     description:
       'Betrouwbare taxi service met vaste prijzen. 24/7 beschikbaar, Schiphol transfers.',
-    images: ['/taxi-den-haag.jpg'],
+    images: ['/taxi-vredespaleis.webp'],
   },
   robots: {
     index: true,
@@ -103,7 +104,7 @@ export default function RootLayout({
     <html lang="nl" className={inter.variable}>
       <head>
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#79ba3a" />
+        <meta name="theme-color" content="#2563eb" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17817067496"
           strategy="afterInteractive"
@@ -138,8 +139,9 @@ export default function RootLayout({
           }}
         />
         <Header />
-        <main id="main-content" className="min-h-screen">{children}</main>
+        <main id="main-content" className="min-h-screen pb-16 md:pb-0">{children}</main>
         <Footer />
+        <FloatingContact />
       </body>
     </html>
   )

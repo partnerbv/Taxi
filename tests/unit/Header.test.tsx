@@ -20,36 +20,36 @@ describe('Header Component', () => {
   it('renders navigation links', () => {
     render(<Header />)
 
-    // Use getAllByRole since there are desktop and mobile nav links
+    // Desktop and mobile nav links can both be present
     expect(screen.getAllByRole('link', { name: /^home$/i }).length).toBeGreaterThan(0)
+    expect(screen.getAllByRole('link', { name: /tarieven/i }).length).toBeGreaterThan(0)
     expect(screen.getAllByRole('link', { name: /diensten/i }).length).toBeGreaterThan(0)
-    expect(screen.getAllByRole('link', { name: /over ons/i }).length).toBeGreaterThan(0)
+    expect(screen.getAllByRole('link', { name: /locaties/i }).length).toBeGreaterThan(0)
     expect(screen.getAllByRole('link', { name: /contact/i }).length).toBeGreaterThan(0)
   })
 
-  it('renders the Boek Nu button', () => {
+  it('renders the Bel Nu call button', () => {
     render(<Header />)
 
-    const bookButtons = screen.getAllByRole('link', { name: /boek nu/i })
-    expect(bookButtons.length).toBeGreaterThan(0)
+    const callButtons = screen.getAllByRole('link', { name: /bel/i })
+    expect(callButtons.length).toBeGreaterThan(0)
   })
 
-  it('toggles mobile menu when button is clicked', () => {
+  it('toggles the mobile menu when the button is clicked', () => {
     render(<Header />)
 
-    const menuButton = screen.getByRole('button', { name: /toggle navigatiemenu/i })
+    const menuButton = screen.getByRole('button', { name: /menu openen/i })
+    expect(menuButton).toHaveAttribute('aria-expanded', 'false')
 
-    // Initially mobile menu should be collapsed
     fireEvent.click(menuButton)
 
-    // After click, menu should be expanded
     expect(menuButton).toHaveAttribute('aria-expanded', 'true')
   })
 
   it('has correct link to homepage', () => {
     render(<Header />)
 
-    const homeLink = screen.getByRole('link', { name: /enjoy taxi home/i })
+    const homeLink = screen.getByRole('link', { name: /terug naar home/i })
     expect(homeLink).toHaveAttribute('href', '/')
   })
 })

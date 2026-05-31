@@ -6,6 +6,7 @@ interface PageHeroProps {
   titleHighlight?: string
   subtitle: string
   badge?: string
+  image?: string
   breadcrumb?: {
     label: string
     href?: string
@@ -18,40 +19,39 @@ export default function PageHero({
   titleHighlight,
   subtitle,
   badge,
+  image = '/taxi-vredespaleis.webp',
   breadcrumb,
   children,
 }: PageHeroProps) {
   return (
-    <section className="relative pt-32 pb-20 overflow-hidden">
+    <section className="relative bg-accent-900 pt-32 md:pt-40 pb-28 md:pb-36 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/enjoy-taxi.webp"
-          alt="Enjoy Taxi - Taxi Den Haag met Vaste Prijzen"
+          src={image}
+          alt="Enjoy Taxi - Taxi Den Haag & Leiden"
           fill
           className="object-cover"
           priority
           quality={85}
+          sizes="100vw"
         />
-        {/* Overlay with gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary-900/95 via-secondary-900/90 to-primary-900/80" />
-        {/* Color glow effects */}
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary-500/20 rounded-full blur-[120px] -translate-x-1/2 translate-y-1/2" />
-        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary-400/15 rounded-full blur-[100px] translate-x-1/3 -translate-y-1/3" />
+        <div className="absolute inset-0 bg-gradient-to-r from-accent-900/95 via-accent-900/85 to-accent-900/65" />
+        <div className="absolute inset-0 bg-gradient-to-t from-accent-900 via-transparent to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="container-custom relative z-10">
+      <div className="container-luxury relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           {/* Breadcrumb */}
           {breadcrumb && breadcrumb.length > 0 && (
             <nav
-              className="flex items-center justify-center space-x-2 text-sm text-white/70 mb-6"
+              className="flex items-center justify-center gap-2 text-sm text-primary-300 mb-5"
               aria-label="Breadcrumb"
             >
               {breadcrumb.map((item, index) => (
-                <span key={item.label} className="flex items-center space-x-2">
-                  {index > 0 && <span aria-hidden="true">/</span>}
+                <span key={item.label} className="flex items-center gap-2">
+                  {index > 0 && <span className="text-accent-500" aria-hidden="true">/</span>}
                   {item.href ? (
                     <Link href={item.href} className="hover:text-white transition-colors">
                       {item.label}
@@ -64,16 +64,22 @@ export default function PageHero({
             </nav>
           )}
 
+          {/* Badge */}
+          {badge && (
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-500/20 rounded-full mb-5">
+              <div className="w-2 h-2 bg-primary-400 rounded-full" />
+              <span className="text-primary-300 text-sm font-semibold">{badge}</span>
+            </div>
+          )}
+
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
             {title}
-            {titleHighlight && (
-              <span className="block text-primary-300">{titleHighlight}</span>
-            )}
+            {titleHighlight && <span className="block text-gradient-blue">{titleHighlight}</span>}
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-accent-200 mb-8 max-w-2xl mx-auto leading-relaxed">
             {subtitle}
           </p>
 
@@ -82,8 +88,8 @@ export default function PageHero({
         </div>
       </div>
 
-      {/* Bottom wave divider */}
-      <div className="absolute bottom-0 left-0 right-0 z-20">
+      {/* Bottom curve */}
+      <div className="absolute bottom-0 left-0 right-0 z-0 pointer-events-none">
         <svg
           viewBox="0 0 1440 80"
           fill="none"

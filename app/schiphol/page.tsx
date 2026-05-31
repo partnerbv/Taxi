@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import ReviewList from '@/components/ReviewList'
-import FloatingCTA from '@/components/FloatingCTA'
 
 export const metadata: Metadata = {
   title: 'Taxi naar Schiphol Den Haag | Vaste Prijs €79 | Enjoy Taxi',
@@ -253,8 +252,8 @@ export default function SchipholPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/taxi-naar-schiphol.webp"
-            alt="Taxi naar Schiphol - Betrouwbare Luchthaven Transfer"
+            src="/taxi-vredespaleis.webp"
+            alt="Enjoy Taxi naar Schiphol - Mercedes EQS in Den Haag"
             fill
             className="object-cover"
             priority
@@ -275,7 +274,7 @@ export default function SchipholPage() {
               {/* Main Headline */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
                 Taxi naar{' '}
-                <span className="text-primary-300">Schiphol</span>
+                <span className="text-gradient-blue">Schiphol</span>
               </h1>
 
               {/* Subheadline */}
@@ -550,10 +549,10 @@ export default function SchipholPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => {
               const gradients = [
-                'from-emerald-500 to-teal-500',
-                'from-purple-500 to-pink-500',
-                'from-orange-500 to-amber-500',
-                'from-emerald-500 to-teal-500',
+                'from-primary-500 to-primary-600',
+                'from-primary-500 to-primary-600',
+                'from-primary-500 to-primary-600',
+                'from-primary-500 to-primary-600',
               ]
               return (
                 <Link
@@ -594,8 +593,8 @@ export default function SchipholPage() {
             <div className="relative order-2 lg:order-1">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/taxi.jpg"
-                  alt="Schiphol Taxi Service - Enjoy Taxi"
+                  src="/hero-new.webp"
+                  alt="Schiphol Taxi Service - comfortabel interieur van onze Mercedes EQS"
                   width={600}
                   height={450}
                   className="w-full h-auto object-cover"
@@ -708,21 +707,21 @@ export default function SchipholPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">Schiphol Taxi in Cijfers</h3>
-                  <p className="text-white/80 text-sm">Onze prestaties spreken voor zich</p>
+                  <h3 className="text-xl font-bold text-white mb-2">Schiphol Taxi — Goed Geregeld</h3>
+                  <p className="text-white/80 text-sm">Duidelijke afspraken, geen verrassingen</p>
                 </div>
                 <div className="grid grid-cols-2 divide-x divide-y divide-secondary-200">
                   <div className="p-6 text-center">
-                    <div className="text-3xl font-bold text-primary-600 mb-1">1000+</div>
-                    <div className="text-sm text-secondary-500">Schiphol Ritten</div>
+                    <div className="text-3xl font-bold text-primary-600 mb-1">€79</div>
+                    <div className="text-sm text-secondary-500">Vaste prijs vanaf</div>
                   </div>
                   <div className="p-6 text-center">
-                    <div className="text-3xl font-bold text-primary-600 mb-1">100%</div>
-                    <div className="text-sm text-secondary-500">Op Tijd</div>
+                    <div className="text-3xl font-bold text-primary-600 mb-1">30 min</div>
+                    <div className="text-sm text-secondary-500">Gratis wachttijd</div>
                   </div>
                   <div className="p-6 text-center">
-                    <div className="text-3xl font-bold text-accent-600 mb-1">5.0</div>
-                    <div className="text-sm text-secondary-500">Rating</div>
+                    <div className="text-3xl font-bold text-accent-600 mb-1">0</div>
+                    <div className="text-sm text-secondary-500">Toeslagen</div>
                   </div>
                   <div className="p-6 text-center">
                     <div className="text-3xl font-bold text-primary-600 mb-1">24/7</div>
@@ -754,7 +753,7 @@ export default function SchipholPage() {
                 <h3 className="text-lg font-bold text-secondary-900 mb-6">Waarom klanten ons vertrouwen</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div className="flex items-center gap-3 p-4 bg-green-50 rounded-xl border border-green-100">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center shadow-lg shadow-green-500/20">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center shadow-lg shadow-green-500/20">
                       <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                       </svg>
@@ -938,8 +937,6 @@ export default function SchipholPage() {
         />
       </section>
 
-      {/* Floating CTA */}
-      <FloatingCTA />
     </>
   )
 }

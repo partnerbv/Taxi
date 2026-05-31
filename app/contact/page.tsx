@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: 'https://enjoytaxi.nl/contact',
     type: 'website',
     locale: 'nl_NL',
-    images: [{ url: 'https://enjoytaxi.nl/enjoy-taxi.webp', width: 1200, height: 630, alt: 'Enjoy Taxi' }],
+    images: [{ url: 'https://enjoytaxi.nl/taxi-vredespaleis.webp', width: 1200, height: 630, alt: 'Enjoy Taxi' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -79,7 +79,7 @@ export default function ContactPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/enjoy-taxi.webp"
+            src="/taxi-vredespaleis.webp"
             alt="Contact Enjoy Taxi - Neem Contact Op"
             fill
             className="object-cover"
@@ -113,7 +113,7 @@ export default function ContactPage() {
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
               Neem Contact
-              <span className="block text-primary-300">Met Ons Op</span>
+              <span className="block text-gradient-blue">Met Ons Op</span>
             </h1>
             <p className="text-xl text-white/80 mb-8">
               Heeft u vragen of wilt u een offerte aanvragen? Wij staan 24/7 voor
