@@ -8,7 +8,7 @@ const reviews = [
   },
   {
     name: 'Maria',
-    location: 'Leiden',
+    location: 'Voorburg',
     rating: 5,
     text: 'Al meerdere keren gebruikt voor ritten naar Schiphol. Altijd op tijd, vaste prijs en vriendelijke chauffeurs. Top service!',
     date: '1 maand geleden',
@@ -82,7 +82,7 @@ export default function ReviewsSection() {
             Wat Onze Klanten <span className="text-gradient-blue">Zeggen</span>
           </h2>
           <p className="text-accent-600 max-w-2xl mx-auto">
-            Lees de ervaringen van tevreden klanten die onze taxiservice in Den Haag en Leiden hebben gebruikt.
+            Lees de ervaringen van tevreden klanten die onze taxiservice in Den Haag en omgeving hebben gebruikt.
           </p>
         </div>
 

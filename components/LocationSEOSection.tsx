@@ -31,7 +31,7 @@ export default function LocationSEOSection() {
         {/* Compact Header */}
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-accent-900 mb-3">
-            Taxi in Den Haag, Leiden &amp; Omgeving
+            Taxi in Den Haag &amp; Omgeving
           </h2>
           <p className="text-accent-600">
             Wij rijden in heel de regio — klik voor tarieven en info per locatie

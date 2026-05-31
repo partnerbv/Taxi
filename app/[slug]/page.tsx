@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
-import { locations, getLocationBySlug, getAllLocationSlugs } from '@/data/locations'
+import { locations, getLocationBySlug, getAllLocationSlugs, type Location } from '@/data/locations'
 import ReviewList from '@/components/ReviewList'
 
 interface LocationPageProps {
@@ -79,32 +79,43 @@ export async function generateMetadata({ params }: LocationPageProps): Promise<M
   }
 }
 
-// Dynamic FAQs based on location
-function getLocationFaqs(locationName: string) {
+// Dynamische, locatie-specifieke FAQ's op basis van de echte locatiedata
+function getLocationFaqs(location: Location) {
+  const name = location.name
+  const routes = location.popularRoutes
+  const main = routes[0]
+  const routeList = routes.map((r) => `${r.destination} (vanaf €${r.priceFrom},-)`).join(', ')
+  const spots = location.highlights.slice(0, 4).join(', ')
+  const naarSchiphol = main.destination.toLowerCase().includes('schiphol')
+  const timeInfo =
+    naarSchiphol && location.schipholTime && location.schipholTime !== '-'
+      ? ` De rit duurt ongeveer ${location.schipholTime} (${location.schipholDistance}).`
+      : ''
+
   return [
     {
-      question: `Hoe bestel ik een taxi in ${locationName}?`,
-      answer: `U kunt een taxi in ${locationName} bestellen door te bellen naar 06 2017 2767 of via WhatsApp. Wij reageren binnen 5 minuten met een vaste prijs.`,
+      question: `Wat kost een taxi van ${name} naar ${main.destination}?`,
+      answer: `Een taxi van ${name} naar ${main.destination} kost vanaf €${main.priceFrom},-. Dit is een vaste prijs inclusief BTW — ook bij files of 's nachts betaalt u niet meer.${timeInfo}`,
     },
     {
-      question: `Hoe snel kan er een taxi in ${locationName} zijn?`,
-      answer: `In ${locationName} kunnen wij meestal binnen 15-20 minuten een taxi bij u hebben. Voor geplande ritten raden wij reserveren aan.`,
+      question: `Naar welke bestemmingen rijden jullie vanuit ${name}?`,
+      answer: `Vanuit ${name} rijden wij onder andere naar ${routeList}. Daarnaast brengen wij u naar elke bestemming in ${location.region} en daarbuiten, met een vaste prijs vooraf.`,
     },
     {
-      question: `Wat zijn de tarieven voor een taxi in ${locationName}?`,
-      answer: `Wij werken met vaste prijzen die u vooraf ontvangt. Geen verrassingen, ook niet bij files. Bel of WhatsApp ons voor een directe prijsopgave voor uw rit.`,
+      question: `Waar haalt Enjoy Taxi mij op in ${name}?`,
+      answer: `Wij halen u op bij ${spots} en op elk ander adres in ${name}. Geef bij het boeken simpelweg uw ophaaladres door, dan staat de chauffeur klaar.`,
     },
     {
-      question: `Kan ik in ${locationName} ook zakelijk boeken?`,
-      answer: `Ja, wij bieden zakelijke accounts met maandelijkse facturatie, BTW-specificatie en korting bij regelmatig gebruik.`,
+      question: `Hoe snel is er een taxi beschikbaar in ${name}?`,
+      answer: `In ${name} (${location.region}) streven wij ernaar snel bij u te zijn. Voor een vlucht of belangrijke afspraak adviseren wij vooraf te reserveren, dan staan wij gegarandeerd op tijd klaar.`,
     },
     {
-      question: `Rijden jullie vanaf ${locationName} naar de luchthaven?`,
-      answer: `Ja, wij verzorgen dagelijks luchthaven transfers naar Schiphol, Rotterdam Airport en Eindhoven Airport. Inclusief vlucht tracking en gratis wachttijd.`,
+      question: `Rijden jullie 24/7 vanuit ${name}?`,
+      answer: `Ja, Enjoy Taxi is 24 uur per dag, 7 dagen per week beschikbaar in ${name}. Ook voor vroege vluchten naar ${location.nearbyAirport || 'Schiphol'} kunt u bij ons terecht.`,
     },
     {
-      question: 'Welke betaalmethoden accepteren jullie?',
-      answer: 'Wij accepteren PIN, contant, creditcard en facturatie voor zakelijke klanten. Vooraf betalen via iDEAL is ook mogelijk.',
+      question: `Hoe bestel ik een taxi in ${name}?`,
+      answer: `Een taxi bestellen in ${name} kan eenvoudig telefonisch via 06 2017 2767 of via WhatsApp. U ontvangt direct een vaste prijs en een bevestiging.`,
     },
   ]
 }
@@ -122,7 +133,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
     (l) => l.region === location.region && l.slug !== location.slug
   ).slice(0, 4)
 
-  const locationFaqs = getLocationFaqs(location.name)
+  const locationFaqs = getLocationFaqs(location)
 
   return (
     <>

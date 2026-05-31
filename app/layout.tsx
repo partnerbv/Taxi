@@ -20,11 +20,11 @@ export const metadata: Metadata = {
     apple: '/icon-512.png',
   },
   title: {
-    default: 'Taxi Den Haag & Leiden | 24/7 Betrouwbare Service | Enjoy Taxi',
-    template: '%s | Enjoy Taxi',
+    default: 'Taxi Den Haag | 24/7 Betrouwbare Service | Enjoy Taxi',
+    template: '%s',
   },
   description:
-    'Taxi Den Haag en Leiden - Betrouwbare taxi service met vaste prijzen. ✓ 24/7 beschikbaar ✓ Vaste prijzen ✓ Schiphol transfers ✓ Zakelijk vervoer. Bel nu!',
+    'Taxi Den Haag - Betrouwbare taxi service met vaste prijzen. ✓ 24/7 beschikbaar ✓ Vaste prijzen ✓ Schiphol transfers ✓ Zakelijk vervoer. Bel nu!',
   keywords: [
     'taxi den haag',
     'taxi leiden',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     locale: 'nl_NL',
     url: 'https://enjoytaxi.nl',
     siteName: 'Enjoy Taxi',
-    title: 'Taxi Den Haag & Leiden | 24/7 Betrouwbare Service',
+    title: 'Taxi Den Haag | 24/7 Betrouwbare Service',
     description:
       'Betrouwbare taxi service in Den Haag en omgeving. 100% vaste prijzen, 24/7 beschikbaar. Professionele chauffeurs.',
     images: [
@@ -62,13 +62,13 @@ export const metadata: Metadata = {
         url: '/taxi-vredespaleis.webp',
         width: 1200,
         height: 630,
-        alt: 'Enjoy Taxi - Taxi Den Haag en Leiden',
+        alt: 'Enjoy Taxi - Taxi Den Haag',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Taxi Den Haag & Leiden | Enjoy Taxi',
+    title: 'Taxi Den Haag | Enjoy Taxi',
     description:
       'Betrouwbare taxi service met vaste prijzen. 24/7 beschikbaar, Schiphol transfers.',
     images: ['/taxi-vredespaleis.webp'],

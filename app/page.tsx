@@ -7,9 +7,9 @@ import ReviewsSection from '@/components/ReviewsSection'
 import LocationSEOSection from '@/components/LocationSEOSection'
 
 export const metadata: Metadata = {
-  title: 'Taxi Den Haag & Leiden | 24/7 Betrouwbare Service | Enjoy Taxi',
+  title: 'Taxi Den Haag | 24/7 Betrouwbare Service | Enjoy Taxi',
   description:
-    'Enjoy Taxi - uw betrouwbare taxi service in Den Haag en Leiden. 24/7 beschikbaar met vaste prijzen. Schiphol transfers, zakelijk vervoer en meer. Bel nu 06 2017 2767!',
+    'Enjoy Taxi - uw betrouwbare taxi service in Den Haag en omgeving. 24/7 beschikbaar met vaste prijzen. Schiphol transfers, zakelijk vervoer en meer. Bel nu 06 2017 2767!',
   keywords: [
     'taxi den haag',
     'taxi leiden',
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     '24 uur taxi',
   ],
   openGraph: {
-    title: 'Taxi Den Haag & Leiden | 24/7 Betrouwbare Service | Enjoy Taxi',
+    title: 'Taxi Den Haag | 24/7 Betrouwbare Service | Enjoy Taxi',
     description:
-      'Enjoy Taxi - uw betrouwbare taxi service in Den Haag en Leiden. 24/7 beschikbaar met vaste prijzen. Schiphol transfers, zakelijk vervoer en meer.',
+      'Enjoy Taxi - uw betrouwbare taxi service in Den Haag en omgeving. 24/7 beschikbaar met vaste prijzen. Schiphol transfers, zakelijk vervoer en meer.',
     url: 'https://enjoytaxi.nl',
     type: 'website',
     locale: 'nl_NL',
@@ -37,16 +37,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Taxi Den Haag & Leiden | 24/7 Betrouwbare Service | Enjoy Taxi',
+    title: 'Taxi Den Haag | 24/7 Betrouwbare Service | Enjoy Taxi',
     description:
-      'Enjoy Taxi - uw betrouwbare taxi service in Den Haag en Leiden. 24/7 beschikbaar met vaste prijzen. Schiphol transfers, zakelijk vervoer en meer.',
+      'Enjoy Taxi - uw betrouwbare taxi service in Den Haag en omgeving. 24/7 beschikbaar met vaste prijzen. Schiphol transfers, zakelijk vervoer en meer.',
   },
   alternates: { canonical: 'https://enjoytaxi.nl' },
 }
 
 const faqs = [
   {
-    q: 'Hoe kan ik een taxi in Den Haag of Leiden bestellen?',
+    q: 'Hoe kan ik een taxi in Den Haag bestellen?',
     a: 'Een taxi bestellen kan eenvoudig telefonisch of via WhatsApp. Enjoy Taxi is 24/7 bereikbaar. Na uw boeking weet u direct de vaste ritprijs. Snel, eenvoudig en betrouwbaar.',
   },
   {
@@ -59,11 +59,11 @@ const faqs = [
   },
   {
     q: 'Hoe snel is er een taxi beschikbaar?',
-    a: 'Wij zijn 24 uur per dag, 7 dagen per week beschikbaar in Den Haag, Leiden en omgeving. U kunt ook vooraf reserveren, bijvoorbeeld voor een vroege vlucht naar Schiphol.',
+    a: 'Wij zijn 24 uur per dag, 7 dagen per week beschikbaar in Den Haag en omgeving. U kunt ook vooraf reserveren, bijvoorbeeld voor een vroege vlucht naar Schiphol.',
   },
   {
     q: 'In welke gebieden rijden jullie?',
-    a: 'Wij rijden door heel Den Haag en de regio (Wassenaar, Voorburg, Leidschendam, Rijswijk, Scheveningen, Delft) én de Leidse regio (Leiden, Katwijk, Noordwijk, Voorschoten, Oegstgeest). Ook luchthavenvervoer naar Schiphol, Rotterdam en Eindhoven.',
+    a: 'Wij rijden door heel Den Haag en de regio: Wassenaar, Voorburg, Leidschendam, Rijswijk, Scheveningen en Delft. Ook verzorgen wij luchthavenvervoer naar Schiphol, Rotterdam en Eindhoven Airport.',
   },
   {
     q: 'Kan ik gratis annuleren?',
@@ -87,7 +87,7 @@ export default function HomePage() {
             url: 'https://enjoytaxi.nl',
             logo: 'https://enjoytaxi.nl/logo.png',
             description:
-              'Betrouwbare taxi service in Den Haag en Leiden. 24/7 beschikbaar voor luchthaven transfers, zakelijk vervoer en VIP service.',
+              'Betrouwbare taxi service in Den Haag en omgeving. 24/7 beschikbaar voor luchthaven transfers, zakelijk vervoer en VIP service.',
             telephone: '+31620172767',
             email: 'info@enjoytaxi.nl',
             address: {
@@ -108,9 +108,9 @@ export default function HomePage() {
             '@context': 'https://schema.org',
             '@type': 'TaxiService',
             '@id': 'https://enjoytaxi.nl/#taxiservice',
-            name: 'Enjoy Taxi - Taxi Den Haag & Leiden',
+            name: 'Enjoy Taxi - Taxi Den Haag',
             description:
-              'Betrouwbare taxi service voor Den Haag, Leiden en omgeving. Luchthaven transfers, zakelijk vervoer, evenementen en VIP service.',
+              'Betrouwbare taxi service voor Den Haag en omgeving. Luchthaven transfers, zakelijk vervoer, evenementen en VIP service.',
             provider: { '@id': 'https://enjoytaxi.nl/#organization' },
             serviceType: 'Taxi Service',
             areaServed: [
@@ -169,7 +169,7 @@ export default function HomePage() {
               <span className="text-primary-700 text-sm font-semibold">Veelgestelde Vragen</span>
             </div>
             <h2 className="text-2xl md:text-3xl font-bold text-accent-900 mb-3">
-              Taxi Den Haag &amp; Leiden — <span className="text-gradient-blue">FAQ</span>
+              Taxi Den Haag — <span className="text-gradient-blue">FAQ</span>
             </h2>
             <p className="text-accent-600 max-w-2xl mx-auto">
               Antwoorden op de meest gestelde vragen over onze taxiservice.

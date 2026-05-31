@@ -143,7 +143,7 @@ export const locations: Location[] = [
       { destination: 'Rotterdam The Hague Airport', priceFrom: 55 },
       { destination: 'Eindhoven Airport', priceFrom: 149 },
     ],
-    metaTitle: 'Taxi Segbroek Den Haag | 24/7 Taxi | Regentessekwartier | Enjoy Taxi',
+    metaTitle: 'Taxi Segbroek Den Haag | 24/7 Taxi | Enjoy Taxi',
     metaDescription:
       'Taxi Segbroek bestellen? ✓ vaste prijzen ✓ Regentessekwartier ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
@@ -206,7 +206,7 @@ export const locations: Location[] = [
       { destination: 'Rotterdam The Hague Airport', priceFrom: 55 },
       { destination: 'Eindhoven Airport', priceFrom: 149 },
     ],
-    metaTitle: 'Taxi Mariahoeve Den Haag | 24/7 Taxi | Clingendael | Enjoy Taxi',
+    metaTitle: 'Taxi Mariahoeve Den Haag | 24/7 Taxi | Enjoy Taxi',
     metaDescription:
       'Taxi Mariahoeve bestellen? ✓ vaste prijzen ✓ Clingendael ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
@@ -227,7 +227,7 @@ export const locations: Location[] = [
       { destination: 'Rotterdam The Hague Airport', priceFrom: 55 },
       { destination: 'Eindhoven Airport', priceFrom: 149 },
     ],
-    metaTitle: 'Taxi Statenkwartier Den Haag | 24/7 Taxi | Vredespaleis | Enjoy Taxi',
+    metaTitle: 'Taxi Statenkwartier Den Haag | 24/7 Taxi | Enjoy Taxi',
     metaDescription:
       'Taxi Statenkwartier bestellen? ✓ vaste prijzen ✓ Vredespaleis ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
@@ -269,7 +269,7 @@ export const locations: Location[] = [
       { destination: 'Rotterdam The Hague Airport', priceFrom: 55 },
       { destination: 'Eindhoven Airport', priceFrom: 149 },
     ],
-    metaTitle: 'Taxi Scheveningen | 24/7 Taxi | Kurhaus & Strand | Enjoy Taxi',
+    metaTitle: 'Taxi Scheveningen | 24/7 Taxi | Enjoy Taxi',
     metaDescription:
       'Taxi Scheveningen bestellen? ✓ vaste prijzen ✓ Kurhaus & Boulevard ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
@@ -459,7 +459,7 @@ export const locations: Location[] = [
       { destination: 'Rotterdam The Hague Airport', priceFrom: 55 },
       { destination: 'Eindhoven Airport', priceFrom: 149 },
     ],
-    metaTitle: 'Taxi Noordwijk | 24/7 Taxi | Space Expo & Strand | Enjoy Taxi',
+    metaTitle: 'Taxi Noordwijk | 24/7 Taxi | Strand | Enjoy Taxi',
     metaDescription:
       'Taxi Noordwijk bestellen? ✓ vaste prijzen ✓ Space Expo ✓ Congressen ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
@@ -480,7 +480,7 @@ export const locations: Location[] = [
       { destination: 'Rotterdam The Hague Airport', priceFrom: 55 },
       { destination: 'Eindhoven Airport', priceFrom: 149 },
     ],
-    metaTitle: 'Taxi Voorschoten | 24/7 Taxi | Leiden & Den Haag | Enjoy Taxi',
+    metaTitle: 'Taxi Voorschoten | 24/7 Taxi | Enjoy Taxi',
     metaDescription:
       'Taxi Voorschoten bestellen? ✓ vaste prijzen ✓ 24/7 beschikbaar ✓ Vaste prijzen ✓ Bel 06 2017 2767!',
   },
@@ -501,7 +501,7 @@ export const locations: Location[] = [
       { destination: 'Rotterdam The Hague Airport', priceFrom: 55 },
       { destination: 'Eindhoven Airport', priceFrom: 149 },
     ],
-    metaTitle: 'Taxi Oegstgeest | 24/7 Taxi | LUMC & Bio Science | Enjoy Taxi',
+    metaTitle: 'Taxi Oegstgeest | 24/7 Taxi | LUMC | Enjoy Taxi',
     metaDescription:
       'Taxi Oegstgeest bestellen? ✓ vaste prijzen ✓ LUMC ✓ Bio Science Park ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },
@@ -565,7 +565,7 @@ export const locations: Location[] = [
       { destination: 'Schiphol Airport', priceFrom: 79 },
       { destination: 'Eindhoven Airport', priceFrom: 149 },
     ],
-    metaTitle: 'Taxi Rotterdam Airport | 24/7 Taxi | Den Haag €55 | Enjoy Taxi',
+    metaTitle: 'Taxi Rotterdam Airport | Den Haag €55 | Enjoy Taxi',
     metaDescription:
       'Rotterdam Airport taxi naar Den Haag €55. ✓ vaste prijzen ✓ Vaste prijs ✓ 24/7 beschikbaar ✓ Bel 06 2017 2767!',
   },

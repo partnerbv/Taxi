@@ -45,7 +45,7 @@ const usps = [
       </svg>
     ),
     title: 'Lokale Expertise',
-    description: 'Onze chauffeurs kennen Den Haag, Leiden en omgeving als hun broekzak.',
+    description: 'Onze chauffeurs kennen Den Haag en omgeving als hun broekzak.',
   },
   {
     icon: (
@@ -82,7 +82,7 @@ export default function WhyChooseUs() {
               Waarom klanten <span className="text-gradient-blue">ons kiezen</span>
             </h2>
             <p className="text-lg text-accent-600 leading-relaxed mb-8">
-              Enjoy Taxi is de betrouwbare taxiservice van Den Haag en Leiden. Onze klanten
+              Enjoy Taxi is de betrouwbare taxiservice van Den Haag en omgeving. Onze klanten
               waarderen onze punctualiteit, eerlijke prijzen en vriendelijke chauffeurs.
             </p>
 

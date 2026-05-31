@@ -50,13 +50,13 @@ export default function Hero() {
           {/* Content */}
           <div className="text-center lg:text-left animate-slide-up">
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.1] mb-4 lg:mb-6 tracking-tight">
-              Taxi Den Haag &amp; Leiden
+              Taxi Den Haag
               <br />
               <span className="text-gradient-blue">24/7 Beschikbaar</span>
             </h1>
 
             <p className="text-lg md:text-xl text-accent-200 mb-5 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              <strong className="text-white">Taxi nodig</strong> in Den Haag, Leiden of omgeving? Boek
+              <strong className="text-white">Taxi nodig</strong> in Den Haag of omgeving? Boek
               snel uw rit met <strong className="text-white">vaste tarieven</strong> en professionele chauffeurs.
             </p>
 

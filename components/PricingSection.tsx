@@ -37,7 +37,7 @@ export default function PricingSection() {
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                 </svg>
-                Lokale Tarieven Den Haag, Leiden &amp; Omgeving
+                Lokale Tarieven Den Haag &amp; Omgeving
               </h3>
             </div>
             <div className="divide-y divide-accent-100">
@@ -82,10 +82,6 @@ export default function PricingSection() {
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-accent-900/90 to-transparent p-6">
-                <p className="text-white font-bold text-lg">Vaste prijs naar elke luchthaven</p>
-                <p className="text-white/80 text-sm">Comfortabel &amp; op tijd</p>
-              </div>
             </div>
 
             {/* Pricing Cards */}

@@ -48,7 +48,7 @@ export default function Footer() {
         <div className="container-luxury relative">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">Taxi Den Haag of Leiden bestellen?</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">Taxi Den Haag bestellen?</h3>
               <p className="text-primary-100">24/7 beschikbaar — Vaste prijzen, geen verrassingen</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -93,7 +93,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-accent-300 mb-8 max-w-sm leading-relaxed text-base">
-              Uw betrouwbare taxiservice in Den Haag, Leiden en omgeving. Vaste prijzen,
+              Uw betrouwbare taxiservice in Den Haag en omgeving. Vaste prijzen,
               24/7 beschikbaar en professionele chauffeurs voor luchthavenvervoer, zakelijk
               vervoer en meer.
             </p>
@@ -122,7 +122,7 @@ export default function Footer() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <span>Den Haag &amp; Leiden e.o.</span>
+                <span>Den Haag e.o.</span>
               </div>
             </div>
           </div>
