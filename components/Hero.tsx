@@ -30,12 +30,12 @@ const benefits = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen bg-accent-900 overflow-x-hidden">
+    <section className="relative bg-accent-900 overflow-x-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <Image
-          src="/hero-new.webp"
-          alt="Enjoy Taxi - luxe interieur van onze Mercedes EQS, comfortabel reizen 24/7"
+          src="/taxi-vredespaleis.webp"
+          alt="Enjoy Taxi - Mercedes EQS taxi bij het Vredespaleis in Den Haag, 24/7 beschikbaar"
           fill
           priority
           className="object-cover"
@@ -45,7 +45,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-accent-900 via-transparent to-transparent" />
       </div>
 
-      <div className="relative z-10 container-luxury section-padding pt-28 md:pt-36 lg:pt-40 pb-40 md:pb-44">
+      <div className="relative z-10 container-luxury px-4 md:px-8 pt-28 md:pt-36 pb-28 md:pb-32">
         <div className="max-w-3xl">
           {/* Content */}
           <div className="text-center lg:text-left animate-slide-up">
@@ -125,7 +125,7 @@ export default function Hero() {
 
       {/* Curved bottom edge */}
       <div className="absolute bottom-0 left-0 right-0 z-0 pointer-events-none">
-        <svg className="w-full h-24 md:h-32 lg:h-40" viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="w-full h-16 md:h-24 lg:h-28" viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
             className="fill-primary-600/20"

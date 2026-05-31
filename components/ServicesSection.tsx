@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { getWhatsAppUrl } from '@/lib/config'
 
 const services = [
@@ -65,6 +66,17 @@ export default function ServicesSection() {
           <p className="text-accent-600 max-w-xl mx-auto">
             Of u nu naar Schiphol moet, een zakelijke afspraak heeft of met een groep reist — wij staan voor u klaar.
           </p>
+        </div>
+
+        {/* Interieur-visual */}
+        <div className="relative rounded-3xl overflow-hidden shadow-luxury-lg border border-accent-100 mb-12 max-w-5xl mx-auto">
+          <Image
+            src="/hero-new.webp"
+            alt="Comfortabel reizen in het interieur van de Mercedes EQS van Enjoy Taxi"
+            width={1536}
+            height={1024}
+            className="w-full h-56 md:h-72 object-cover"
+          />
         </div>
 
         {/* Services Grid */}
