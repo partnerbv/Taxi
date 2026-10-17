@@ -68,15 +68,27 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        {/* Interieur-visual */}
-        <div className="relative rounded-3xl overflow-hidden shadow-luxury-lg border border-accent-100 mb-12 max-w-5xl mx-auto">
-          <Image
-            src="/hero-new.webp"
-            alt="Comfortabel reizen in het interieur van de Mercedes EQS van Enjoy Taxi"
-            width={1536}
-            height={1024}
-            className="w-full h-56 md:h-72 object-cover"
-          />
+        {/* Interieur-visuals */}
+        <div className="grid md:grid-cols-3 gap-4 md:gap-6 mb-12 max-w-5xl mx-auto">
+          <div className="relative md:col-span-2 rounded-3xl overflow-hidden shadow-luxury-lg border border-accent-100">
+            <Image
+              src="/hero-new.webp"
+              alt="Comfortabel reizen in het interieur van de Mercedes EQS van Enjoy Taxi"
+              width={1536}
+              height={1024}
+              className="w-full h-56 md:h-80 object-cover"
+            />
+          </div>
+          <div className="relative rounded-3xl overflow-hidden shadow-luxury-lg border border-accent-100">
+            <Image
+              src="/binnenkant.jpeg"
+              alt="Luxe achterbank met sfeerverlichting in de Mercedes EQS van Enjoy Taxi"
+              width={1500}
+              height={2000}
+              sizes="(min-width: 768px) 320px, 100vw"
+              className="w-full h-64 md:h-80 object-cover object-[center_70%]"
+            />
+          </div>
         </div>
 
         {/* Services Grid */}
