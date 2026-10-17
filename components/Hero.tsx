@@ -30,38 +30,30 @@ const benefits = [
 
 export default function Hero() {
   return (
-    <section className="relative bg-accent-900 overflow-x-hidden">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0">
-        <Image
-          src="/taxi-vredespaleis.webp"
-          alt="Enjoy Taxi - Mercedes EQS taxi bij het Vredespaleis in Den Haag, 24/7 beschikbaar"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-accent-900/95 via-accent-900/80 to-accent-900/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-accent-900 via-transparent to-transparent" />
+    <section className="relative bg-accent-900 overflow-hidden">
+      {/* Subtle background glow */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div className="absolute -top-40 -right-40 w-[40rem] h-[40rem] rounded-full bg-primary-600/20 blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-[32rem] h-[32rem] rounded-full bg-primary-500/10 blur-3xl" />
       </div>
 
-      <div className="relative z-10 container-luxury px-4 md:px-8 pt-28 md:pt-36 pb-28 md:pb-32">
-        <div className="max-w-3xl">
+      <div className="relative z-10 container-luxury px-4 md:px-8 pt-28 md:pt-32 lg:pt-36 pb-24 md:pb-28 lg:pb-32">
+        <div className="grid md:grid-cols-[1fr_0.8fr] lg:grid-cols-[1fr_auto] gap-10 md:gap-10 lg:gap-16 items-center">
           {/* Content */}
-          <div className="text-center lg:text-left animate-slide-up">
+          <div className="text-center md:text-left animate-slide-up">
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.1] mb-4 lg:mb-6 tracking-tight">
               Taxi Den Haag
               <br />
               <span className="text-gradient-blue">24/7 Beschikbaar</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-accent-200 mb-5 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-lg md:text-xl text-accent-200 mb-6 max-w-xl mx-auto md:mx-0 leading-relaxed">
               <strong className="text-white">Taxi nodig</strong> in Den Haag of omgeving? Boek
               snel uw rit met <strong className="text-white">vaste tarieven</strong> en professionele chauffeurs.
             </p>
 
             {/* USP Pills */}
-            <ul className="flex flex-wrap justify-center lg:justify-start gap-2.5 mb-7">
+            <ul className="flex flex-wrap justify-center md:justify-start gap-2.5 mb-8">
               {benefits.map((b) => (
                 <li
                   key={b.text}
@@ -76,7 +68,7 @@ export default function Hero() {
             </ul>
 
             {/* Desktop CTAs */}
-            <div className="hidden lg:flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+            <div className="hidden md:flex flex-wrap gap-3 justify-start">
               <a
                 href={getWhatsAppUrl()}
                 target="_blank"
@@ -100,7 +92,7 @@ export default function Hero() {
             </div>
 
             {/* Mobile CTAs */}
-            <div className="lg:hidden mt-6 flex flex-col gap-3">
+            <div className="md:hidden mt-6 flex flex-col gap-3">
               <a href={getPhoneUrl()} className="btn-primary w-full justify-center text-lg group">
                 <svg className="w-5 h-5 mr-2 transition-transform group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -118,6 +110,38 @@ export default function Hero() {
                 </svg>
                 WhatsApp Bericht
               </a>
+            </div>
+          </div>
+
+          {/* Hero Image */}
+          <div className="relative mx-auto w-full max-w-md md:max-w-none lg:w-[400px] xl:w-[440px] animate-slide-up">
+            {/* Accent frame behind the photo */}
+            <div
+              className="absolute -inset-3 md:-inset-4 rounded-[2rem] bg-gradient-to-br from-primary-500/40 via-primary-600/10 to-transparent blur-sm"
+              aria-hidden="true"
+            />
+            <div className="relative aspect-[4/3] md:aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl shadow-black/50 ring-1 ring-white/15">
+              <Image
+                src="/taxi-vredespaleis.webp"
+                alt="Enjoy Taxi - Mercedes EQS taxi bij het Vredespaleis in Den Haag, 24/7 beschikbaar"
+                fill
+                priority
+                className="object-cover object-[center_65%] md:object-center"
+                sizes="(min-width: 1280px) 440px, (min-width: 1024px) 400px, (min-width: 768px) 40vw, 100vw"
+              />
+            </div>
+
+            {/* Floating price badge */}
+            <div className="absolute -bottom-5 left-4 md:-left-6 flex items-center gap-3 rounded-2xl bg-white px-4 py-3 shadow-xl">
+              <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary-500 text-white flex-shrink-0">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" />
+                </svg>
+              </span>
+              <span className="leading-tight text-left">
+                <span className="block text-xs font-medium text-accent-500">Schiphol vanaf</span>
+                <span className="block text-lg font-bold text-accent-900">€79 all-in</span>
+              </span>
             </div>
           </div>
         </div>
